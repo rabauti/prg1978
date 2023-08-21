@@ -1,0 +1,336 @@
+<doc src="Literature" genre="fiction" original_author="Robert Louis Stevenson" original_title="Dr. Jekyll and Mr. Hyde. The Merry Menand Other Tales" title="Kummaline lugu Dr. Jekyllist ja Mr. Hyde'st. Enesetapjate klubi" publisher="Varrak" original_year="1936" year="2006" text_type="Short Story" sub_text_type="Translation" translator="Kersti Unt" ISBN="978-9985-3-1324-4">
+<s>
+Katharine	H.sg.n	Katharine-h	sg_n	Katharine	Katharine	0		prop_sg_nom					1	5	obl	kurjast	kuri	S	sg_el	root
+de	H.?	de-h	?	de	de			prop					2	1	flat	Katharine	Katharine	H	sg_n	obl
+Mattosele	H.sg.all	Mattonen-h	sg_all	Mattonen	Mattonen	le		prop_sg_all					3	1	flat	Katharine	Katharine	H	sg_n	obl
+On	V.b	olema-v	b	ole	ole	0		mod_indic_pres_ps3_sg_ps_af			fin	Intr	4	5	cop	kurjast	kuri	S	sg_el	root
+kurjast	S.sg.el	kuri-s	sg_el	kuri	kuri	st		com_sg_el					5	0	root					
+käsulaudu	S.pl.p	käsulaud-s	pl_p	käsu laud	käsu_laud	u		com_pl_part					6	7	obj	lõhkuda	lõhkuma	V	da	csubj:cop
+lõhkuda	V.da	lõhkuma-v	da	lõhku	lõhku	da		mod_inf			inf		7	5	csubj:cop	kurjast	kuri	S	sg_el	root
+<g/>
+,	Z	,-z		,	,				Com				8	10	punct	seatud	seadma	V	tud	ccomp
+mis	P.sg.n	mis-p	sg_n	mis	mis	0		sg_nom		inter_rel			9	10	obj	seatud	seadma	V	tud	ccomp
+seatud	V.tud	seadma-v	tud	sead	sead	tud		mod_indic_impf_imps_neg			fin	NGP-P	10	7	ccomp	lõhkuda	lõhkuma	V	da	csubj:cop
+Jumalast	H.sg.el	Jumal-h	sg_el	Jumal	Jumal	st		prop_sg_el					11	10	obl	seatud	seadma	V	tud	ccomp
+<g/>
+,	Z	,-z		,	,				Com				12	15	punct	tunda	tundma	V	da	conj
+meis	P.pl.in	mina-p	pl_in	mina	mina	s		pl_in		ps1			13	15	obl	tunda	tundma	V	da	conj
+siiski	D	siiski-d		siiski	siiski	0							14	15	advmod	tunda	tundma	V	da	conj
+tunda	V.da	tundma-v	da	tund	tund	a		mod_inf			inf	Part-P	15	10	conj	seatud	seadma	V	tud	ccomp
+tuultest	S.pl.el	tuul-s	pl_el	tuul	tuul	test		com_pl_el					16	15	obl	tunda	tundma	V	da	conj
+räsit	S.sg.n	räsit-s	sg_n	räsit	räsit	0		com_sg_nom					17	19	nmod	last	laps	S	sg_p	obj
+kanarbikunõmme	S.sg.g	kanarbikunõmm-s	sg_g	kanarbiku nõmm	kanarbiku_nõmm	0		com_sg_gen					18	19	nmod	last	laps	S	sg_p	obj
+last	S.sg.p	laps-s	sg_p	laps	laps	t		com_sg_part					19	15	obj	tunda	tundma	V	da	conj
+<g/>
+.	Z	.-z		.	.				Fst				20	5	punct	kurjast	kuri	S	sg_el	root
+</s>
+<s>
+Jääb	V.b	jääma-v	b	jää	jää	b		mod_indic_pres_ps3_sg_ps_af			fin	Intr_Ill_All_Tr	1	0	root					
+võõrsil	D	võõrsil-d		võõrsil	võõrsil	0							2	1	advmod	Jääb	jääma	V	b	root
+teadmine	S.sg.n	teadmine-s	sg_n	teadmine	teadmine	0		com_sg_nom					3	1	nsubj	Jääb	jääma	V	b	root
+<g/>
+,	Z	,-z		,	,				Com				4	12	punct	ehtinud	ehtima	V	nud	acl
+et	J	et-j		et	et	0		sub_crd					5	12	mark	ehtinud	ehtima	V	nud	acl
+kodukõnnul	S.sg.ad	kodukõnd-s	sg_ad	kodu kõnd	kodu_kõnd	l		com_sg_ad					6	12	obl	ehtinud	ehtima	V	nud	acl
+remmelga	S.sg.g	remmelgas-s	sg_g	remmelgas	remmelgas	0		com_sg_gen					7	12	obj	ehtinud	ehtima	V	nud	acl
+just	D	just-d		just	just	0							8	9	advmod	meie	mina	P	pl_g	obl
+meie	P.pl.g	mina-p	pl_g	mina	mina	0		pl_gen		ps1			9	12	obl	ehtinud	ehtima	V	nud	acl
+jaoks	K	jaoks-k		jaoks	jaoks	0		post				gen	10	9	case	meie	mina	P	pl_g	obl
+on	V.b	olema-v	b	ole	ole	0		mod_indic_pres_ps3_sg_ps_af			fin	Intr	11	12	aux	ehtinud	ehtima	V	nud	acl
+ehtinud	V.nud	ehtima-v	nud	ehti	ehti	nud		mod_indic_impf_ps_neg			fin	NGP-P_Kom	12	3	acl	teadmine	teadmine	S	sg_n	nsubj
+karm	A.sg.n	karm-a	sg_n	karm	karm	0		pos_sg_nom					13	14	amod	põhjamaa	põhjamaa	S	sg_n	nsubj
+põhjamaa	S.sg.n	põhjamaa-s	sg_n	põhja maa	põhja_maa	0		com_sg_nom					14	12	nsubj	ehtinud	ehtima	V	nud	acl
+<g/>
+,	Z	,-z		,	,				Com				15	17	punct	lugu	lugu	S	sg_n	conj
+Ukse	H.sg.g	Uks-h	sg_g	Uks	Uks	0		prop_sg_gen					16	17	nmod	lugu	lugu	S	sg_n	conj
+lugu	S.sg.n	lugu-s	sg_n	lugu	lugu	0		com_sg_nom					17	14	conj	põhjamaa	põhjamaa	S	sg_n	nsubj
+Mr.	Y.?	Mr-y	?	Mr	Mr	0		nominal					18	17	appos	lugu	lugu	S	sg_n	conj
+Utterson	H.sg.n	Utterson-h	sg_n	Utterson	Utterson	0		prop_sg_nom					19	18	flat	Mr.	Mr	Y	?	appos
+<g/>
+,	Z	,-z		,	,				Com				20	21	punct	advokaat	advokaat	S	sg_n	conj
+advokaat	S.sg.n	advokaat-s	sg_n	advokaat	advokaat	0		com_sg_nom					21	14	conj	põhjamaa	põhjamaa	S	sg_n	nsubj
+<g/>
+,	Z	,-z		,	,				Com				22	24	punct	ilme	ilme	S	sg_g	nmod
+kelle	P.sg.g	kes-p	sg_g	kes	kes	0		sg_gen		inter_rel			23	24	nmod	ilme	ilme	S	sg_g	nmod
+ilme	S.sg.g	ilme-s	sg_g	ilme	ilme	0		com_sg_gen					24	25	nmod	karmust	karmus	S	sg_p	obj
+karmust	S.sg.p	karmus-s	sg_p	karmus	karmus	t		com_sg_part					25	28	obj	mahendanud	mahendama	V	nud	acl
+iial	D	iial-d		iial	iial	0							26	28	advmod	mahendanud	mahendama	V	nud	acl
+ei	V.neg	ei-v	neg	ei	ei	0		aux_neg			inf		27	29	aux	naeratus	naeratus	S	sg_n	acl:relcl
+mahendanud	V.nud	mahendama-v	nud	mahenda	mahenda	nud		mod_indic_impf_ps_neg			fin		28	29	acl	naeratus	naeratus	S	sg_n	acl:relcl
+naeratus	S.sg.n	naeratus-s	sg_n	naeratus	naeratus	0		com_sg_nom					29	21	acl:relcl	advokaat	advokaat	S	sg_n	conj
+<g/>
+,	Z	,-z		,	,				Com				30	33	punct	külm	külm	A	sg_n	conj
+oli	V.s	olema-v	s	ole	ole	i		mod_indic_impf_ps3_sg_ps_af			fin	Intr	31	33	cop	külm	külm	A	sg_n	conj
+vestluses	S.sg.in	vestlus-s	sg_in	vestlus	vestlus	s		com_sg_in					32	33	obl	külm	külm	A	sg_n	conj
+külm	A.sg.n	külm-a	sg_n	külm	külm	0		pos_sg_nom					33	12	conj	ehtinud	ehtima	V	nud	acl
+<g/>
+,	Z	,-z		,	,				Com				34	35	punct	sõnaaher	sõnaaher	A	sg_n	conj
+sõnaaher	A.sg.n	sõnaaher-a	sg_n	sõna aher	sõna_aher	0		pos_sg_nom					35	33	conj	külm	külm	A	sg_n	conj
+ja	J	ja-j		ja	ja	0		sub_crd					36	37	cc	kohmakas	kohmakas	A	sg_n	conj
+kohmakas	A.sg.n	kohmakas-a	sg_n	kohmakas	kohmakas	0		pos_sg_nom					37	33	conj	külm	külm	A	sg_n	conj
+<g/>
+;	Z	;-z		;	;				Scl				38	40	punct	tagasihoidlik	tagasihoidlik	A	sg_n	conj
+tunnetega	S.pl.kom	tunne-s	pl_kom	tunne	tunne	tega		com_pl_kom					39	40	obl	tagasihoidlik	tagasihoidlik	A	sg_n	conj
+tagasihoidlik	A.sg.n	tagasihoidlik-a	sg_n	tagasi hoidlik	tagasi_hoidlik	0		pos_sg_nom					40	33	conj	külm	külm	A	sg_n	conj
+<g/>
+;	Z	;-z		;	;				Scl				41	42	punct	kõhn	kõhn	A	sg_n	conj
+kõhn	A.sg.n	kõhn-a	sg_n	kõhn	kõhn	0		pos_sg_nom					42	40	conj	tagasihoidlik	tagasihoidlik	A	sg_n	conj
+<g/>
+,	Z	,-z		,	,				Com				43	44	punct	pikakasvuline	pikakasvuline	A	sg_n	conj
+pikakasvuline	A.sg.n	pikakasvuline-a	sg_n	pika kasvuline	pika_kasvuline	0		pos_sg_nom					44	42	conj	kõhn	kõhn	A	sg_n	conj
+<g/>
+,	Z	,-z		,	,				Com				45	46	punct	kuiv	kuiv	A	sg_n	conj
+kuiv	A.sg.n	kuiv-a	sg_n	kuiv	kuiv	0		pos_sg_nom					46	42	conj	kõhn	kõhn	A	sg_n	conj
+<g/>
+,	Z	,-z		,	,				Com				47	48	punct	morn	morn	A	sg_n	conj
+morn	A.sg.n	morn-a	sg_n	morn	morn	0		pos_sg_nom					48	42	conj	kõhn	kõhn	A	sg_n	conj
+–	Z	--z		-	-				Dsh				49	54	punct	väärne	väärne	A	sg_n	conj
+ja	J	ja-j		ja	ja	0		sub_crd					50	54	cc	väärne	väärne	A	sg_n	conj
+millegipärast	D	millegipärast-d		millegi pärast	millegi_pärast	0							51	54	advmod	väärne	väärne	A	sg_n	conj
+ometi	D	ometi-d		ometi	ometi	0							52	54	advmod	väärne	väärne	A	sg_n	conj
+armastus	S.sg.n	armastus-s	sg_n	armastus	armastus	0		com_sg_nom					53	54	nsubj:cop	väärne	väärne	A	sg_n	conj
+väärne	A.sg.n	väärne-a	sg_n	väärne	väärne	0		pos_sg_nom					54	40	conj	tagasihoidlik	tagasihoidlik	A	sg_n	conj
+<g/>
+.	Z	.-z		.	.				Fst				55	1	punct	Jääb	jääma	V	b	root
+</s>
+<s>
+Sõprade	S.pl.g	sõber-s	pl_g	sõber	sõber	de		com_pl_gen					1	7	obl	juues	jooma	V	des	advcl
+seltsis	K	seltsis-k		seltsis	seltsis	0		post				gen	2	1	case	Sõprade	sõber	S	pl_g	obl
+mõnd	P.sg.p	mõni-p	sg_p	mõni	mõni	d		sg_part		indef			3	5	det	lemmik	lemmik	S	sg_n	obj
+oma	P.sg.g	oma-p	sg_g	oma	oma	0		sg_gen		pos_det_refl			4	5	nmod	lemmik	lemmik	S	sg_n	obj
+lemmik	S.sg.n	lemmik-s	sg_n	lemmik	lemmik	0		com_sg_nom					5	7	obj	juues	jooma	V	des	advcl
+veini	S.sg.p	vein-s	sg_p	vein	vein	0		com_sg_part					6	7	obj	juues	jooma	V	des	advcl
+juues	V.des	jooma-v	des	joo	joo	es		mod_ger			inf		7	8	advcl	sigines	siginema	V	s	root
+sigines	V.s	siginema-v	s	sigine	sigine	s		mod_indic_impf_ps3_sg_ps_af			fin		8	0	root					
+advokaadi	S.sg.g	advokaat-s	sg_g	advokaat	advokaat	0		com_sg_gen					9	10	nmod	pilku	pilk	S	sg_p	obj
+pilku	S.sg.p	pilk-s	sg_p	pilk	pilk	0		com_sg_part					10	8	obj	sigines	siginema	V	s	root
+midagi	P.sg.p	miski-p	sg_p	miski	miski	dagi		sg_part		inter_rel			11	8	obj	sigines	siginema	V	s	root
+<g/>
+,	Z	,-z		,	,				Com				12	18	punct	vilkus	vilkuma	V	s	acl:relcl
+mis	P.sg.n	mis-p	sg_n	mis	mis	0		sg_nom		inter_rel			13	18	nsubj	vilkus	vilkuma	V	s	acl:relcl
+sealt	D	sealt-d		sealt	sealt	0							14	18	advmod	vilkus	vilkuma	V	s	acl:relcl
+üsna	D	üsna-d		üsna	üsna	0							15	16	advmod	inimlikult	inimlikult	D		advmod
+inimlikult	D	inimlikult-d		inimlikult	inimlikult	0							16	18	advmod	vilkus	vilkuma	V	s	acl:relcl
+vastu	D	vastu-d		vastu	vastu	0							17	18	compound:prt	vilkus	vilkuma	V	s	acl:relcl
+vilkus	V.s	vilkuma-v	s	vilku	vilku	s		mod_indic_impf_ps3_sg_ps_af			fin	Intr	18	11	acl:relcl	midagi	miski	P	sg_p	obj
+<g/>
+.	Z	.-z		.	.				Fst				19	8	punct	sigines	siginema	V	s	root
+</s>
+<s>
+Tõsi	S.sg.n	tõsi-s	sg_n	tõsi	tõsi	0		com_sg_nom					1	0	root					
+küll	D	küll-d		küll	küll	0							2	1	advmod	Tõsi	tõsi	S	sg_n	root
+<g/>
+,	Z	,-z		,	,				Com				3	7	punct	pääsenud	pääsema	V	nud	conj
+see	P.sg.n	see-p	sg_n	see	see	0		sg_nom		dem			4	5	det	miski	miski	P	sg_n	nsubj
+miski	P.sg.n	miski-p	sg_n	miski	miski	0		sg_nom		inter_rel			5	7	nsubj	pääsenud	pääsema	V	nud	conj
+ei	V.neg	ei-v	neg	ei	ei	0		aux_neg			inf		6	7	aux	pääsenud	pääsema	V	nud	conj
+pääsenud	V.nud	pääsema-v	nud	pääse	pääse	nud		mod_indic_impf_ps_neg			fin	Intr_El	7	1	conj	Tõsi	tõsi	S	sg_n	root
+iial	D	iial-d		iial	iial	0							8	7	advmod	pääsenud	pääsema	V	nud	conj
+ta	P.sg.g	tema-p	sg_g	tema	tema	0		sg_gen		ps3			9	10	nmod	kõneviisi	kõneviis	S	adt	obj
+kõneviisi	S.adt	kõneviis-s	adt	kõne viis	kõne_viis	0		com_sg_adit					10	11	obj	muutma	muutma	V	ma	xcomp
+muutma	V.ma	muutma-v	ma	muut	muut	ma		mod_sup_ps_ill			inf	NGP-P_Tr	11	7	xcomp	pääsenud	pääsema	V	nud	conj
+<g/>
+,	Z	,-z		,	,				Com				12	20	punct	avaldunud	avalduma	V	nud	conj
+kuid	J	kuid-j		kuid	kuid	0		sub_crd					13	20	cc	avaldunud	avalduma	V	nud	conj
+mr.	Y.?	mr-y	?	mr	mr	0		nominal					14	18	nmod	küljed	külg	S	pl_n	nsubj
+Uttersoni	H.sg.g	Utterson-h	sg_g	Utterson	Utterson	0		prop_sg_gen					15	14	flat	mr.	mr	Y	?	nmod
+inimliku	A.sg.g	inimlik-a	sg_g	inimlik	inimlik	0		pos_sg_gen					16	17	amod	mad	mad	S	sg_n	nmod
+mad	S.sg.n	mad-s	sg_n	mad	mad	0		com_sg_nom					17	18	nmod	küljed	külg	S	pl_n	nsubj
+küljed	S.pl.n	külg-s	pl_n	külg	külg	d		com_pl_nom					18	20	nsubj	avaldunud	avalduma	V	nud	conj
+ei	V.neg	ei-v	neg	ei	ei	0		aux_neg			inf		19	20	aux	avaldunud	avalduma	V	nud	conj
+avaldunud	V.nud	avalduma-v	nud	avaldu	avaldu	nud		mod_indic_impf_ps_neg			fin	Intr_In_Es	20	1	conj	Tõsi	tõsi	S	sg_n	root
+kaugeltki	D	kaugeltki-d		kaugeltki	kaugeltki	0							21	22	advmod	mitte	mitte	D		advmod
+mitte	D	mitte-d		mitte	mitte	0							22	23	advmod	ainuüksi	ainuüksi	D		advmod
+ainuüksi	D	ainuüksi-d		ainu üksi	ainu_üksi	0							23	24	advmod	pärastlõunaste	pärastlõunane	A	pl_g	amod
+pärastlõunaste	A.pl.g	pärastlõunane-a	pl_g	pärast lõunane	pärast_lõunane	te		pos_pl_gen					24	25	amod	jõudehetkede	jõudehetk	S	pl_g	obl
+jõudehetkede	S.pl.g	jõudehetk-s	pl_g	jõude hetk	jõude_hetk	de		com_pl_gen					25	20	obl	avaldunud	avalduma	V	nud	conj
+rahul	D	rahul-d		rahul	rahul	0							26	20	compound:prt	avaldunud	avalduma	V	nud	conj
+oluna	S.sg.es	olu-s	sg_es	olu	olu	na		com_sg_es					27	20	obl	avaldunud	avalduma	V	nud	conj
+ta	P.sg.g	tema-p	sg_g	tema	tema	0		sg_gen		ps3			28	27	nmod	oluna	olu	S	sg_es	obl
+näol	K	näol-k		näol	näol	0		post				gen	29	28	case	ta	tema	P	sg_g	nmod
+<g/>
+,	Z	,-z		,	,				Com				30	33	punct	sagedamini	sagedamini	D		conj
+vaid	J	vaid-j		vaid	vaid	0		sub_crd					31	33	cc	sagedamini	sagedamini	D		conj
+palju	D	palju-d		palju	palju	0							32	33	advmod	sagedamini	sagedamini	D		conj
+sagedamini	D	sagedamini-d		sagedamini	sagedamini	0							33	28	conj	ta	tema	P	sg_g	nmod
+ja	J	ja-j		ja	ja	0		sub_crd					34	38	cc	tegudes	tegu	S	pl_in	conj
+märksa	D	märksa-d		märksa	märksa	0							35	36	advmod	häälekamalt	häälekamalt	D		conj
+häälekamalt	D	häälekamalt-d		häälekamalt	hääleka=malt	0							36	33	conj	sagedamini	sagedamini	D		conj
+tema	P.sg.g	tema-p	sg_g	tema	tema	0		sg_gen		ps3			37	38	nmod	tegudes	tegu	S	pl_in	conj
+tegudes	S.pl.in	tegu-s	pl_in	tegu	tegu	des		com_pl_in					38	33	conj	sagedamini	sagedamini	D		conj
+<g/>
+.	Z	.-z		.	.				Fst				39	1	punct	Tõsi	tõsi	S	sg_n	root
+</s>
+<s>
+Enda	P.sg.g	ise-p	sg_g	ise	ise	0		sg_gen		pos_det_refl			1	5	obl	vali	vali	A	sg_n	root
+vastu	K	vastu-k		vastu	vastu	0		post				gen	2	1	case	Enda	ise	P	sg_g	obl
+oli	V.s	olema-v	s	ole	ole	i		mod_indic_impf_ps3_sg_ps_af			fin	Intr	3	5	cop	vali	vali	A	sg_n	root
+advokaat	S.sg.n	advokaat-s	sg_n	advokaat	advokaat	0		com_sg_nom					4	5	nsubj:cop	vali	vali	A	sg_n	root
+vali	A.sg.n	vali-a	sg_n	vali	vali	0		pos_sg_nom					5	0	root					
+<g/>
+:	Z	:-z		:	:				Col				6	8	punct	juua	jooma	V	da	advcl
+et	J	et-j		et	et	0		sub_crd					7	8	mark	juua	jooma	V	da	advcl
+juua	V.da	jooma-v	da	joo	joo	a		mod_inf			inf		8	5	advcl	vali	vali	A	sg_n	root
+vähem	D	vähem-d		vähem	vähem	0							9	10	advmod	veini	vein	S	sg_p	obj
+veini	S.sg.p	vein-s	sg_p	vein	vein	0		com_sg_part					10	8	obj	juua	jooma	V	da	advcl
+<g/>
+,	Z	,-z		,	,				Com				11	12	punct	pruukis	pruukima	V	s	parataxis
+pruukis	V.s	pruukima-v	s	pruuki	pruuki	s		mod_indic_impf_ps3_sg_ps_af			fin	Part-P	12	5	parataxis	vali	vali	A	sg_n	root
+ta	P.sg.n	tema-p	sg_n	tema	tema	0		sg_nom		ps3			13	12	nsubj	pruukis	pruukima	V	s	parataxis
+omaette	D	omaette-d		oma ette	oma_ette	0							14	12	advmod	pruukis	pruukima	V	s	parataxis
+olles	V.des	olema-v	des	ole	ole	es		mod_ger			inf	Intr	15	12	advcl	pruukis	pruukima	V	s	parataxis
+alati	D	alati-d		alati	alati	0							16	12	advmod	pruukis	pruukima	V	s	parataxis
+džinni	S.sg.p	džinn-s	sg_p	džinn	džinn	0		com_sg_part					17	12	obj	pruukis	pruukima	V	s	parataxis
+<g/>
+,	Z	,-z		,	,				Com				18	24	punct	pidas	pidama	V	s	conj
+ning	J	ning-j		ning	ning	0		sub_crd					19	24	cc	pidas	pidama	V	s	conj
+kuigi	J	kuigi-j		kuigi	kuigi	0		sub_crd					20	24	advmod	pidas	pidama	V	s	conj
+ta	P.sg.n	tema-p	sg_n	tema	tema	0		sg_nom		ps3			21	24	nsubj	pidas	pidama	V	s	conj
+näitekunstist	S.sg.el	näitekunst-s	sg_el	näite kunst	näite_kunst	st		com_sg_el					22	24	obl	pidas	pidama	V	s	conj
+palju	D	palju-d		palju	palju	0							23	24	advmod	pidas	pidama	V	s	conj
+pidas	V.s	pidama-v	s	pida	pida	s		mod_indic_impf_ps3_sg_ps_af			fin	NGP-P	24	12	conj	pruukis	pruukima	V	s	parataxis
+<g/>
+,	Z	,-z		,	,				Com				25	34	punct	saanud	saama	V	nud	conj
+polnud	V.neg.nud	olema-v	neg_nud	ole	ole	nud		aux_indic_impf_ps_neg			fin	Intr	26	34	cop	saanud	saama	V	nud	conj
+ta	P.sg.n	tema-p	sg_n	tema	tema	0		sg_nom		ps3			27	34	nsubj:cop	saanud	saama	V	nud	conj
+juba	D	juba-d		juba	juba	0							28	29	advmod	kakskümmend	kakskümmend	N	sg_n	nummod
+kakskümmend	N.sg.n	kakskümmend-n	sg_n	kaks kümmend	kaks_kümmend	0		card_sg_nom_l					29	30	nummod	aastat	aasta	S	sg_p	obl
+aastat	S.sg.p	aasta-s	sg_p	aasta	aasta	t		com_sg_part					30	34	obl	saanud	saama	V	nud	conj
+jalga	D	jalga-d		jalga	jalga	0							31	34	advmod	saanud	saama	V	nud	conj
+üle	K	üle-k		üle	üle	0		post				gen	32	33	case	teatriläve	teatrilävi	S	sg_g	obl
+teatriläve	S.sg.g	teatrilävi-s	sg_g	teatri lävi	teatri_lävi	0		com_sg_gen					33	34	obl	saanud	saama	V	nud	conj
+saanud	V.nud	saama-v	nud	saa	saa	nud		mod_indic_impf_ps_neg			fin	NGP-P	34	5	conj	vali	vali	A	sg_n	root
+<g/>
+.	Z	.-z		.	.				Fst				35	5	punct	vali	vali	A	sg_n	root
+</s>
+<s>
+Kuid	H.pl.n	Kui-h	pl_n	Kui	Kui	d		prop_pl_nom					1	3	obl	ilmutas	ilmutama	V	s	root
+teistega	P.pl.kom	teine-p	pl_kom	teine	teine	tega		pl_kom		dem			2	1	nmod	Kuid	Kui	H	pl_n	obl
+ilmutas	V.s	ilmutama-v	s	ilmuta	ilmuta	s		mod_indic_impf_ps3_sg_ps_af			fin	Part	3	0	root					
+mr.	Y.?	mr-y	?	mr	mr	0		nominal					4	3	nsubj	ilmutas	ilmutama	V	s	root
+Utterson	H.sg.n	Utterson-h	sg_n	Utterson	Utterson	0		prop_sg_nom					5	4	flat	mr.	mr	Y	?	nsubj
+kiiduväärt	D	kiiduväärt-d		kiidu väärt	kiidu_väärt	0							6	3	advmod	ilmutas	ilmutama	V	s	root
+kannatlikkust	S.sg.p	kannatlikkus-s	sg_p	kannatlikkus	kannatlikkus	t		com_sg_part					7	3	obj	ilmutas	ilmutama	V	s	root
+<g/>
+,	Z	,-z		,	,				Com				8	15	punct	kätketud	kätkema	V	tud	conj
+vahel	D	vahel-d		vahel	vahel	0							9	12	advmod	imetledes	imetlema	V	des	advcl
+peaaegu	D	peaaegu-d		pea aegu	pea_aegu	0							10	11	advmod	kadedalt	kadedalt	D		advmod
+kadedalt	D	kadedalt-d		kadedalt	kadedalt	0							11	12	advmod	imetledes	imetlema	V	des	advcl
+imetledes	V.des	imetlema-v	des	imetle	imetle	des		mod_ger			inf	Part	12	15	advcl	kätketud	kätkema	V	tud	conj
+ligimeste	S.pl.g	ligimene-s	pl_g	ligimene	ligimene	te		com_pl_gen					13	14	nmod	pahategudesse	pahategu	S	pl_ill	obl
+pahategudesse	S.pl.ill	pahategu-s	pl_ill	paha tegu	paha_tegu	desse		com_pl_ill					14	15	obl	kätketud	kätkema	V	tud	conj
+kätketud	V.tud	kätkema-v	tud	kätke	kätke	tud		mod_indic_impf_imps_neg			fin	NGP-P_In	15	3	conj	ilmutas	ilmutama	V	s	root
+tormakat	A.sg.p	tormakas-a	sg_p	tormakas	tormakas	t		pos_sg_part					16	17	amod	elulusti	elulust	S	sg_p	obj
+elulusti	S.sg.p	elulust-s	sg_p	elu lust	elu_lust	0		com_sg_part					17	15	obj	kätketud	kätkema	V	tud	conj
+<g/>
+,	Z	,-z		,	,				Com				18	20	punct	oli	olema	V	s	conj
+ning	J	ning-j		ning	ning	0		sub_crd					19	20	cc	oli	olema	V	s	conj
+oli	V.s	olema-v	s	ole	ole	i		mod_indic_impf_ps3_sg_ps_af			fin	Intr	20	3	conj	ilmutas	ilmutama	V	s	root
+äärmises	A.sg.in	äärmine-a	sg_in	äärmine	äärmine	s		pos_sg_in					21	22	amod	hädas	häda	S	sg_in	obl
+hädas	S.sg.in	häda-s	sg_in	häda	häda	s		com_sg_in					22	20	obl	oli	olema	V	s	conj
+pigem	D	pigem-d		pigem	pigem	0							23	20	advmod	oli	olema	V	s	conj
+valmis	D	valmis-d		valmis	valmis	0							24	20	compound:prt	oli	olema	V	s	conj
+appi	S.adt	abi-s	adt	abi	abi	0		com_sg_adit					25	26	obl	asuma	asuma	V	ma	xcomp
+asuma	V.ma	asuma-v	ma	asu	asu	ma		mod_sup_ps_ill			inf	Intr	26	20	xcomp	oli	olema	V	s	conj
+kui	J	kui-j		kui	kui	0		sub_crd					27	30	mark	tegema	tegema	V	ma	advcl
+ettehei	S.sg.g	ettehei-s	sg_g	ettehei	ettehei	0		com_sg_gen					28	29	nmod	teid	tee	S	pl_p	obj
+teid	S.pl.p	tee-s	pl_p	tee	tee	id		com_pl_part					29	30	obj	tegema	tegema	V	ma	advcl
+tegema	V.ma	tegema-v	ma	tege	tege	ma		mod_sup_ps_ill			inf	NGP-P	30	26	advcl	asuma	asuma	V	ma	xcomp
+<g/>
+.	Z	.-z		.	.				Fst				31	3	punct	ilmutas	ilmutama	V	s	root
+</s>
+<s>
+"	Z	"-z		"	"				Quo				1	4	punct	ketser	ketser	S	sg_n	root
+<g/>
+Olen	V.n	olema-v	n	ole	ole	n		mod_indic_pres_ps1_sg_ps_af			fin	Intr	2	4	cop	ketser	ketser	S	sg_n	root
+samasugune	P.sg.n	samasugune-p	sg_n	sama sugune	sama_sugune	0		sg_nom		dem			3	4	det	ketser	ketser	S	sg_n	root
+ketser	S.sg.n	ketser-s	sg_n	ketser	ketser	0		com_sg_nom					4	0	root					
+nagu	J	nagu-j		nagu	nagu	0		sub_crd					5	6	mark	Kain	Kain	H	sg_n	advcl
+Kain	H.sg.n	Kain-h	sg_n	Kain	Kain	0		prop_sg_nom					6	4	advcl	ketser	ketser	S	sg_n	root
+<g/>
+,	Z	,-z		,	,				Com				7	4	punct	ketser	ketser	S	sg_n	root
+<g/>
+"	Z	"-z		"	"				Quo				8	4	punct	ketser	ketser	S	sg_n	root
+tavatses	V.s	tavatsema-v	s	tavatse	tavatse	s		mod_indic_impf_ps3_sg_ps_af			fin	InfP	9	4	parataxis	ketser	ketser	S	sg_n	root
+ta	P.sg.n	tema-p	sg_n	tema	tema	0		sg_nom		ps3			10	9	nsubj	tavatses	tavatsema	V	s	parataxis
+oma	P.sg.g	oma-p	sg_g	oma	oma	0		sg_gen		pos_det_refl			11	13	nmod	kõnepruugis	kõnepruuk	S	sg_in	obl
+isevärki	A	isevärki-a		ise värki	ise_värki	0		pos					12	13	amod	kõnepruugis	kõnepruuk	S	sg_in	obl
+kõnepruugis	S.sg.in	kõnepruuk-s	sg_in	kõne pruuk	kõne_pruuk	s		com_sg_in					13	14	obl	öelda	ütlema	V	da	xcomp
+öelda	V.da	ütlema-v	da	ütle	ütle	da		mod_inf			inf	NGP-P	14	9	xcomp	tavatses	tavatsema	V	s	parataxis
+<g/>
+,	Z	,-z		,	,				Com				15	19	punct	minul	mina	P	sg_ad	conj
+"	Z	"-z		"	"				Quo				16	19	punct	minul	mina	P	sg_ad	conj
+<g/>
+ja	J	ja-j		ja	ja	0		sub_crd					17	19	cc	minul	mina	P	sg_ad	conj
+pole	V.neg.o	olema-v	neg_o	ole	ole	0		aux_imper_pres_ps2_sg_ps_neg			fin	Intr	18	19	cop	minul	mina	P	sg_ad	conj
+minul	P.sg.ad	mina-p	sg_ad	mina	mina	l		sg_ad		ps1			19	9	conj	tavatses	tavatsema	V	s	parataxis
+sellest	P.sg.el	see-p	sg_el	see	see	st		sg_el		dem			20	19	obl	minul	mina	P	sg_ad	conj
+sooja	A.sg.p	soe-a	sg_p	soe	soe	0		pos_sg_part					21	19	nsubj:cop	minul	mina	P	sg_ad	conj
+ega	J	ega-j		ega	ega	0		sub_crd					22	23	cc	külma	külm	A	sg_p	conj
+külma	A.sg.p	külm-a	sg_p	külm	külm	0		pos_sg_part					23	21	conj	sooja	soe	A	sg_p	nsubj:cop
+<g/>
+,	Z	,-z		,	,				Com				24	31	punct	sillutab	sillutama	V	b	advcl
+mil	D	mil-d		mil	mil	0							25	31	mark	sillutab	sillutama	V	b	advcl
+kombel	S.sg.ad	komme-s	sg_ad	komme	komme	l		com_sg_ad					26	31	obl	sillutab	sillutama	V	b	advcl
+täpselt	D	täpselt-d		täpselt	täpselt	0							27	31	advmod	sillutab	sillutama	V	b	advcl
+keegi	P.sg.n	keegi-p	sg_n	keegi	keegi	0		sg_nom		indef			28	31	nsubj	sillutab	sillutama	V	b	advcl
+enesele	P.sg.all	ise-p	sg_all	ise	ise	le		sg_all		pos_det_refl			29	31	obl	sillutab	sillutama	V	b	advcl
+põrguteed	S.pl.n	põrgutee-s	pl_n	põrgu tee	põrgu_tee	d		com_pl_nom					30	31	obj	sillutab	sillutama	V	b	advcl
+sillutab	V.b	sillutama-v	b	silluta	silluta	b		mod_indic_pres_ps3_sg_ps_af			fin		31	23	advcl	külma	külm	A	sg_p	conj
+<g/>
+.	Z	.-z		.	.				Fst				32	4	punct	ketser	ketser	S	sg_n	root
+</s>
+<s>
+"	Z	"-z		"	"				Quo				1	9	punct	õnn	õnn	S	sg_n	root
+Seesuguse	P.sg.g	seesugune-p	sg_g	see sugune	see_sugune	0		sg_gen		dem			2	3	amod	iseloomu	iseloom	S	sg_g	obl
+iseloomu	S.sg.g	iseloom-s	sg_g	ise loom	ise_loom	0		com_sg_gen					3	9	obl	õnn	õnn	S	sg_n	root
+tõttu	K	tõttu-k		tõttu	tõttu	0		post				gen	4	3	case	iseloomu	iseloom	S	sg_g	obl
+oli	V.s	olema-v	s	ole	ole	i		mod_indic_impf_ps3_sg_ps_af			fin	Intr	5	9	cop	õnn	õnn	S	sg_n	root
+mr.	Y.?	mr-y	?	mr	mr	0		nominal					6	9	nsubj:cop	õnn	õnn	S	sg_n	root
+Uttersonil	H.sg.ad	Utterson-h	sg_ad	Utterson	Utterson	l		prop_sg_ad					7	6	flat	mr.	mr	Y	?	nsubj:cop
+tihtipeale	D	tihtipeale-d		tihti peale	tihti_peale	0							8	9	advmod	õnn	õnn	S	sg_n	root
+õnn	S.sg.n	õnn-s	sg_n	õnn	õnn	0		com_sg_nom					9	0	root					
+olla	V.da	olema-v	da	ole	ole	a		mod_inf			inf	Intr	10	13	cop	tutvuseks	tutvus	S	sg_tr	xcomp
+viimaseks	A.sg.tr	viimane-a	sg_tr	viimane	viimane	ks		pos_sg_tr					11	13	amod	tutvuseks	tutvus	S	sg_tr	xcomp
+väärikaks	A.sg.tr	väärikas-a	sg_tr	väärikas	väärikas	ks		pos_sg_tr					12	13	amod	tutvuseks	tutvus	S	sg_tr	xcomp
+tutvuseks	S.sg.tr	tutvus-s	sg_tr	tutvus	tutvus	ks		com_sg_tr					13	9	xcomp	õnn	õnn	S	sg_n	root
+ja	J	ja-j		ja	ja	0		sub_crd					14	16	cc	mõjujõuks	mõjujõud	S	sg_tr	conj
+heaks	A.sg.tr	hea-a	sg_tr	hea	hea	ks		pos_sg_tr					15	16	amod	mõjujõuks	mõjujõud	S	sg_tr	conj
+mõjujõuks	S.sg.tr	mõjujõud-s	sg_tr	mõju jõud	mõju_jõud	ks		com_sg_tr					16	13	conj	tutvuseks	tutvus	S	sg_tr	xcomp
+ini	S.sg.g	ini-s	sg_g	ini	ini	0		com_sg_gen					17	18	nmod	meste	mest	S	pl_p	nsubj:cop
+meste	S.pl.p	mest-s	pl_p	mest	mest	e		com_pl_part					18	16	nsubj:cop	mõjujõuks	mõjujõud	S	sg_tr	conj
+elus	S.sg.in	elu-s	sg_in	elu	elu	s		com_sg_in					19	18	nmod	meste	mest	S	pl_p	nsubj:cop
+<g/>
+,	Z	,-z		,	,				Com				20	22	punct	tee	tee	S	sg_n	nsubj
+kelle	P.sg.g	kes-p	sg_g	kes	kes	0		sg_gen		inter_rel			21	22	nmod	tee	tee	S	sg_n	nsubj
+tee	S.sg.n	tee-s	sg_n	tee	tee	0		com_sg_nom					22	23	nsubj	kiskus	kiskuma	V	s	acl:relcl
+kiskus	V.s	kiskuma-v	s	kisku	kisku	s		mod_indic_impf_ps3_sg_ps_af			fin	NGP-P	23	19	acl:relcl	elus	elu	S	sg_in	nmod
+allamäge	D	allamäge-d		alla mäge	alla_mäge	0							24	23	advmod	kiskus	kiskuma	V	s	acl:relcl
+<g/>
+.	Z	.-z		.	.				Fst				25	9	punct	õnn	õnn	S	sg_n	root
+</s>
+<s>
+Ning	J	ning-j		ning	ning	0		sub_crd					1	2	cc	niikaua	niikaua	D		advmod
+niikaua	D	niikaua-d		nii kaua	nii_kaua	0							2	16	advmod	märgata	märkama	V	da	root
+<g/>
+,	Z	,-z		,	,				Com				3	8	punct	külasta	külastama	V	o	advcl
+kuni	J	kuni-j		kuni	kuni	0		sub_crd					4	8	mark	külasta	külastama	V	o	advcl
+seesugused	P.pl.n	seesugune-p	pl_n	see sugune	see_sugune	d		pl_nom		dem			5	8	nsubj	külasta	külastama	V	o	advcl
+teda	P.sg.p	tema-p	sg_p	tema	tema	da		sg_part		ps3			6	8	obj	külasta	külastama	V	o	advcl
+veel	D	veel-d		veel	veel	0							7	8	advmod	külasta	külastama	V	o	advcl
+külasta	V.o	külastama-v	o	külasta	külasta	0		mod_indic_pres_ps_neg			fin		8	2	advcl	niikaua	niikaua	D		advmod
+sid	S.sg.n	sid-s	sg_n	sid	sid	0		com_sg_nom					9	8	obj	külasta	külastama	V	o	advcl
+<g/>
+,	Z	,-z		,	,				Com				10	8	punct	külasta	külastama	V	o	advcl
+polnud	V.neg.nud	olema-v	neg_nud	ole	ole	nud		aux_indic_impf_ps_neg			fin	Intr	11	13	cop	hoiakus	hoiak	S	sg_in	obl
+ta	P.sg.g	tema-p	sg_g	tema	tema	0		sg_gen		ps3			12	13	nmod	hoiakus	hoiak	S	sg_in	obl
+hoiakus	S.sg.in	hoiak-s	sg_in	hoiak	hoiak	s		com_sg_in					13	16	obl	märgata	märkama	V	da	root
+nende	P.pl.g	see-p	pl_g	see	see	de		pl_gen		dem			14	16	obl	märgata	märkama	V	da	root
+suhtes	K	suhtes-k		suhtes	suhtes	0		post				gen	15	14	case	nende	see	P	pl_g	obl
+märgata	V.da	märkama-v	da	märka	märka	ta		mod_inf			inf	Part-P_InfP	16	0	root					
+vähimatki	U.sg.p	vähim-u	sg_p	vähim	vähim	t	ki	super_sg_part					17	18	amod	muutust	muutus	S	sg_p	obj
+muutust	S.sg.p	muutus-s	sg_p	muutus	muutus	t		com_sg_part					18	16	obj	märgata	märkama	V	da	root
+<g/>
+.	Z	.-z		.	.				Fst				19	16	punct	märgata	märkama	V	da	root
+</s>
+</doc>

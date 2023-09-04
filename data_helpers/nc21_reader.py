@@ -1,3 +1,4 @@
+import re
 from tqdm import tqdm
 
 
@@ -42,6 +43,7 @@ class Nc21Reader(BaseReader):
 			raise Exception("Unknown mode %s", mode)
 		# global line counter
 		count = 0
+		doc = None
 		with open(self.__FILE) as f:
 			# current sentence data
 			current_sentence = []
@@ -67,9 +69,12 @@ class Nc21Reader(BaseReader):
 						col_id += 1
 						current_sentence = []
 						global_sent_id = col_id
+					elif line.startswith('<doc '):
+						doc = re.sub(r'^<doc +', '', line)
 					elif line == '</s>':
 						g = SyntaxGraph(current_sentence)
 						if mode == 'graph':
+							g.set_metadata('doc', doc)
 							yield global_sent_id, g
 						else:
 							yield global_sent_id, current_sentence_text
@@ -93,6 +98,11 @@ class Nc21Reader(BaseReader):
 				data['verbform'] = None
 				if data['upostag'] in 'V':
 					data['verbform'] = row[1].split('.')[-1]
+
+
+                # fields for conll
+
+
 
 				# print(data)
 				# data['start'] = None

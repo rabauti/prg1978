@@ -11,6 +11,7 @@ from .utils import ListUtils
 
 class BaseDiGraph(nx.DiGraph):
     _distances_matrix = None  # matrix for node distances
+    _meta = {}  # graph metadata
 
     def __init__(self):
         super(BaseDiGraph, self).__init__()
@@ -27,6 +28,16 @@ class BaseDiGraph(nx.DiGraph):
         if attrvalue in nodes:
             return dict(nodes)[attrvalue]
         return []
+
+    def set_metadata(self, prop, data):
+        self._meta[prop] = data
+
+    def get_metadata(self, prop=None):
+        if prop is None:
+            return self._meta
+        if prop in self._meta:
+            return self._meta[prop]
+        return None
 
 
 class SyntaxGraph(BaseDiGraph):
@@ -45,9 +56,12 @@ class SyntaxGraph(BaseDiGraph):
                     form=data['form'],
                     feats=data['feats'],
                     verbform=data['verbform'],
+                    # for conll
+                    head=data['head'],
+
                     # start=data.start,
                     # end=data.end
-				)
+                )
                 self.add_edge(data['id'] - data['id'] + data['head'], data['id'], deprel=data['deprel'])
         self.init_distances_matrix()
 
@@ -86,7 +100,152 @@ class SyntaxGraph(BaseDiGraph):
                 'kom',  # kaasa#
             ):
                 return attr
-        return '<käändumatu>'
+        # return '<käändumatu>'
+        return None
+
+    def get_node_number(self, node_id):
+        """
+        https://github.com/estnltk/estnltk/blob/4236f2033110d2bf20fc7f565950c0a2170f8573/estnltk/estnltk/taggers/standard/syntax/visl_rows.ipynb#L39
+        :param node_id:
+        :return:
+        """
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in (
+                'sg',  # ainsus
+                'pl',  # mitmus
+            ):
+                return attr
+        return None
+
+    def get_node_voice(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('imps', 'ps'):
+                return attr
+        return None
+
+    def get_node_mood(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('indic', 'cond', 'imper', 'quot'):
+                return attr
+        return None
+
+    def get_node_tense(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('pres', 'past', 'impf'):
+                return attr
+        return None
+
+    def get_node_person(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('ps1', 'ps2', 'ps3'):
+                return attr
+        return None
+
+    def get_node_adposition_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('pre', 'post'):
+                return attr
+        return None
+
+    def get_node_negation(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('af', 'neg'):
+                return attr
+        return None
+
+    def get_node_inf_form(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('sup', 'inf', 'ger', 'partic'):
+                return attr
+        return None
+
+    def get_node_pronoun_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('pos', 'det', 'refl', 'dem', 'inter_rel', 'pers', 'rel', 'rec', 'indef'):
+                return attr
+        return None
+
+    def get_node_adjective_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('pos', 'comp', 'super'):
+                return attr
+        return None
+
+    def get_node_verb_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('main', 'mod', 'aux'):
+                return attr
+        return None
+
+    def get_node_substantive_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('prop', 'com'):
+                return attr
+        return None
+
+    def get_node_numeral_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('card', 'ord'):
+                return attr
+        return None
+
+    def get_node_number_format(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('l', 'roman', 'digit'):
+                return attr
+        return None
+
+    def get_node_adposition_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('pre', 'post'):
+                return attr
+        return None
+
+    def get_node_conjunction_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('crd', 'sub'):
+                return attr
+        return None
+
+    def get_node_punctuation_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in (
+                'Col', 'Com', 'Cpr', 'Cqu', 'Csq', 'Dsd', 'Dsh', 'Ell',
+                'Els', 'Exc', 'Fst', 'Int', 'Opr', 'Oqu', 'Osq', 'Quo', 'Scl', 'Sla', 'Sml'
+            ):
+                return attr
+        return None
+
+    def get_node_abbreviation_type(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('adjectival', 'adverbial', 'nominal', 'verbal'):
+                return attr
+        return None
+
+    def get_node_capitalized(self, node_id):
+        feats = self.nodes[node_id]['feats']
+        for attr in feats:
+            if attr in ('cap'):
+                return attr
+        return None
 
     def draw_graph(self, **kwargs):
         """

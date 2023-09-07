@@ -1,0 +1,465 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# newdoc = id="2184" src="Balanced Corpus" genre="periodicals" genre_src="source" filename="aja_EPL_2002_02_12.tasak.ma" texttype_nc="periodicals" newspaperNumber="Eesti Päevaleht 12.02.2002" heading="Majandus" article="Mustamäe ühiselamute üks omanik on USAs registreeritud firma">
+# text = Tallinna sotsiaal- ja tervishoiuameti juhataja Vahur Keldrima kinnitas informatsiooni .
+1	Tallinna	Tallinn	H	H	Case=gen|Number=sg	2	nmod	H_lemma:sotsiaal	_
+2	sotsiaal-	sotsiaal	S	S	Case=nom|Number=sg	5	nmod	H_lemma:juhataja	_
+3	ja	ja	J	J	_	4	cc	H_lemma:tervishoiuamet	_
+4	tervishoiuameti	tervishoiuamet	S	S	Case=gen|Number=sg	2	conj	H_lemma:sotsiaal	_
+5	juhataja	juhataja	S	S	Case=nom|Number=sg	8	nsubj	H_lemma:kinnitama	_
+6	Vahur	Vahur	H	H	Case=nom|Number=sg	5	appos	H_lemma:juhataja	_
+7	Keldrima	Keldrima	H	H	Case=nom|Number=sg	6	flat	H_lemma:Vahur	_
+8	kinnitas	kinnitama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+9	informatsiooni	informatsioon	S	S	Case=part|Number=sg	8	obj	H_lemma:kinnitama	_
+10	.	.	Z	Z	_	8	punct	H_lemma:kinnitama	_
+
+# text = Tallinna elanikele kommunaalteenuseid vahendav kinnisvarahooldusfirma BREM tasus ASile Tallinna Vesi oma eelmise aasta võla veeteenuste eest , lähinädalail loodab BREM tasuda võlga ka Tallinna Soojusele .
+1	Tallinna	Tallinn	H	H	Case=gen|Number=sg	2	nmod	H_lemma:elanik	_
+2	elanikele	elanik	S	S	Case=all|Number=pl	4	obl	H_lemma:vahendav	_
+3	kommunaalteenuseid	kommunaalteenus	S	S	Case=part|Number=pl	4	obj	H_lemma:vahendav	_
+4	vahendav	vahendav	A	A	Case=nom|Number=sg	5	acl	H_lemma:kinnisvarahooldusfirma	_
+5	kinnisvarahooldusfirma	kinnisvarahooldusfirma	S	S	Case=nom|Number=sg	7	nsubj	H_lemma:tasuma	_
+6	BREM	BREM	Y	Y	_	5	appos	H_lemma:kinnisvarahooldusfirma	_
+7	tasus	tasuma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+8	ASile	AS	Y	Y	Case=all|Number=sg	7	obl	H_lemma:tasuma	_
+9	Tallinna	Tallinn	H	H	Case=gen|Number=sg	10	nmod	H_lemma:vesi	_
+10	Vesi	vesi	S	S	Case=nom|Number=sg	7	nsubj	H_lemma:tasuma	_
+11	oma	oma	P	P	Case=gen|Number=sg	13	nmod	H_lemma:aasta	_
+12	eelmise	eelmine	A	A	Case=gen|Number=sg	13	amod	H_lemma:aasta	_
+13	aasta	aasta	S	S	Case=gen|Number=sg	14	nmod	H_lemma:võlg	_
+14	võla	võlg	S	S	Case=gen|Number=sg	15	nmod	H_lemma:veeteenus	_
+15	veeteenuste	veeteenus	S	S	Case=gen|Number=pl	7	obl	H_lemma:tasuma	_
+16	eest	eest	K	K	AdpType=post	15	case	H_lemma:veeteenus	_
+17	,	,	Z	Z	_	19	punct	H_lemma:lootma	_
+18	lähinädalail	lähinädal	S	S	Case=ad|Number=pl	19	obl	H_lemma:lootma	_
+19	loodab	lootma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	7	conj	H_lemma:tasuma	_
+20	BREM	BREM	Y	Y	_	19	nsubj	H_lemma:lootma	_
+21	tasuda	tasuma	V	V	VerbType=inf	19	xcomp	H_lemma:lootma	_
+22	võlga	võlg	S	S	Case=part|Number=sg	21	obj	H_lemma:tasuma	_
+23	ka	ka	D	D	_	25	advmod	H_lemma:soojus	_
+24	Tallinna	Tallinn	H	H	Case=gen|Number=sg	25	nmod	H_lemma:soojus	_
+25	Soojusele	soojus	S	S	Case=all|Number=sg	21	obl	H_lemma:tasuma	_
+26	.	.	Z	Z	_	7	punct	H_lemma:tasuma	_
+
+# text = BREMi esindaja teatas , et finantskohustuste täitmist eelmise aasta lõpu seisuga Tallinna Vesi ees kinnitas ka ASi Tallinna Vesi finantsdirektor David Ordman .
+1	BREMi	BREM	Y	Y	Case=gen|Number=sg	2	nmod	H_lemma:esindaja	_
+2	esindaja	esindaja	S	S	Case=nom|Number=sg	3	nsubj	H_lemma:teatama	_
+3	teatas	teatama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+4	,	,	Z	Z	_	15	punct	H_lemma:kinnitama	_
+5	et	et	J	J	_	15	mark	H_lemma:kinnitama	_
+6	finantskohustuste	finantskohustus	S	S	Case=gen|Number=pl	7	nmod	H_lemma:täitmine	_
+7	täitmist	täitmine	S	S	Case=part|Number=sg	15	obj	H_lemma:kinnitama	_
+8	eelmise	eelmine	A	A	Case=gen|Number=sg	9	amod	H_lemma:aasta	_
+9	aasta	aasta	S	S	Case=gen|Number=sg	10	nmod	H_lemma:lõpp	_
+10	lõpu	lõpp	S	S	Case=gen|Number=sg	11	nmod	H_lemma:seis	_
+11	seisuga	seis	S	S	Case=kom|Number=sg	7	nmod	H_lemma:täitmine	_
+12	Tallinna	Tallinn	H	H	Case=gen|Number=sg	13	nmod	H_lemma:vesi	_
+13	Vesi	vesi	S	S	Case=nom|Number=sg	11	nmod	H_lemma:seis	_
+14	ees	ees	K	K	AdpType=post	13	case	H_lemma:vesi	_
+15	kinnitas	kinnitama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	3	ccomp	H_lemma:teatama	_
+16	ka	ka	D	D	_	20	advmod	H_lemma:finantsdirektor	_
+17	ASi	AS	Y	Y	Case=gen|Number=sg	20	nmod	H_lemma:finantsdirektor	_
+18	Tallinna	Tallinn	H	H	Case=gen|Number=sg	19	nmod	H_lemma:vesi	_
+19	Vesi	vesi	S	S	Case=nom|Number=sg	20	nmod	H_lemma:finantsdirektor	_
+20	finantsdirektor	finantsdirektor	S	S	Case=nom|Number=sg	15	nsubj	H_lemma:kinnitama	_
+21	David	David	H	H	Case=nom|Number=sg	20	appos	H_lemma:finantsdirektor	_
+22	Ordman	Ordman	H	H	Case=nom|Number=sg	21	flat	H_lemma:David	_
+23	.	.	Z	Z	_	3	punct	H_lemma:teatama	_
+
+# text = " Rotermanni kvartali tsoneerimisskeem ja hoonestustingimused " kehtestavad kvartalis piirangud ehitusõiguse osas - uusehitiste kõrgus , lubatud ehitusalad , avaliku tänavaruumi ehk jalakäijate jaoks reserveeritud alad , muinsuskaitsealused hooned .
+1	"	"	Z	Z	_	4	punct	H_lemma:tsoneerimisskeem	_
+2	Rotermanni	Rotermanni	H	H	Case=gen|Number=sg	3	nmod	H_lemma:kvartal	_
+3	kvartali	kvartal	S	S	Case=gen|Number=sg	4	nmod	H_lemma:tsoneerimisskeem	_
+4	tsoneerimisskeem	tsoneerimisskeem	S	S	Case=nom|Number=sg	8	nsubj	H_lemma:kehtestama	_
+5	ja	ja	J	J	_	6	cc	H_lemma:hoonestustingimus	_
+6	hoonestustingimused	hoonestustingimus	S	S	Case=nom|Number=pl	4	conj	H_lemma:tsoneerimisskeem	_
+7	"	"	Z	Z	_	4	punct	H_lemma:tsoneerimisskeem	_
+8	kehtestavad	kehtestama	V	V	Mood=indic|Number=pl|Person=ps3|Polarity=af|Tense=pres|Voice=ps	0	root	_	_
+9	kvartalis	kvartal	S	S	Case=in|Number=sg	8	obl	H_lemma:kehtestama	_
+10	piirangud	piirang	S	S	Case=nom|Number=pl	8	obj	H_lemma:kehtestama	_
+11	ehitusõiguse	ehitusõigus	S	S	Case=gen|Number=sg	10	nmod	H_lemma:piirang	_
+12	osas	osas	K	K	AdpType=post	11	case	H_lemma:ehitusõigus	_
+13	-	-	Z	Z	_	15	punct	H_lemma:kõrgus	_
+14	uusehitiste	uusehitis	S	S	Case=gen|Number=pl	15	nmod	H_lemma:kõrgus	_
+15	kõrgus	kõrgus	S	S	Case=nom|Number=sg	10	appos	H_lemma:piirang	_
+16	,	,	Z	Z	_	17	punct	H_lemma:lubatud	_
+17	lubatud	lubatud	A	A	_	8	conj	H_lemma:kehtestama	_
+18	ehitusalad	ehitusala	S	S	Case=nom|Number=pl	17	obj	H_lemma:lubatud	_
+19	,	,	Z	Z	_	26	punct	H_lemma:ala	_
+20	avaliku	avalik	A	A	Case=gen|Number=sg	21	amod	H_lemma:tänavaruum	_
+21	tänavaruumi	tänavaruum	S	S	Case=gen|Number=sg	25	obl	H_lemma:reserveerima	_
+22	ehk	ehk	J	J	_	26	cc	H_lemma:ala	_
+23	jalakäijate	jalakäija	S	S	Case=gen|Number=pl	25	obl	H_lemma:reserveerima	_
+24	jaoks	jaoks	K	K	AdpType=post	23	case	H_lemma:jalakäija	_
+25	reserveeritud	reserveerima	V	V	Mood=indic|Polarity=neg|Tense=impf|Voice=imps	26	acl	H_lemma:ala	_
+26	alad	ala	S	S	Case=nom|Number=pl	18	conj	H_lemma:ehitusala	_
+27	,	,	Z	Z	_	29	punct	H_lemma:hoone	_
+28	muinsuskaitsealused	muinsuskaitsealune	A	A	Case=nom|Number=pl	29	amod	H_lemma:hoone	_
+29	hooned	hoone	S	S	Case=nom|Number=pl	18	conj	H_lemma:ehitusala	_
+30	.	.	Z	Z	_	8	punct	H_lemma:kehtestama	_
+
+# text = Dokumendi eesmärk on anda maaomanikele ja investoritele ette konkreetsed ja lihtsad mängureeglid kvartalis ehitustegevuse arendamiseks , samas peab dokument kindlustama , et linnelanikud ja turistid võiksid ka tulevikus osa saada unikaalsest 19. - 20. sajandi vahetuse tööstusmiljööst .
+1	Dokumendi	dokument	S	S	Case=gen|Number=sg	2	nmod	H_lemma:eesmärk	_
+2	eesmärk	eesmärk	S	S	Case=nom|Number=sg	3	nsubj:cop	H_lemma:olema	_
+3	on	olema	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	0	root	_	_
+4	anda	andma	V	V	VerbType=inf	3	ccomp	H_lemma:olema	_
+5	maaomanikele	maaomanik	S	S	Case=all|Number=pl	4	obl	H_lemma:andma	_
+6	ja	ja	J	J	_	7	cc	H_lemma:investor	_
+7	investoritele	investor	S	S	Case=all|Number=pl	5	conj	H_lemma:maaomanik	_
+8	ette	ette	D	D	_	4	compound:prt	H_lemma:andma	_
+9	konkreetsed	konkreetne	A	A	Case=nom|Number=pl	12	amod	H_lemma:mängureegel	_
+10	ja	ja	J	J	_	11	cc	H_lemma:lihtne	_
+11	lihtsad	lihtne	A	A	Case=nom|Number=pl	9	conj	H_lemma:konkreetne	_
+12	mängureeglid	mängureegel	S	S	Case=nom|Number=pl	4	obj	H_lemma:andma	_
+13	kvartalis	kvartal	S	S	Case=in|Number=sg	12	nmod	H_lemma:mängureegel	_
+14	ehitustegevuse	ehitustegevus	S	S	Case=gen|Number=sg	15	nmod	H_lemma:arendamine	_
+15	arendamiseks	arendamine	S	S	Case=tr|Number=sg	12	nmod	H_lemma:mängureegel	_
+16	,	,	Z	Z	_	20	punct	H_lemma:kindlustama	_
+17	samas	sama	P	P	Case=in|Number=sg	20	obl	H_lemma:kindlustama	_
+18	peab	pidama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	20	aux	H_lemma:kindlustama	_
+19	dokument	dokument	S	S	Case=nom|Number=sg	20	nsubj	H_lemma:kindlustama	_
+20	kindlustama	kindlustama	V	V	Case=ill|VerbType=sup|Voice=ps	3	conj	H_lemma:olema	_
+21	,	,	Z	Z	_	30	punct	H_lemma:saama	_
+22	et	et	J	J	_	30	mark	H_lemma:saama	_
+23	linnelanikud	linnelanik	S	S	Case=nom|Number=pl	30	nsubj	H_lemma:saama	_
+24	ja	ja	J	J	_	25	cc	H_lemma:turist	_
+25	turistid	turist	S	S	Case=nom|Number=pl	23	conj	H_lemma:linnelanik	_
+26	võiksid	võima	V	V	Mood=cond|Number=pl|Person=ps3|Polarity=af|Tense=pres|Voice=ps	30	aux	H_lemma:saama	_
+27	ka	ka	D	D	_	28	advmod	H_lemma:tulevik	_
+28	tulevikus	tulevik	S	S	Case=in|Number=sg	30	obl	H_lemma:saama	_
+29	osa	osa	S	S	Case=nom|Number=sg	30	obj	H_lemma:saama	_
+30	saada	saama	V	V	VerbType=inf	20	ccomp	H_lemma:kindlustama	_
+31	unikaalsest	unikaalne	A	A	Case=el|Number=sg	37	amod	H_lemma:tööstusmiljöö	_
+32	19.	19.	O	O	_	37	amod	H_lemma:tööstusmiljöö	_
+33	-	-	Z	Z	_	36	punct	H_lemma:vahetus	_
+34	20.	20.	O	O	_	35	amod	H_lemma:sajand	_
+35	sajandi	sajand	S	S	Case=gen|Number=sg	36	nmod	H_lemma:vahetus	_
+36	vahetuse	vahetus	S	S	Case=gen|Number=sg	37	nmod	H_lemma:tööstusmiljöö	_
+37	tööstusmiljööst	tööstusmiljöö	S	S	Case=el|Number=sg	30	obl	H_lemma:saama	_
+38	.	.	Z	Z	_	3	punct	H_lemma:olema	_
+
+# text = Tsoneerimiskava ja hoonestustingimused läbivad kesklinna halduskogu ja avaliku arutelu ning kinnitatakse linnavalitsuse korraldusega .
+1	Tsoneerimiskava	Tsoneerimiskava	H	H	Case=nom|Number=sg	4	nsubj	H_lemma:läbima	_
+2	ja	ja	J	J	_	3	cc	H_lemma:hoonestustingimus	_
+3	hoonestustingimused	hoonestustingimus	S	S	Case=nom|Number=pl	1	conj	H_lemma:Tsoneerimiskava	_
+4	läbivad	läbima	V	V	Mood=indic|Number=pl|Person=ps3|Polarity=af|Tense=pres|Voice=ps	0	root	_	_
+5	kesklinna	kesklinn	S	S	Case=gen|Number=sg	6	nmod	H_lemma:halduskogu	_
+6	halduskogu	halduskogu	S	S	Case=gen|Number=sg	4	obj	H_lemma:läbima	_
+7	ja	ja	J	J	_	9	cc	H_lemma:arutelu	_
+8	avaliku	avalik	A	A	Case=gen|Number=sg	9	amod	H_lemma:arutelu	_
+9	arutelu	arutelu	S	S	Case=gen|Number=sg	6	conj	H_lemma:halduskogu	_
+10	ning	ning	J	J	_	11	cc	H_lemma:kinnitama	_
+11	kinnitatakse	kinnitama	V	V	Mood=indic|Polarity=af|Tense=pres|Voice=imps	4	conj	H_lemma:läbima	_
+12	linnavalitsuse	linnavalitsus	S	S	Case=gen|Number=sg	13	nmod	H_lemma:korraldus	_
+13	korraldusega	korraldus	S	S	Case=kom|Number=sg	11	obl	H_lemma:kinnitama	_
+14	.	.	Z	Z	_	4	punct	H_lemma:läbima	_
+
+# text = Edaspidi saab sellest dokumendist alus Säästva Arengu ja Planeerimise Ameti poolt väljastavatele nimetatud kvartali detailplaneeringute lähteülesannetele ning projekteerimistingimustele .
+1	Edaspidi	edaspidi	D	D	_	2	advmod	H_lemma:saama	_
+2	saab	saama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	0	root	_	_
+3	sellest	see	P	P	Case=el|Number=sg	4	det	H_lemma:dokument	_
+4	dokumendist	dokument	S	S	Case=el|Number=sg	2	obl	H_lemma:saama	_
+5	alus	alus	S	S	Case=nom|Number=sg	2	nsubj	H_lemma:saama	_
+6	Säästva	säästev	A	A	Case=gen|Number=sg	7	acl	H_lemma:areng	_
+7	Arengu	areng	S	S	Case=gen|Number=sg	10	nmod	H_lemma:amet	_
+8	ja	ja	J	J	_	9	cc	H_lemma:planeerimine	_
+9	Planeerimise	planeerimine	S	S	Case=gen|Number=sg	7	conj	H_lemma:areng	_
+10	Ameti	amet	S	S	Case=gen|Number=sg	12	obl	H_lemma:väljastav	_
+11	poolt	poolt	K	K	AdpType=post	10	case	H_lemma:amet	_
+12	väljastavatele	väljastav	A	A	Case=all|Number=pl	14	acl	H_lemma:kvartal	_
+13	nimetatud	nimetatud	A	A	_	14	acl	H_lemma:kvartal	_
+14	kvartali	kvartal	S	S	Case=gen|Number=sg	15	nmod	H_lemma:detailplaneering	_
+15	detailplaneeringute	detailplaneering	S	S	Case=gen|Number=pl	16	nmod	H_lemma:lähteülesanne	_
+16	lähteülesannetele	lähteülesanne	S	S	Case=all|Number=pl	5	nmod	H_lemma:alus	_
+17	ning	ning	J	J	_	18	cc	H_lemma:projekteerimistingimus	_
+18	projekteerimistingimustele	projekteerimistingimus	S	S	Case=all|Number=pl	16	conj	H_lemma:lähteülesanne	_
+19	.	.	Z	Z	_	2	punct	H_lemma:saama	_
+
+# newdoc = id="2188" src="Balanced Corpus" genre="periodicals" genre_src="source" filename="aja_EPL_2002_02_12.tasak.ma" texttype_nc="periodicals" newspaperNumber="Eesti Päevaleht 12.02.2002" heading="Majandus" article="Tallinn tahab ühiselamuelanikele maksta toetust">
+# text = Tallinn tahab valitsusele teha ettepaneku muuta sotsiaalhoolekande seadust , sest praegune seadus ei võimalda maksta toetust tudengitele ja teistele ühiselamutes elavatele inimestele .
+1	Tallinn	Tallinn	H	H	Case=nom|Number=sg	2	nsubj	H_lemma:tahtma	_
+2	tahab	tahtma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	0	root	_	_
+3	valitsusele	valitsus	S	S	Case=all|Number=sg	4	obl	H_lemma:tegema	_
+4	teha	tegema	V	V	VerbType=inf	2	xcomp	H_lemma:tahtma	_
+5	ettepaneku	ettepanek	S	S	Case=gen|Number=sg	4	obj	H_lemma:tegema	_
+6	muuta	muutma	V	V	VerbType=inf	5	acl	H_lemma:ettepanek	_
+7	sotsiaalhoolekande	sotsiaalhoolekanne	S	S	Case=gen|Number=sg	8	nmod	H_lemma:seadus	_
+8	seadust	seadus	S	S	Case=part|Number=sg	6	obj	H_lemma:muutma	_
+9	,	,	Z	Z	_	14	punct	H_lemma:võimaldama	_
+10	sest	sest	J	J	_	14	mark	H_lemma:võimaldama	_
+11	praegune	praegune	A	A	Case=nom|Number=sg	12	amod	H_lemma:seadus	_
+12	seadus	seadus	S	S	Case=nom|Number=sg	14	nsubj	H_lemma:võimaldama	_
+13	ei	ei	V	V	Polarity=neg	14	aux	H_lemma:võimaldama	_
+14	võimalda	võimaldama	V	V	Mood=indic|Polarity=neg|Tense=pres|Voice=ps	2	advcl	H_lemma:tahtma	_
+15	maksta	maksma	V	V	VerbType=inf	14	xcomp	H_lemma:võimaldama	_
+16	toetust	toetus	S	S	Case=part|Number=sg	15	obj	H_lemma:maksma	_
+17	tudengitele	tudeng	S	S	Case=all|Number=pl	16	nmod	H_lemma:toetus	_
+18	ja	ja	J	J	_	22	cc	H_lemma:inimene	_
+19	teistele	teine	P	P	Case=all|Number=pl	20	det	H_lemma:ühiselamu	_
+20	ühiselamutes	ühiselamu	S	S	Case=in|Number=pl	17	conj	H_lemma:tudeng	_
+21	elavatele	elav	A	A	Case=all|Number=pl	22	acl	H_lemma:inimene	_
+22	inimestele	inimene	S	S	Case=all|Number=pl	17	conj	H_lemma:tudeng	_
+23	.	.	Z	Z	_	2	punct	H_lemma:tahtma	_
+
+# text = " Lisaks toimetulekuraskustes üliõpilastele , kes elavad mitmekesi ühes ühiselamutoas kasutuslepingu alusel , võtab seadus toimetulekutoetuse saamise õiguse ka isikutelt , kellega eluruumi omanik üürnikust vabanemise eesmärgil keeldub üürilepingut vormistamast , " ütles abilinnapea Anders Tsahkna .
+1	"	"	Z	Z	_	14	punct	H_lemma:võtma	_
+2	Lisaks	lisa	S	S	Case=tr|Number=sg	14	obl	H_lemma:võtma	_
+3	toimetulekuraskustes	toimetulekuraskune	A	A	Case=in|Number=pl	4	amod	H_lemma:üliõpilane	_
+4	üliõpilastele	üliõpilane	S	S	Case=all|Number=pl	2	nmod	H_lemma:lisa	_
+5	,	,	Z	Z	_	7	punct	H_lemma:elama	_
+6	kes	kes	P	P	Case=nom|Number=sg	7	nsubj	H_lemma:elama	_
+7	elavad	elama	V	V	Mood=indic|Number=pl|Person=ps3|Polarity=af|Tense=pres|Voice=ps	4	acl:relcl	H_lemma:üliõpilane	_
+8	mitmekesi	mitmekesi	D	D	_	7	advmod	H_lemma:elama	_
+9	ühes	üks	P	P	Case=in|Number=sg	10	det	H_lemma:ühiselamutuba	_
+10	ühiselamutoas	ühiselamutuba	S	S	Case=in|Number=sg	7	obl	H_lemma:elama	_
+11	kasutuslepingu	kasutusleping	S	S	Case=gen|Number=sg	12	nmod	H_lemma:alus	_
+12	alusel	alus	S	S	Case=ad|Number=sg	7	obl	H_lemma:elama	_
+13	,	,	Z	Z	_	7	punct	H_lemma:elama	_
+14	võtab	võtma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	0	root	_	_
+15	seadus	seadus	S	S	Case=nom|Number=sg	14	nsubj	H_lemma:võtma	_
+16	toimetulekutoetuse	toimetulekutoetus	S	S	Case=gen|Number=sg	17	nmod	H_lemma:saamine	_
+17	saamise	saamine	S	S	Case=gen|Number=sg	18	nmod	H_lemma:õigus	_
+18	õiguse	õigus	S	S	Case=gen|Number=sg	14	obj	H_lemma:võtma	_
+19	ka	ka	D	D	_	20	advmod	H_lemma:isik	_
+20	isikutelt	isik	S	S	Case=abl|Number=pl	18	nmod	H_lemma:õigus	_
+21	,	,	Z	Z	_	28	punct	H_lemma:keelduma	_
+22	kellega	kes	P	P	Case=kom|Number=sg	28	obl	H_lemma:keelduma	_
+23	eluruumi	eluruum	S	S	Case=gen|Number=sg	24	nmod	H_lemma:omanik	_
+24	omanik	omanik	S	S	Case=nom|Number=sg	28	nsubj	H_lemma:keelduma	_
+25	üürnikust	üürnik	S	S	Case=el|Number=sg	26	nmod	H_lemma:vabanemine	_
+26	vabanemise	vabanemine	S	S	Case=gen|Number=sg	27	nmod	H_lemma:eesmärk	_
+27	eesmärgil	eesmärk	S	S	Case=ad|Number=sg	28	obl	H_lemma:keelduma	_
+28	keeldub	keelduma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	20	acl:relcl	H_lemma:isik	_
+29	üürilepingut	üürileping	S	S	Case=part|Number=sg	30	obj	H_lemma:vormistama	_
+30	vormistamast	vormistama	V	V	Case=el|VerbType=sup|Voice=ps	28	xcomp	H_lemma:keelduma	_
+31	,	,	Z	Z	_	14	punct	H_lemma:võtma	_
+32	"	"	Z	Z	_	14	punct	H_lemma:võtma	_
+33	ütles	ütlema	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	14	parataxis	H_lemma:võtma	_
+34	abilinnapea	abilinnapea	S	S	Case=nom|Number=sg	33	nsubj	H_lemma:ütlema	_
+35	Anders	Anders	H	H	Case=nom|Number=sg	34	appos	H_lemma:abilinnapea	_
+36	Tsahkna	Tsahkna	H	H	Case=nom|Number=sg	35	flat	H_lemma:Anders	_
+37	.	.	Z	Z	_	14	punct	H_lemma:võtma	_
+
+# text = " Toimetulekuraskustes inimene ei tohi sattuda temast mittesõltuvatel asjaoludel teistega võrreldes ebasoodsasse olukorda , " põhjendas Tsahkna seaduse muutmise ettepanekut .
+1	"	"	Z	Z	_	6	punct	H_lemma:sattuma	_
+2	Toimetulekuraskustes	toimetulekuraskus	S	S	Case=in|Number=pl	6	obl	H_lemma:sattuma	_
+3	inimene	inimene	S	S	Case=nom|Number=sg	6	nsubj	H_lemma:sattuma	_
+4	ei	ei	V	V	Polarity=neg	6	aux	H_lemma:sattuma	_
+5	tohi	tohtima	V	V	Mood=indic|Polarity=neg|Tense=pres|Voice=ps	6	aux	H_lemma:sattuma	_
+6	sattuda	sattuma	V	V	VerbType=inf	0	root	_	_
+7	temast	tema	P	P	Case=el|Number=sg	8	obl	H_lemma:mittesõltuv	_
+8	mittesõltuvatel	mittesõltuv	A	A	Case=ad|Number=pl	9	acl	H_lemma:asjaolu	_
+9	asjaoludel	asjaolu	S	S	Case=ad|Number=pl	6	obl	H_lemma:sattuma	_
+10	teistega	teine	P	P	Case=kom|Number=pl	11	obl	H_lemma:võrdlema	_
+11	võrreldes	võrdlema	V	V	VerbType=ger	6	advcl	H_lemma:sattuma	_
+12	ebasoodsasse	ebasoodne	A	A	Case=ill|Number=sg	13	amod	H_lemma:olukord	_
+13	olukorda	olukord	S	S	Case=adit|Number=sg	6	obl	H_lemma:sattuma	_
+14	,	,	Z	Z	_	6	punct	H_lemma:sattuma	_
+15	"	"	Z	Z	_	6	punct	H_lemma:sattuma	_
+16	põhjendas	põhjendama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	6	parataxis	H_lemma:sattuma	_
+17	Tsahkna	Tsahkna	H	H	Case=nom|Number=sg	16	nsubj	H_lemma:põhjendama	_
+18	seaduse	seadus	S	S	Case=gen|Number=sg	19	nmod	H_lemma:muutmine	_
+19	muutmise	muutmine	S	S	Case=gen|Number=sg	20	nmod	H_lemma:ettepanek	_
+20	ettepanekut	ettepanek	S	S	Case=part|Number=sg	16	obj	H_lemma:põhjendama	_
+21	.	.	Z	Z	_	6	punct	H_lemma:sattuma	_
+
+# newdoc = id="2189" src="Balanced Corpus" genre="periodicals" genre_src="source" filename="aja_EPL_2002_02_12.tasak.ma" texttype_nc="periodicals" newspaperNumber="Eesti Päevaleht 12.02.2002" heading="Majandus" article="Lukoil teenis üle 1,9 miljardi dollari kasumit">
+# text = Venemaa naftakompanii Lukoil möödunud aasta üheksa kuu puhaskasum ulatus 1,937 miljardi dollarini , teatas ettevõte täna .
+1	Venemaa	venemaa	G	G	_	2	amod	H_lemma:naftakompanii	_
+2	naftakompanii	naftakompanii	S	S	Case=gen|Number=sg	4	nsubj	H_lemma:möödunud	_
+3	Lukoil	Lukoil	H	H	Case=nom|Number=sg	2	appos	H_lemma:naftakompanii	_
+4	möödunud	möödunud	A	A	_	0	root	_	_
+5	aasta	aasta	S	S	Case=gen|Number=sg	6	nmod	H_lemma:üheksa	_
+6	üheksa	üheksa	N	N	Case=gen|Number=sg	7	nummod	H_lemma:kuu	_
+7	kuu	kuu	S	S	Case=gen|Number=sg	8	nmod	H_lemma:puhaskasum	_
+8	puhaskasum	puhaskasum	S	S	Case=nom|Number=sg	9	nsubj	H_lemma:ulatuma	_
+9	ulatus	ulatuma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	4	conj	H_lemma:möödunud	_
+10	1,937	1,937	N	N	_	11	compound	H_lemma:miljard	_
+11	miljardi	miljard	N	N	Case=gen|Number=sg	12	nummod	H_lemma:dollar	_
+12	dollarini	dollar	S	S	Case=term|Number=sg	9	obl	H_lemma:ulatuma	_
+13	,	,	Z	Z	_	14	punct	H_lemma:teatama	_
+14	teatas	teatama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	4	conj	H_lemma:möödunud	_
+15	ettevõte	ettevõte	S	S	Case=nom|Number=sg	14	nsubj	H_lemma:teatama	_
+16	täna	täna	D	D	_	14	advmod	H_lemma:teatama	_
+17	.	.	Z	Z	_	4	punct	H_lemma:möödunud	_
+
+# text = Firma varad kasvasid üheksa kuuga 15 protsenti ja ulatusid 19,699 miljardi dollarini , aktsiakapital suurenes 16 protsenti ja moodustas 12,194 miljardit dollarit .
+1	Firma	firma	S	S	Case=gen|Number=sg	2	nmod	H_lemma:vara	_
+2	varad	vara	S	S	Case=nom|Number=pl	3	nsubj	H_lemma:kasvama	_
+3	kasvasid	kasvama	V	V	Mood=indic|Number=pl|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+4	üheksa	üheksa	N	N	Case=gen|Number=sg	5	nummod	H_lemma:kuu	_
+5	kuuga	kuu	S	S	Case=kom|Number=sg	3	obl	H_lemma:kasvama	_
+6	15	15	N	N	_	7	nummod	H_lemma:protsent	_
+7	protsenti	protsent	S	S	Case=part|Number=sg	3	obl	H_lemma:kasvama	_
+8	ja	ja	J	J	_	9	cc	H_lemma:ulatuma	_
+9	ulatusid	ulatuma	V	V	Mood=indic|Number=pl|Person=ps3|Polarity=af|Tense=impf|Voice=ps	3	conj	H_lemma:kasvama	_
+10	19,699	19,699	N	N	_	11	compound	H_lemma:miljard	_
+11	miljardi	miljard	N	N	Case=gen|Number=sg	12	nummod	H_lemma:dollar	_
+12	dollarini	dollar	S	S	Case=term|Number=sg	9	obl	H_lemma:ulatuma	_
+13	,	,	Z	Z	_	15	punct	H_lemma:suurenema	_
+14	aktsiakapital	aktsiakapital	S	S	Case=nom|Number=sg	15	nsubj	H_lemma:suurenema	_
+15	suurenes	suurenema	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	3	conj	H_lemma:kasvama	_
+16	16	16	N	N	_	17	nummod	H_lemma:protsent	_
+17	protsenti	protsent	S	S	Case=part|Number=sg	15	obl	H_lemma:suurenema	_
+18	ja	ja	J	J	_	19	cc	H_lemma:moodustama	_
+19	moodustas	moodustama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	3	conj	H_lemma:kasvama	_
+20	12,194	12,194	N	N	_	21	compound	H_lemma:miljard	_
+21	miljardit	miljard	N	N	Case=part|Number=sg	22	nummod	H_lemma:dollar	_
+22	dollarit	dollar	S	S	Case=part|Number=sg	19	obj	H_lemma:moodustama	_
+23	.	.	Z	Z	_	3	punct	H_lemma:kasvama	_
+
+# text = Üheksa kuuga kasvasid Lukoili investeeringud peaaegu kahekordseks ja ulatusid 2,397 miljardi dollarini .
+1	Üheksa	üheksa	N	N	Case=nom|Number=sg	2	nummod	H_lemma:kuu	_
+2	kuuga	kuu	S	S	Case=kom|Number=sg	3	obl	H_lemma:kasvama	_
+3	kasvasid	kasvama	V	V	Mood=indic|Number=pl|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+4	Lukoili	Lukoil	H	H	Case=gen|Number=sg	5	nmod	H_lemma:investeering	_
+5	investeeringud	investeering	S	S	Case=nom|Number=pl	3	nsubj	H_lemma:kasvama	_
+6	peaaegu	peaaegu	D	D	_	7	advmod	H_lemma:kahekordne	_
+7	kahekordseks	kahekordne	A	A	Case=tr|Number=sg	3	xcomp	H_lemma:kasvama	_
+8	ja	ja	J	J	_	9	cc	H_lemma:ulatuma	_
+9	ulatusid	ulatuma	V	V	Mood=indic|Number=pl|Person=ps3|Polarity=af|Tense=impf|Voice=ps	3	conj	H_lemma:kasvama	_
+10	2,397	2,397	N	N	_	11	compound	H_lemma:miljard	_
+11	miljardi	miljard	N	N	Case=gen|Number=sg	12	nummod	H_lemma:dollar	_
+12	dollarini	dollar	S	S	Case=term|Number=sg	9	obl	H_lemma:ulatuma	_
+13	.	.	Z	Z	_	3	punct	H_lemma:kasvama	_
+
+# newdoc = id="2190" src="Balanced Corpus" genre="periodicals" genre_src="source" filename="aja_EPL_2002_02_12.tasak.ma" texttype_nc="periodicals" newspaperNumber="Eesti Päevaleht 12.02.2002" heading="Majandus" article="Venemaa teraviljaeksport kasvas ligi kolmekordseks">
+# text = Venemaa eksportis möödunud aastal 3,24 miljonit tonni teravilja , mis annab aastaseks juurdekasvuks 172 protsenti , selgub riikliku teraviljainspektsiooni täna avaldatud andmetest .
+1	Venemaa	venemaa	G	G	_	2	nsubj	H_lemma:eksportima	_
+2	eksportis	eksportima	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+3	möödunud	möödunud	A	A	_	2	xcomp	H_lemma:eksportima	_
+4	aastal	aasta	S	S	Case=ad|Number=sg	3	obl	H_lemma:möödunud	_
+5	3,24	3,24	N	N	_	6	compound	H_lemma:miljon	_
+6	miljonit	miljon	N	N	Case=part|Number=sg	7	nummod	H_lemma:tonn	_
+7	tonni	tonn	S	S	Case=part|Number=sg	8	nmod	H_lemma:teravili	_
+8	teravilja	teravili	S	S	Case=part|Number=sg	3	nsubj	H_lemma:möödunud	_
+9	,	,	Z	Z	_	11	punct	H_lemma:andma	_
+10	mis	mis	P	P	Case=nom|Number=sg	11	nsubj	H_lemma:andma	_
+11	annab	andma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	8	acl:relcl	H_lemma:teravili	_
+12	aastaseks	aastane	A	A	Case=tr|Number=sg	13	amod	H_lemma:juurdekasv	_
+13	juurdekasvuks	juurdekasv	S	S	Case=tr|Number=sg	11	xcomp	H_lemma:andma	_
+14	172	172	N	N	_	15	nummod	H_lemma:protsent	_
+15	protsenti	protsent	S	S	Case=part|Number=sg	11	obj	H_lemma:andma	_
+16	,	,	Z	Z	_	17	punct	H_lemma:selguma	_
+17	selgub	selguma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	2	conj	H_lemma:eksportima	_
+18	riikliku	riiklik	A	A	Case=gen|Number=sg	19	amod	H_lemma:teraviljainspektsioon	_
+19	teraviljainspektsiooni	teraviljainspektsioon	S	S	Case=gen|Number=sg	22	nmod	H_lemma:andmed	_
+20	täna	täna	D	D	_	21	advmod	H_lemma:avaldatud	_
+21	avaldatud	avaldatud	A	A	_	22	acl	H_lemma:andmed	_
+22	andmetest	andmed	S	S	Case=el|Number=pl	17	obl	H_lemma:selguma	_
+23	.	.	Z	Z	_	2	punct	H_lemma:eksportima	_
+
+# text = Teravilja import ulatus mullu 2,04 miljoni tonnini , vähenedes 2000. aastaga võrreldes 57 protsenti .
+1	Teravilja	teravili	S	S	Case=gen|Number=sg	2	nmod	H_lemma:import	_
+2	import	import	S	S	Case=nom|Number=sg	3	nsubj	H_lemma:ulatuma	_
+3	ulatus	ulatuma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+4	mullu	mullu	D	D	_	3	advmod	H_lemma:ulatuma	_
+5	2,04	2,04	N	N	_	6	compound	H_lemma:miljon	_
+6	miljoni	miljon	N	N	Case=gen|Number=sg	7	nummod	H_lemma:tonn	_
+7	tonnini	tonn	S	S	Case=term|Number=sg	3	obl	H_lemma:ulatuma	_
+8	,	,	Z	Z	_	9	punct	H_lemma:vähenema	_
+9	vähenedes	vähenema	V	V	VerbType=ger	3	advcl	H_lemma:ulatuma	_
+10	2000.	2000.	O	O	_	11	amod	H_lemma:aasta	_
+11	aastaga	aasta	S	S	Case=kom|Number=sg	12	obl	H_lemma:võrdlema	_
+12	võrreldes	võrdlema	V	V	VerbType=ger	9	advcl	H_lemma:vähenema	_
+13	57	57	N	N	_	14	nummod	H_lemma:protsent	_
+14	protsenti	protsent	S	S	Case=part|Number=sg	9	obl	H_lemma:vähenema	_
+15	.	.	Z	Z	_	3	punct	H_lemma:ulatuma	_
+
+# newdoc = id="2191" src="Balanced Corpus" genre="periodicals" genre_src="source" filename="aja_EPL_2002_02_12.tasak.ma" texttype_nc="periodicals" newspaperNumber="Eesti Päevaleht 12.02.2002" heading="Majandus" article="Tolli laekumised olid jaanuaris aastaga kasvanud 17,6 protsenti">
+# text = Tolli kaudu laekus riigieelarvesse jaanuaris üks miljard ja 75,4 miljonit krooni , mis võrreldes eelmise aasta jaanuariga on 17,6 protsenti rohkem .
+1	Tolli	toll	S	S	Case=gen|Number=sg	3	obl	H_lemma:laekuma	_
+2	kaudu	kaudu	K	K	AdpType=post	1	case	H_lemma:toll	_
+3	laekus	laekuma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+4	riigieelarvesse	riigieelarve	S	S	Case=ill|Number=sg	3	obl	H_lemma:laekuma	_
+5	jaanuaris	jaanuar	S	S	Case=in|Number=sg	3	obl	H_lemma:laekuma	_
+6	üks	üks	P	P	Case=nom|Number=sg	7	det	H_lemma:miljard	_
+7	miljard	miljard	N	N	Case=nom|Number=sg	3	nsubj	H_lemma:laekuma	_
+8	ja	ja	J	J	_	11	cc	H_lemma:kroon	_
+9	75,4	75,4	N	N	_	10	compound	H_lemma:miljon	_
+10	miljonit	miljon	N	N	Case=part|Number=sg	11	nummod	H_lemma:kroon	_
+11	krooni	kroon	S	S	Case=part|Number=sg	7	conj	H_lemma:miljard	_
+12	,	,	Z	Z	_	21	punct	H_lemma:rohkem	_
+13	mis	mis	P	P	Case=nom|Number=sg	21	nsubj:cop	H_lemma:rohkem	_
+14	võrreldes	võrdlema	V	V	VerbType=ger	21	advcl	H_lemma:rohkem	_
+15	eelmise	eelmine	A	A	Case=gen|Number=sg	16	amod	H_lemma:aasta	_
+16	aasta	aasta	S	S	Case=gen|Number=sg	17	nmod	H_lemma:jaanuar	_
+17	jaanuariga	jaanuar	S	S	Case=kom|Number=sg	14	obl	H_lemma:võrdlema	_
+18	on	olema	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	21	cop	H_lemma:rohkem	_
+19	17,6	17,6	N	N	_	20	nummod	H_lemma:protsent	_
+20	protsenti	protsent	S	S	Case=part|Number=sg	21	obl	H_lemma:rohkem	_
+21	rohkem	rohkem	D	D	_	11	acl:relcl	H_lemma:kroon	_
+22	.	.	Z	Z	_	3	punct	H_lemma:laekuma	_
+
+# text = Enim suurenesid võrreldes eelmise aasta sama ajaga aktsiisimaksude laekumised , teatas tolliameti pressiesindaja Aivar Pau .
+1	Enim	enim	U	U	Case=nom|Number=sg	2	nsubj	H_lemma:suurenema	_
+2	suurenesid	suurenema	V	V	Mood=indic|Number=pl|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+3	võrreldes	võrdlema	V	V	VerbType=ger	2	advcl	H_lemma:suurenema	_
+4	eelmise	eelmine	A	A	Case=gen|Number=sg	5	amod	H_lemma:aasta	_
+5	aasta	aasta	S	S	Case=gen|Number=sg	7	nmod	H_lemma:aeg	_
+6	sama	sama	P	P	Case=gen|Number=sg	7	det	H_lemma:aeg	_
+7	ajaga	aeg	S	S	Case=kom|Number=sg	3	obl	H_lemma:võrdlema	_
+8	aktsiisimaksude	aktsiisimaks	S	S	Case=gen|Number=pl	9	nmod	H_lemma:laekumine	_
+9	laekumised	laekumine	S	S	Case=nom|Number=pl	2	nsubj	H_lemma:suurenema	_
+10	,	,	Z	Z	_	11	punct	H_lemma:teatama	_
+11	teatas	teatama	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	2	conj	H_lemma:suurenema	_
+12	tolliameti	tolliamet	S	S	Case=gen|Number=sg	13	nmod	H_lemma:pressiesindaja	_
+13	pressiesindaja	pressiesindaja	S	S	Case=nom|Number=sg	11	nsubj	H_lemma:teatama	_
+14	Aivar	Aivar	H	H	Case=nom|Number=sg	13	appos	H_lemma:pressiesindaja	_
+15	Pau	Pau	H	H	Case=nom|Number=sg	14	flat	H_lemma:Aivar	_
+16	.	.	Z	Z	_	2	punct	H_lemma:suurenema	_
+
+# text = Kütuseaktsiisi laekumine on eelmise aasta jaanuarikuuga võrreldes suurenenud 30,4 protsendi võrra .
+1	Kütuseaktsiisi	kütuseaktsiis	S	S	Case=gen|Number=sg	2	nmod	H_lemma:laekumine	_
+2	laekumine	laekumine	S	S	Case=nom|Number=sg	8	nsubj	H_lemma:suurenema	_
+3	on	olema	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=pres|Voice=ps	8	aux	H_lemma:suurenema	_
+4	eelmise	eelmine	A	A	Case=gen|Number=sg	5	amod	H_lemma:aasta	_
+5	aasta	aasta	S	S	Case=gen|Number=sg	6	nmod	H_lemma:jaanuarikuu	_
+6	jaanuarikuuga	jaanuarikuu	S	S	Case=kom|Number=sg	7	obl	H_lemma:võrdlema	_
+7	võrreldes	võrdlema	V	V	VerbType=ger	8	advcl	H_lemma:suurenema	_
+8	suurenenud	suurenema	V	V	Mood=indic|Polarity=neg|Tense=impf|Voice=ps	0	root	_	_
+9	30,4	30,4	N	N	_	10	nummod	H_lemma:protsent	_
+10	protsendi	protsent	S	S	Case=gen|Number=sg	8	obl	H_lemma:suurenema	_
+11	võrra	võrra	K	K	AdpType=post	10	case	H_lemma:protsent	_
+12	.	.	Z	Z	_	8	punct	H_lemma:suurenema	_
+
+# text = Tänavu jaanuaris laekus seda 152,4 miljonit krooni , eelmisel aastal 116,8 miljonit krooni .
+1	Tänavu	tänavu	D	D	_	2	advmod	H_lemma:jaanuar	_
+2	jaanuaris	jaanuar	S	S	Case=in|Number=sg	3	obl	H_lemma:laekuma	_
+3	laekus	laekuma	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+4	seda	see	P	P	Case=part|Number=sg	3	nsubj	H_lemma:laekuma	_
+5	152,4	152,4	N	N	_	6	compound	H_lemma:miljon	_
+6	miljonit	miljon	N	N	Case=part|Number=sg	7	nummod	H_lemma:kroon	_
+7	krooni	kroon	S	S	Case=part|Number=sg	3	nsubj	H_lemma:laekuma	_
+8	,	,	Z	Z	_	13	punct	H_lemma:kroon	_
+9	eelmisel	eelmine	A	A	Case=ad|Number=sg	10	amod	H_lemma:aasta	_
+10	aastal	aasta	S	S	Case=ad|Number=sg	13	orphan	H_lemma:kroon	_
+11	116,8	116,8	N	N	_	12	compound	H_lemma:miljon	_
+12	miljonit	miljon	N	N	Case=part|Number=sg	13	nummod	H_lemma:kroon	_
+13	krooni	kroon	S	S	Case=part|Number=sg	3	conj	H_lemma:laekuma	_
+14	.	.	Z	Z	_	3	punct	H_lemma:laekuma	_
+
+# text = Tollistatistika põhjal suurenes jaanuaris enam diislikütuse sissevedu : võrreldes eelmise aasta jaanuariga 35,8 protsendi võrra ning kerge kütteõli sissevedu 5 protsendi võrra .
+1	Tollistatistika	tollistatistika	S	S	Case=gen|Number=sg	3	obl	H_lemma:suurenema	_
+2	põhjal	põhjal	K	K	AdpType=post	1	case	H_lemma:tollistatistika	_
+3	suurenes	suurenema	V	V	Mood=indic|Number=sg|Person=ps3|Polarity=af|Tense=impf|Voice=ps	0	root	_	_
+4	jaanuaris	jaanuar	S	S	Case=in|Number=sg	3	obl	H_lemma:suurenema	_
+5	enam	enam	D	D	_	3	advmod	H_lemma:suurenema	_
+6	diislikütuse	diislikütus	S	S	Case=gen|Number=sg	7	nmod	H_lemma:sissevedu	_
+7	sissevedu	sissevedu	S	S	Case=part|Number=sg	3	nsubj	H_lemma:suurenema	_
+8	:	:	Z	Z	_	9	punct	H_lemma:võrdlema	_
+9	võrreldes	võrdlema	V	V	VerbType=ger	3	advcl	H_lemma:suurenema	_
+10	eelmise	eelmine	A	A	Case=gen|Number=sg	11	amod	H_lemma:aasta	_
+11	aasta	aasta	S	S	Case=gen|Number=sg	12	nmod	H_lemma:jaanuar	_
+12	jaanuariga	jaanuar	S	S	Case=kom|Number=sg	9	obl	H_lemma:võrdlema	_
+13	35,8	35,8	N	N	_	14	nummod	H_lemma:protsent	_
+14	protsendi	protsent	S	S	Case=gen|Number=sg	9	obl	H_lemma:võrdlema	_
+15	võrra	võrra	K	K	AdpType=post	14	case	H_lemma:protsent	_
+16	ning	ning	J	J	_	19	cc	H_lemma:sissevedu	_
+17	kerge	kerge	A	A	Case=gen|Number=sg	18	amod	H_lemma:kütteõli	_
+18	kütteõli	kütteõli	S	S	Case=gen|Number=sg	19	nmod	H_lemma:sissevedu	_
+19	sissevedu	sissevedu	S	S	Case=nom|Number=sg	9	conj	H_lemma:võrdlema	_
+20	5	5	N	N	_	21	nummod	H_lemma:protsent	_
+21	protsendi	protsent	S	S	Case=gen|Number=sg	19	nmod	H_lemma:sissevedu	_
+22	võrra	võrra	K	K	AdpType=post	21	case	H_lemma:protsent	_
+23	.	.	Z	Z	_	3	punct	H_lemma:suurenema	_
+

@@ -66,6 +66,7 @@ class DbMethods:
                         , `obl_case2` text
                     
                         , `count` int
+                        , `count_all` int
                         );
                        """)
 
@@ -110,7 +111,8 @@ class DbMethods:
                               key[7],  # case2
                               key[8],  # verbform2
                               key[9],  # obl_case2
-                              collocations[key]['total']  # count
+                              collocations[key]['total'],  # count
+                              collocations[key]['total_all'],  # count
                               ))
 
         self._cursor.executemany(f"""
@@ -125,9 +127,10 @@ class DbMethods:
             , case2
             , verbform2
             , obl_case2
-            , count )
+            , count 
+            , count_all)
 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(`verb`
                 , `verb_compound` 
                 , `deprel1` 
@@ -139,7 +142,8 @@ class DbMethods:
                 , `verbform2` 
                 , `obl_case2` )
             DO UPDATE SET
-                `count` = `count` + excluded.`count`
+                `count` = `count` + excluded.`count`,
+                `count_all` = `count_all` + excluded.`count_all`
                 ;
         """, sql_colls)
 
@@ -156,8 +160,8 @@ class DbMethods:
 
     def index_fields(self):
         indexesQ = []
-        for field in list(self.key_fields) + ['count']:
-            direction = 'ASC' if field not in ['count'] else 'DESC'
+        for field in list(self.key_fields) + ['count', 'count_all']:
+            direction = 'ASC' if field not in ['count', 'count_all'] else 'DESC'
             indexesQ.append(f'CREATE INDEX IF NOT EXISTS "`{field}`" ON '
                             f' "{self._TABLE1_NAME}" ("`{field}`" {direction});')
         for q in indexesQ:
@@ -220,9 +224,11 @@ def extract_something(graph, collection_id, collocations):
             key = (v_lemma, verb_compound, '', '', '', '', '', '', '', '',)
             collocations = add_key_in_collocations(key, collocations)
             collocations[key]['total'] += 1
+            collocations[key]['total_all'] += 1
             # add to collacations
             continue
-        kids_with_required_data = collect_kids_data(graph, kids)
+        kids_with_required_data_dict = collect_kids_data(graph, kids)
+        kids_with_required_data = list(kids_with_required_data_dict.keys())
 
         #print(kids_with_required_data)
 
@@ -245,10 +251,14 @@ def extract_something(graph, collection_id, collocations):
                 )
                 collocations = add_key_in_collocations(key, collocations)
                 collocations[key]['total'] += 1
+                # TODO! correct number
+                collocations[key]['total_all'] += kids_with_required_data_dict[k1]
 
     return collocations,
 
 def collect_kids_data(graph, nodes_ids):
+    
+    spans_dict = {}
     dpath = graph.get_distances_matrix()
     spans = []
     for n in nodes_ids:
@@ -270,8 +280,12 @@ def collect_kids_data(graph, nodes_ids):
         obl_case_k = ','.join(sorted(list(set(obl_case_lemmas))))
         span = (deprel, case, verbform, obl_case_k)
         spans.append(span)
-    spans = list(set(spans))
-    return spans
+    for s in spans:
+        if s in spans_dict:
+            spans_dict[s] += 1
+        else:
+            spans_dict[s] = 1
+    return spans_dict
 
 
 
@@ -280,5 +294,5 @@ def collect_kids_data(graph, nodes_ids):
 
 def add_key_in_collocations(key, collocations):
     if key not in collocations:
-        collocations[key] = {'total': 0}
+        collocations[key] = {'total': 0, 'total_all': 0}
     return collocations

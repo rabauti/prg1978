@@ -76,7 +76,7 @@ class SyntaxGraph(BaseDiGraph):
             })
         return obl_data
 
-    def get_node_case(self, node_id):
+    def get_node_case(self, node_id, not_null=True):
         """
         https://github.com/EstSyntax/EstCG/ (käänded)
         """
@@ -100,7 +100,7 @@ class SyntaxGraph(BaseDiGraph):
                 'kom',  # kaasa#
             ):
                 return attr
-        # return '<käändumatu>'
+        if not_null: return '<puudub>'
         return None
 
     def get_node_number(self, node_id):

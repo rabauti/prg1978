@@ -237,7 +237,7 @@ def extract_something(graph, collection_id, collocations):
         
         v_lemma = graph.nodes[verb]['lemma']
         
-        print(v_lemma)
+        #print(v_lemma)
 
         # compound children
         n_compounds = ListUtils.list_intersection(kids, compound_nodes)
@@ -321,7 +321,7 @@ def extract_something(graph, collection_id, collocations):
                     
                 total_all = kids_with_required_data_dict[k1]['total'] * kids_with_required_data_dict[k2]['total']
                 
-                if k1 == k2:
+                if k1 == k2 and kids_with_required_data_dict[k1]['total'] > 1:
                     n = kids_with_required_data_dict[k1]['total']
                     total_all = n*n - (n*n/2 + n/2)
                 

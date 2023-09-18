@@ -283,12 +283,13 @@ def extract_something(graph, collection_id, collocations):
                         
                 total_all = kids_with_required_data_dict[k1]['total'] * kids_with_required_data_dict[k2]['total']
                 if k1 == k2:
-                    total_all -= math.factorial(kids_with_required_data_dict[k1]['total'])
+                    n = kids_with_required_data_dict[k1]['total']
+                    total_all = n*n - (n*n/2 + n/2)
                 collocations[key]['total'] += 1
                 # TODO! correct number
                 collocations[key]['total_all'] += total_all
-                collocations[key]['total_left'] = len(left)
-                collocations[key]['total_right'] = len(right)
+                collocations[key]['total_left'] += len(left)
+                collocations[key]['total_right'] += len(right)
 
     return collocations,
 

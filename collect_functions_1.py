@@ -58,7 +58,6 @@ class DbMethods:
         self._cursor.execute(f"""CREATE TABLE IF NOT EXISTS {self._TABLE1_NAME}
                         (`id` INTEGER PRIMARY KEY AUTOINCREMENT
                         , `verb` text
-                        , `verb_deprel` text
                         , `verb_compound` text
                         , `deprel1` text
                         , `case1` text
@@ -71,8 +70,9 @@ class DbMethods:
                     
                         , `count` int
                         , `count_all` int
-                        , `count_left` int
-                        , `count_right` int
+                        , `deprel1_before` int
+                        , `deprel2_before` int
+                        , `verb_before` int
                         );
                        """)
 
@@ -81,7 +81,6 @@ class DbMethods:
         self._cursor.execute(f"""CREATE UNIQUE INDEX IF NOT EXISTS {INDEXNAME}
           ON {self._TABLE1_NAME}(
                 `verb`
-                , `verb_deprel`
                 , `verb_compound` 
                 , `deprel1` 
                 , `case1` 
@@ -109,26 +108,25 @@ class DbMethods:
             # total = some of cases + opposite case
 
             sql_colls.append((key[0],  # verb
-                              key[1],  # verb_deprel
-                              key[2],  # verb_compound
-                              key[3],  # deprel1
-                              key[4],  # case1
-                              key[5],  # verbform1
-                              key[6],  # obl_case1
-                              key[7],  # deprel2
-                              key[8],  # case2
-                              key[9],  # verbform2
-                              key[10],  # obl_case2
+                              key[1],  # verb_compound
+                              key[2],  # deprel1
+                              key[3],  # case1
+                              key[4],  # verbform1
+                              key[5],  # obl_case1
+                              key[6],  # deprel2
+                              key[7],  # case2
+                              key[8],  # verbform2
+                              key[9],  # obl_case2
                               collocations[key]['total'],  # count
                               collocations[key]['total_all'],  # count
-                              collocations[key]['total_left'],  # count
-                              collocations[key]['total_right'],  # count
+                              collocations[key]['deprel1_before'],  # count
+                              collocations[key]['deprel2_before'],  # count
+                              collocations[key]['verb_before'],  # count
                               ))
 
         self._cursor.executemany(f"""
         INSERT INTO {self._TABLE1_NAME} (
             verb
-            , verb_deprel
             , verb_compound
             , deprel1
             , case1
@@ -140,12 +138,13 @@ class DbMethods:
             , obl_case2
             , count 
             , count_all
-            , count_left
-            , count_right)
+            , deprel1_before
+            , deprel2_before
+            , verb_before
+            )
 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(`verb`
-                , `verb_deprel`
                 , `verb_compound` 
                 , `deprel1` 
                 , `case1` 
@@ -158,8 +157,9 @@ class DbMethods:
             DO UPDATE SET
                 `count` = `count` + excluded.`count`,
                 `count_all` = `count_all` + excluded.`count_all`,
-                `count_left` = `count_left` + excluded.`count_left`,
-                `count_right` = `count_right` + excluded.`count_right`
+                `deprel1_before` = `deprel1_before` + excluded.`deprel1_before`,
+                `deprel2_before` = `deprel2_before` + excluded.`deprel2_before`,
+                `verb_before` = `verb_before` + excluded.`verb_before`
                 ;
         """, sql_colls)
 
@@ -176,8 +176,8 @@ class DbMethods:
 
     def index_fields(self):
         indexesQ = []
-        for field in list(self.key_fields) + ['count', 'count_all', 'count_left', 'count_right']:
-            direction = 'ASC' if field not in ['count', 'count_all', 'count_left', 'count_right'] else 'DESC'
+        for field in list(self.key_fields) + ['count', 'count_all', 'deprel1_before', 'deprel2_before', 'verb_before']:
+            direction = 'ASC' if field not in ['count', 'count_all', 'deprel1_before', 'deprel2_before', 'verb_before'] else 'DESC'
             indexesQ.append(f'CREATE INDEX IF NOT EXISTS "`{field}`" ON '
                             f' "{self._TABLE1_NAME}" ("`{field}`" {direction});')
         for q in indexesQ:
@@ -219,14 +219,25 @@ def extract_something(graph, collection_id, collocations):
 
 
         # do skip collocation if verb is "unusual"
-        #if not graph.is_verb_normal(verb):
-        #    continue
+        if do_ignore_verb(verb, graph):
+            continue
+        
+        v_deprel = graph.nodes[verb]['deprel']
+        # skip verb if verb deprel is 'aux'
+        if v_deprel == 'aux':
+            continue
+            
 
         # childnodes
         kids = [k for k in dpath[verb] if dpath[verb][k] == 1]
+        
+        # jätame vahele kui verbil on alluv aux
+        if 'aux' in [graph.nodes[k]['deprel'] for k in kids]:
+            continue
+        
         v_lemma = graph.nodes[verb]['lemma']
-        v_deprel = graph.nodes[verb]['deprel']
-        # print(v_lemma)
+        
+        print(v_lemma)
 
         # compound children
         n_compounds = ListUtils.list_intersection(kids, compound_nodes)
@@ -236,60 +247,92 @@ def extract_something(graph, collection_id, collocations):
         else:
             verb_compound = ', '.join([graph.nodes[n]['lemma'] for n in sorted(n_compounds) if n])
 
+        kids_with_required_data_dict = collect_kids_data(graph, kids)
+        kids_with_required_data = list(kids_with_required_data_dict.keys())
+        
+        
         # if obl_data is empty, there is no need to further check
-        if not len(kids):
-            # key = ( 'verb', 'verb_deprel', 'verb_compound', 'deprel1', 'case1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'verbform2', 'obl_case2')
-            key = (v_lemma, v_deprel, verb_compound, '', '', '', '', '', '', '', '',)
+        if not len(kids) or not len(kids_with_required_data):
+            # key = ( 'verb',  'verb_compound', 'deprel1', 'case1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'verbform2', 'obl_case2')
+            key = (v_lemma, verb_compound, '', '', '', '', '', '', '', '',)
             collocations = add_key_in_collocations(key, collocations)
             collocations[key]['total'] += 1
             collocations[key]['total_all'] += 1
-            collocations[key]['total_left'] = 0
-            collocations[key]['total_right'] = 0
+            collocations[key]['deprel1_before'] = 0
+            collocations[key]['deprel2_before'] = 0
+            collocations[key]['verb_before'] = 0
             # add to collacations
             continue
-        kids_with_required_data_dict = collect_kids_data(graph, kids)
-        kids_with_required_data = list(kids_with_required_data_dict.keys())
-
-        #print(kids_with_required_data)
 
         # collect all child dependencies
         for k1 in kids_with_required_data:
             for k2 in kids_with_required_data:
+                
                 (deprel1, case1, verbform1, obl_case1) = k1
                 (deprel2, case2, verbform2, obl_case2) = k2
-                key = (
-                    v_lemma,
-                    v_deprel,
-                    verb_compound,
-                    deprel1,
-                    case1,
-                    verbform1,
-                    obl_case1,
-                    deprel2,
-                    case2,
-                    verbform2,
-                    obl_case2,
-                )
-                collocations = add_key_in_collocations(key, collocations)
                 
-                left = []
-                right = []
-                
+                left = [] # deprel1 if first
+                right = [] # deprel2 is first
+                verb_before = 0
                 for k1_node_pos in kids_with_required_data_dict[k1]['position']:
+                    if k1_node_pos > verb:
+                        verb_before +=1
                     for k2_node_pos in kids_with_required_data_dict[k2]['position']:
                         if k1_node_pos == k2_node_pos: continue
-                        if k1_node_pos > k2_node_pos: left.append(k1_node_pos)
-                        if k1_node_pos < k2_node_pos: right.append(k1_node_pos)
-                        
+                        if k1_node_pos < k2_node_pos: left.append(k1_node_pos)
+                        if k1_node_pos > k2_node_pos: right.append(k1_node_pos)
+                
+                
+                
+                
+                if k1 == k2 and kids_with_required_data_dict[k1]['total'] == 1 and len(kids_with_required_data_dict)==1:
+                    
+                    key = (
+                        v_lemma,
+                        verb_compound,
+                        deprel1,
+                        case1,
+                        verbform1,
+                        obl_case1,
+                        '',
+                        '',
+                        '',
+                        '',
+                    )
+                    collocations = add_key_in_collocations(key, collocations)
+                    
+                else:
+                    
+                    key = (
+                        v_lemma,
+                        verb_compound,
+                        deprel1,
+                        case1,
+                        verbform1,
+                        obl_case1,
+                        deprel2,
+                        case2,
+                        verbform2,
+                        obl_case2,
+                    )
+                    collocations = add_key_in_collocations(key, collocations)
+                
+                
+                    
                 total_all = kids_with_required_data_dict[k1]['total'] * kids_with_required_data_dict[k2]['total']
+                
                 if k1 == k2:
                     n = kids_with_required_data_dict[k1]['total']
                     total_all = n*n - (n*n/2 + n/2)
+                
                 collocations[key]['total'] += 1
+                
+                
                 # TODO! correct number
                 collocations[key]['total_all'] += total_all
-                collocations[key]['total_left'] += len(left)
-                collocations[key]['total_right'] += len(right)
+                collocations[key]['deprel1_before'] += len(left)
+                collocations[key]['deprel2_before'] += len(right)
+                collocations[key]['verb_before'] = verb_before
 
     return collocations,
 
@@ -301,6 +344,10 @@ def collect_kids_data(graph, nodes_ids):
     #spans = []
     for n in nodes_ids:
         deprel = graph.nodes[n]['deprel']
+        
+        if deprel not in ('nsubj', 'obj', 'obl', 'xcomp', 'advcl', 'advmod', 'root'):
+            continue
+        
         case = graph.get_node_case(n)
         if deprel in ('xcomp', 'advcl') and graph.nodes[n]['verbform'] in ('ma', 'mast', 'mata', 'vat', 'maks', 'mas', 'da', 'des'):
             verbform = graph.nodes[n]['verbform']
@@ -317,7 +364,7 @@ def collect_kids_data(graph, nodes_ids):
                     obl_case_lemmas.append(graph.nodes[kid]['lemma'])
         obl_case_k = ','.join(sorted(list(set(obl_case_lemmas))))
         span = (deprel, case, verbform, obl_case_k)
-        #spans.append(span)
+
         if span in spans_dict:
             spans_dict[span]['total'] += 1
             spans_dict[span]['position'].append(n)
@@ -334,5 +381,32 @@ def collect_kids_data(graph, nodes_ids):
 
 def add_key_in_collocations(key, collocations):
     if key not in collocations:
-        collocations[key] = {'total': 0, 'total_all': 0, 'total_left': 0, 'total_right': 0}
+        collocations[key] = {'total': 0, 'total_all': 0, 'deprel1_before': 0, 'deprel2_before': 0, 'verb_before': 0}
     return collocations
+
+def do_ignore_verb(verb, graph):
+    """
+    jätame verbi vahele
+    """
+   
+    #kõik need vormid
+    if graph.nodes[verb]['verbform'] in ('ma', 'mast', 'mata', 'v', 'maks', 'mas', 'da', 'des'):
+        return True 
+   
+ 
+    feats = graph.nodes[verb]['feats'].keys()
+    
+    # käskiv
+    if 'imper' in feats: 
+        return True
+   
+    # kui on umbisikuline
+    if 'imps' in feats:
+        return True
+    
+    return False
+    
+
+   
+
+

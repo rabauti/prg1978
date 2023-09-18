@@ -1,5 +1,7 @@
 import sys
 import sqlite3
+import math
+
 from data_helpers.utils import ListUtils
 
 
@@ -269,19 +271,33 @@ def extract_something(graph, collection_id, collocations):
                     obl_case2,
                 )
                 collocations = add_key_in_collocations(key, collocations)
+                
+                left = []
+                right = []
+                
+                for k1_node_pos in kids_with_required_data_dict[k1]['position']:
+                    for k2_node_pos in kids_with_required_data_dict[k2]['position']:
+                        if k1_node_pos == k2_node_pos: continue
+                        if k1_node_pos > k2_node_pos: left.append(k1_node_pos)
+                        if k1_node_pos < k2_node_pos: right.append(k1_node_pos)
+                        
+                total_all = kids_with_required_data_dict[k1]['total'] * kids_with_required_data_dict[k2]['total']
+                if k1 == k2:
+                    total_all -= math.factorial(kids_with_required_data_dict[k1]['total'])
                 collocations[key]['total'] += 1
                 # TODO! correct number
-                collocations[key]['total_all'] += kids_with_required_data_dict[k1]
-                collocations[key]['total_left'] = 0
-                collocations[key]['total_right'] = 0
+                collocations[key]['total_all'] += total_all
+                collocations[key]['total_left'] = len(left)
+                collocations[key]['total_right'] = len(right)
 
     return collocations,
+
 
 def collect_kids_data(graph, nodes_ids):
     
     spans_dict = {}
     dpath = graph.get_distances_matrix()
-    spans = []
+    #spans = []
     for n in nodes_ids:
         deprel = graph.nodes[n]['deprel']
         case = graph.get_node_case(n)
@@ -300,12 +316,14 @@ def collect_kids_data(graph, nodes_ids):
                     obl_case_lemmas.append(graph.nodes[kid]['lemma'])
         obl_case_k = ','.join(sorted(list(set(obl_case_lemmas))))
         span = (deprel, case, verbform, obl_case_k)
-        spans.append(span)
-    for s in spans:
-        if s in spans_dict:
-            spans_dict[s] += 1
+        #spans.append(span)
+        if span in spans_dict:
+            spans_dict[span]['total'] += 1
+            spans_dict[span]['position'].append(n)
         else:
-            spans_dict[s] = 1
+            spans_dict[span] = {'total':1, 'position':[n]}
+        
+        
     return spans_dict
 
 

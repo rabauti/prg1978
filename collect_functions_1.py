@@ -282,9 +282,6 @@ def extract_something(graph, collection_id, collocations):
                         if k1_node_pos < k2_node_pos: left.append(k1_node_pos)
                         if k1_node_pos > k2_node_pos: right.append(k1_node_pos)
                 
-                
-                
-                
                 if k1 == k2 and kids_with_required_data_dict[k1]['total'] == 1 and len(kids_with_required_data_dict)==1:
                     
                     key = (
@@ -327,12 +324,12 @@ def extract_something(graph, collection_id, collocations):
                 
                 collocations[key]['total'] += 1
                 
-                
-                # TODO! correct number
+                # key = ( 'verb', 'verb_deprel', 'verb_compound', 'deprel1', 'case1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'verbform2', 'obl_case2')
+   
                 collocations[key]['total_all'] += total_all
                 collocations[key]['deprel1_before'] += len(left)
                 collocations[key]['deprel2_before'] += len(right)
-                collocations[key]['verb_before'] = verb_before
+                collocations[key]['verb_before'] += verb_before
 
     return collocations,
 

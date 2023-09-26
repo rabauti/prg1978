@@ -1,7 +1,9 @@
 import sys
 import sqlite3
 import math
-
+import numpy as np
+import statistics as st
+import pandas as pd
 from data_helpers.utils import ListUtils
 
 
@@ -188,7 +190,7 @@ def eprint(*args, **kwargs):
     print(*args, file=sys.stdout, **kwargs)
 
 
-def extract_something(graph, collection_id, collocations):
+def extract_something(graph, collection_id, collocations, verb_global_stat):
 
     # graph.draw_graph()
 
@@ -211,8 +213,6 @@ def extract_something(graph, collection_id, collocations):
 
     # iteratsioon üle verbide
     # kogume kokku compound järjestatud
-    # itereerime üle obl fraaside
-
 
     # key = ( 'verb', 'verb_deprel', 'verb_compound', 'deprel1', 'case1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'verbform2', 'obl_case2')
     for verb in verb_nodes:
@@ -250,9 +250,16 @@ def extract_something(graph, collection_id, collocations):
         kids_with_required_data_dict = collect_kids_data(graph, kids)
         kids_with_required_data = list(kids_with_required_data_dict.keys())
         
+        verb_global_key = (v_lemma, verb_compound, )
+        verb_global_stat = add_key_in_verb_total_stat(verb_global_key, verb_global_stat)
+        verb_global_stat[verb_global_key]['occurences'] += 1
         
         # if obl_data is empty, there is no need to further check
         if not len(kids) or not len(kids_with_required_data):
+            # verbi statistika
+            verb_global_stat[verb_global_key]['kids_total'].append(0)
+            verb_global_stat[verb_global_key]['kids_uniq_total'].append(0)
+            
             # key = ( 'verb',  'verb_compound', 'deprel1', 'case1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'verbform2', 'obl_case2')
             key = (v_lemma, verb_compound, '', '', '', '', '', '', '', '',)
             collocations = add_key_in_collocations(key, collocations)
@@ -264,8 +271,17 @@ def extract_something(graph, collection_id, collocations):
             # add to collacations
             continue
 
+        
+        
+        
         # collect all child dependencies
+        verb_stat_kids = []
+       
         for k1 in kids_with_required_data:
+            
+            for m in range(kids_with_required_data_dict[k1]['total']):
+                verb_stat_kids.append(k1[0])
+            
             for k2 in kids_with_required_data:
                 
                 (deprel1, case1, verbform1, obl_case1) = k1
@@ -330,8 +346,14 @@ def extract_something(graph, collection_id, collocations):
                 collocations[key]['deprel1_before'] += len(left)
                 collocations[key]['deprel2_before'] += len(right)
                 collocations[key]['verb_before'] += verb_before
+    
+        # unikaalsed (filtreeritud) lapsed
+        verb_global_stat[verb_global_key]['kids_uniq_total'].append(len(list(set(verb_stat_kids))))
 
-    return collocations,
+        # koik (filtreeritud) lapsed
+        verb_global_stat[verb_global_key]['kids_total'].append(len(verb_stat_kids))
+    
+    return collocations, verb_global_stat,
 
 
 def collect_kids_data(graph, nodes_ids):
@@ -350,6 +372,10 @@ def collect_kids_data(graph, nodes_ids):
             verbform = graph.nodes[n]['verbform']
         else:
             verbform = ''
+        # advcl ainult siis kui on mõni vorm olemas
+        
+        if deprel == 'advcl' and verbform == '':
+            continue
 
         # obl puhul korjame kokku kõik alluvad kaassõnad
 
@@ -372,18 +398,21 @@ def collect_kids_data(graph, nodes_ids):
     return spans_dict
 
 
-
-
-
-
 def add_key_in_collocations(key, collocations):
     if key not in collocations:
         collocations[key] = {'total': 0, 'total_all': 0, 'deprel1_before': 0, 'deprel2_before': 0, 'verb_before': 0}
     return collocations
 
+
+def add_key_in_verb_total_stat(key, verb_total_stat):
+    if key not in verb_total_stat:
+        verb_total_stat[key] = {'occurences': 0, 'kids_total': [], 'kids_uniq_total': []}
+    return verb_total_stat
+
+
 def do_ignore_verb(verb, graph):
     """
-    jätame verbi vahele
+    conditions when verb is ignored
     """
    
     #kõik need vormid
@@ -402,8 +431,51 @@ def do_ignore_verb(verb, graph):
         return True
     
     return False
-    
 
-   
-
-
+def verb_stat_to_csv(verbs_global_stat, filename):
+    data = []
+    # verb_total_stat[key] = {'occurences': 0, 'kids_total': [], 'kids_uniq_total': []}
+    for (lemma, compound,) in verbs_global_stat:
+       
+        arr_kids = verbs_global_stat[(lemma, compound,)]['kids_total']
+        arr_uniq_kids = verbs_global_stat[(lemma, compound,)]['kids_uniq_total']
+        occurences = verbs_global_stat[(lemma, compound,)]['occurences']
+        mean_kids = np.mean(arr_kids)
+        mean_kids_uniq = np.mean(arr_uniq_kids)
+        median_kids = np.median(arr_kids)
+        median_kids_uniq = np.median(arr_uniq_kids)
+        min_kids = np.min(arr_kids)
+        min_kids_uniq = np.min(arr_uniq_kids)
+        max_kids = np.max(arr_kids)
+        max_kids_uniq = np.max(arr_uniq_kids)
+        # mode_kids = "%s" % st.mode(arr_kids)
+        # mode_kids_uniq = "%s" % st.mode(arr_uniq_kids)                    
+        data.append( (lemma, 
+                       compound, 
+                       occurences, 
+                       mean_kids, 
+                       mean_kids_uniq, 
+                       median_kids,
+                       median_kids_uniq,
+                       min_kids,
+                       min_kids_uniq,
+                       max_kids,
+                       max_kids_uniq,
+ 
+                      )  )
+    df = pd.DataFrame(data, columns=[
+        'lemma', 
+        'compound', 
+        'occurences', 
+        'mean_kids', 
+        'mean_kids_uniq', 
+        'median_kids',
+        'median_kids_uniq',
+        'min_kids',
+        'min_kids_uniq',
+        'max_kids',
+        'max_kids_uniq',
+        ])
+    df = df.sort_values(['occurences', 'lemma', 'compound'], ascending=[False, True, True])
+    df.to_csv(filename, index=None)
+    print('Verb stat saved to ', filename)

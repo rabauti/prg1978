@@ -184,6 +184,9 @@ class DbMethods:
                             f' "{self._TABLE1_NAME}" ("`{field}`" {direction});')
         for q in indexesQ:
             self._cursor.execute(q)
+            
+    def dataframe_to_table(dataframe):
+        print('implement me')
 
 
 def eprint(*args, **kwargs):
@@ -419,7 +422,6 @@ def do_ignore_verb(verb, graph):
     if graph.nodes[verb]['verbform'] in ('ma', 'mast', 'mata', 'v', 'maks', 'mas', 'da', 'des'):
         return True 
    
- 
     feats = graph.nodes[verb]['feats'].keys()
     
     # käskiv
@@ -432,7 +434,7 @@ def do_ignore_verb(verb, graph):
     
     return False
 
-def verb_stat_to_csv(verbs_global_stat, filename):
+def verb_stat_to_df(verbs_global_stat, filename):
     data = []
     # verb_total_stat[key] = {'occurences': 0, 'kids_total': [], 'kids_uniq_total': []}
     for (lemma, compound,) in verbs_global_stat:
@@ -448,21 +450,31 @@ def verb_stat_to_csv(verbs_global_stat, filename):
         min_kids_uniq = np.min(arr_uniq_kids)
         max_kids = np.max(arr_kids)
         max_kids_uniq = np.max(arr_uniq_kids)
+        pstdev_kids = st.pstdev(arr_kids) if len(arr_kids)>1 else None 
+        pstdev_kids_uniq = st.pstdev(arr_uniq_kids) if len(arr_uniq_kids)>1 else None 
+        
+        stdev_kids = st.stdev(arr_kids) if len(arr_kids)>1 else None 
+        stdev_kids_uniq = st.stdev(arr_uniq_kids) if len(arr_uniq_kids)>1 else None 
+        
         # mode_kids = "%s" % st.mode(arr_kids)
         # mode_kids_uniq = "%s" % st.mode(arr_uniq_kids)                    
-        data.append( (lemma, 
-                       compound, 
-                       occurences, 
-                       mean_kids, 
-                       mean_kids_uniq, 
-                       median_kids,
-                       median_kids_uniq,
-                       min_kids,
-                       min_kids_uniq,
-                       max_kids,
-                       max_kids_uniq,
- 
-                      )  )
+        data.append( (
+            lemma, 
+            compound, 
+            occurences, 
+            mean_kids, 
+            mean_kids_uniq, 
+            median_kids,
+            median_kids_uniq,
+            min_kids,
+            min_kids_uniq,
+            max_kids,
+            max_kids_uniq,
+            stdev_kids,
+            stdev_kids_uniq,
+            pstdev_kids,
+            pstdev_kids_uniq,
+        )  )
     df = pd.DataFrame(data, columns=[
         'lemma', 
         'compound', 
@@ -475,7 +487,20 @@ def verb_stat_to_csv(verbs_global_stat, filename):
         'min_kids_uniq',
         'max_kids',
         'max_kids_uniq',
+        'stdev_kids',
+        'stdev_kids_uniq',
+        'pstdev_kids',
+        'pstdev_kids_uniq',
         ])
+    
+    
     df = df.sort_values(['occurences', 'lemma', 'compound'], ascending=[False, True, True])
+    for col in df.columns[2:]:
+        df[col] = df[col].round(2)
     df.to_csv(filename, index=None)
+    
+    #df.to_sql(name='verbs_global_stat', con=engine)
+    
     print('Verb stat saved to ', filename)
+    
+    return df

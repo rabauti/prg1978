@@ -367,7 +367,7 @@ def collect_kids_data(graph, nodes_ids):
     for n in nodes_ids:
         deprel = graph.nodes[n]['deprel']
         
-        if deprel not in ('nsubj', 'obj', 'obl', 'xcomp', 'advcl', 'advmod', 'root'):
+        if deprel not in ('nsubj', 'obj', 'obl', 'xcomp', 'advcl', 'advmod', 'root', 'ccomp'):
             continue
         
         case = graph.get_node_case(n)

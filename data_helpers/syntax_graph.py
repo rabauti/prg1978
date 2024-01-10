@@ -51,7 +51,7 @@ class SyntaxGraph(BaseDiGraph):
                     data['id'],
                     id=data['id'],
                     lemma=data['lemma'],
-                    pos=data['upostag'],
+                    POS=data['upostag'],
                     deprel=data['deprel'],
                     form=data['form'],
                     feats=data['feats'],

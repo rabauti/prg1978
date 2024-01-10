@@ -204,7 +204,7 @@ def extract_something(graph, collection_id, collocations, verb_global_stat):
     # 2. collect verbs, compounds node ids
 
     # verb nodes
-    verb_nodes = graph.get_nodes_by_attributes(attrname='pos', attrvalue='V')
+    verb_nodes = graph.get_nodes_by_attributes(attrname='POS', attrvalue='V')
     # print ('verb_nodes', verb_nodes)
 
     # compound:prt
@@ -386,7 +386,7 @@ def collect_kids_data(graph, nodes_ids):
         if deprel in 'obl':
             obl_kids = [k for k in dpath[n] if dpath[n][k] == 1]
             for kid in obl_kids:
-                if (graph.nodes[kid]['deprel'], graph.nodes[kid]['pos'], ) == ('case', 'K', ):
+                if (graph.nodes[kid]['deprel'], graph.nodes[kid]['POS'], ) == ('case', 'K', ):
                     obl_case_lemmas.append(graph.nodes[kid]['lemma'])
         obl_case_k = ','.join(sorted(list(set(obl_case_lemmas))))
         span = (deprel, case, verbform, obl_case_k)

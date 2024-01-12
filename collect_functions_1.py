@@ -24,13 +24,14 @@ class DbMethods:
         'verb_compound',
         'deprel1',
         'case1',
+        'advtype1',  #from HJK table
         'verbform1',
         'obl_case1',
         'deprel2',
         'case2',
+        'advtype2',  ##from HJK table
         'verbform2',
         'obl_case2',
-
       )
 
     def __init__(self, db_file_name, table1_name, table2_name):
@@ -63,10 +64,12 @@ class DbMethods:
                         , `verb_compound` text
                         , `deprel1` text
                         , `case1` text
+                        , `advtype1` text
                         , `verbform1` text
                         , `obl_case1` text
                         , `deprel2` text
                         , `case2` text
+                        , `advtype2` text
                         , `verbform2` text
                         , `obl_case2` text
                     
@@ -85,11 +88,13 @@ class DbMethods:
                 `verb`
                 , `verb_compound` 
                 , `deprel1` 
-                , `case1` 
+                , `case1`
+                , `advtype1`
                 , `verbform1` 
                 , `obl_case1` 
                 , `deprel2` 
-                , `case2` 
+                , `case2`
+                , `advtype2`
                 , `verbform2` 
                 , `obl_case2` 
               );
@@ -113,12 +118,14 @@ class DbMethods:
                               key[1],  # verb_compound
                               key[2],  # deprel1
                               key[3],  # case1
-                              key[4],  # verbform1
-                              key[5],  # obl_case1
-                              key[6],  # deprel2
-                              key[7],  # case2
-                              key[8],  # verbform2
-                              key[9],  # obl_case2
+                              key[4],  # advtype1
+                              key[5],  # verbform1
+                              key[6],  # obl_case1
+                              key[7],  # deprel2
+                              key[8],  # case2
+                              key[9],  # advtype2
+                              key[10],  # verbform2
+                              key[11],  # obl_case2
                               collocations[key]['total'],  # count
                               collocations[key]['total_all'],  # count
                               collocations[key]['deprel1_before'],  # count
@@ -132,10 +139,12 @@ class DbMethods:
             , verb_compound
             , deprel1
             , case1
+            , advtype1
             , verbform1
             , obl_case1
             , deprel2
             , case2
+            , advtype2
             , verbform2
             , obl_case2
             , count 
@@ -145,15 +154,17 @@ class DbMethods:
             , verb_before
             )
 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(`verb`
                 , `verb_compound` 
                 , `deprel1` 
                 , `case1` 
+                , `advtype1` 
                 , `verbform1` 
                 , `obl_case1` 
                 , `deprel2` 
                 , `case2` 
+                , `advtype2` 
                 , `verbform2` 
                 , `obl_case2` )
             DO UPDATE SET
@@ -193,179 +204,31 @@ def eprint(*args, **kwargs):
     print(*args, file=sys.stdout, **kwargs)
 
 
-def extract_something(graph, collection_id, collocations, verb_global_stat):
+def make_advtypes_dict_from_tsv(tsv_file_name):
+    advtypes_df = pd.read_csv(tsv_file_name, sep='\t', usecols=('verb', 'verb_compound', 'obl_root', 'obl_case', 'obl_k', 'advtype', 'count'))
+    advtypes_df.fillna("",inplace=True)
+    # sort smaller count values first, then larger count values will owervrite small count values
+    # otse df-st otsimine osutus aeglaseks, paneme andmed dictionary-sse
+    # searching values from dataframe was too slow
+    # dataframe was transformed to a dictionary
 
-    # graph.draw_graph()
-
-    # matrix for node distances
-    dpath = graph.get_distances_matrix()
-
-    # ---
-    # 2. collect verbs, compounds node ids
-
-    # verb nodes
-    verb_nodes = graph.get_nodes_by_attributes(attrname='POS', attrvalue='V')
-    # print ('verb_nodes', verb_nodes)
-
-    # compound:prt
-    compound_nodes = graph.get_nodes_by_attributes(attrname='deprel', attrvalue='compound:prt')
-
-    # ---
-    # 3. collect obls
-    obl_nodes = graph.get_nodes_by_attributes(attrname='deprel', attrvalue='obl')
-
-    # iteratsioon üle verbide
-    # kogume kokku compound järjestatud
-
-    # key = ( 'verb', 'verb_deprel', 'verb_compound', 'deprel1', 'case1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'verbform2', 'obl_case2')
-    for verb in verb_nodes:
-
-
-        # do skip collocation if verb is "unusual"
-        if do_ignore_verb(verb, graph):
-            continue
-        
-        v_deprel = graph.nodes[verb]['deprel']
-        # skip verb if verb deprel is 'aux'
-        if v_deprel == 'aux':
-            continue
-            
-
-        # childnodes
-        kids = [k for k in dpath[verb] if dpath[verb][k] == 1]
-        
-        # jätame vahele kui verbil on alluv aux
-        if 'aux' in [graph.nodes[k]['deprel'] for k in kids]:
-            continue
-        
-        v_lemma = graph.nodes[verb]['lemma']
-        
-        #print(v_lemma)
-
-        # compound children
-        n_compounds = ListUtils.list_intersection(kids, compound_nodes)
-        if not len(n_compounds):
-            verb_compound = ''
-            n_compounds.append(None)
-        else:
-            verb_compound = ', '.join([graph.nodes[n]['lemma'] for n in sorted(n_compounds) if n])
-
-        kids_with_required_data_dict = collect_kids_data(graph, kids)
-        kids_with_required_data = list(kids_with_required_data_dict.keys())
-        
-        verb_global_key = (v_lemma, verb_compound, )
-        verb_global_stat = add_key_in_verb_total_stat(verb_global_key, verb_global_stat)
-        verb_global_stat[verb_global_key]['occurences'] += 1
-        
-        # if obl_data is empty, there is no need to further check
-        if not len(kids) or not len(kids_with_required_data):
-            # verbi statistika
-            verb_global_stat[verb_global_key]['kids_total'].append(0)
-            verb_global_stat[verb_global_key]['kids_uniq_total'].append(0)
-            
-            # key = ( 'verb',  'verb_compound', 'deprel1', 'case1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'verbform2', 'obl_case2')
-            key = (v_lemma, verb_compound, '', '', '', '', '', '', '', '',)
-            collocations = add_key_in_collocations(key, collocations)
-            collocations[key]['total'] += 1
-            collocations[key]['total_all'] += 1
-            collocations[key]['deprel1_before'] = 0
-            collocations[key]['deprel2_before'] = 0
-            collocations[key]['verb_before'] = 0
-            # add to collacations
-            continue
-
-        
-        
-        
-        # collect all child dependencies
-        verb_stat_kids = []
-       
-        for k1 in kids_with_required_data:
-            
-            for m in range(kids_with_required_data_dict[k1]['total']):
-                verb_stat_kids.append(k1[0])
-            
-            for k2 in kids_with_required_data:
-                
-                (deprel1, case1, verbform1, obl_case1) = k1
-                (deprel2, case2, verbform2, obl_case2) = k2
-                
-                left = [] # deprel1 if first
-                right = [] # deprel2 is first
-                verb_before = 0
-                for k1_node_pos in kids_with_required_data_dict[k1]['position']:
-                    if k1_node_pos > verb:
-                        verb_before +=1
-                    for k2_node_pos in kids_with_required_data_dict[k2]['position']:
-                        if k1_node_pos == k2_node_pos: continue
-                        if k1_node_pos < k2_node_pos: left.append(k1_node_pos)
-                        if k1_node_pos > k2_node_pos: right.append(k1_node_pos)
-                
-                if k1 == k2 and kids_with_required_data_dict[k1]['total'] == 1 and len(kids_with_required_data_dict)==1:
-                    
-                    key = (
-                        v_lemma,
-                        verb_compound,
-                        deprel1,
-                        case1,
-                        verbform1,
-                        obl_case1,
-                        '',
-                        '',
-                        '',
-                        '',
-                    )
-                    collocations = add_key_in_collocations(key, collocations)
-                    
-                else:
-                    
-                    key = (
-                        v_lemma,
-                        verb_compound,
-                        deprel1,
-                        case1,
-                        verbform1,
-                        obl_case1,
-                        deprel2,
-                        case2,
-                        verbform2,
-                        obl_case2,
-                    )
-                    collocations = add_key_in_collocations(key, collocations)
-                
-                
-                    
-                total_all = kids_with_required_data_dict[k1]['total'] * kids_with_required_data_dict[k2]['total']
-                
-                if k1 == k2 and kids_with_required_data_dict[k1]['total'] > 1:
-                    n = kids_with_required_data_dict[k1]['total']
-                    total_all = n*n - (n*n/2 + n/2)
-                
-                collocations[key]['total'] += 1
-                
-                # key = ( 'verb', 'verb_deprel', 'verb_compound', 'deprel1', 'case1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'verbform2', 'obl_case2')
-   
-                collocations[key]['total_all'] += total_all
-                collocations[key]['deprel1_before'] += len(left)
-                collocations[key]['deprel2_before'] += len(right)
-                collocations[key]['verb_before'] += verb_before
+    advtypes_df = advtypes_df.sort_values(['count','advtype'], ascending=[False, False])
+    advtypes_dict = {}
+    # key is ('verb', 'verb_compound', 'obl_root', 'obl_case', 'obl_k',) value is advtype
+    for i in range(advtypes_df.shape[0]):
+        key = [ advtypes_df[f][i] for f in ('verb', 'verb_compound', 'obl_root', 'obl_case', 'obl_k',)]
+        advtypes_dict[tuple(key)] =  advtypes_df['advtype'][i]
     
-        # unikaalsed (filtreeritud) lapsed
-        verb_global_stat[verb_global_key]['kids_uniq_total'].append(len(list(set(verb_stat_kids))))
+    return advtypes_dict
 
-        # koik (filtreeritud) lapsed
-        verb_global_stat[verb_global_key]['kids_total'].append(len(verb_stat_kids))
-    
-    return collocations, verb_global_stat,
-
-
-def collect_kids_data(graph, nodes_ids):
+def collect_kids_data(graph, nodes_ids, verb_data, advtypes_dict):
     
     spans_dict = {}
     dpath = graph.get_distances_matrix()
     #spans = []
     for n in nodes_ids:
         deprel = graph.nodes[n]['deprel']
+        lemma = graph.nodes[n]['lemma']
         
         if deprel not in ('nsubj', 'obj', 'obl', 'xcomp', 'advcl', 'advmod', 'root', 'ccomp'):
             continue
@@ -389,8 +252,19 @@ def collect_kids_data(graph, nodes_ids):
                 if (graph.nodes[kid]['deprel'], graph.nodes[kid]['POS'], ) == ('case', 'K', ):
                     obl_case_lemmas.append(graph.nodes[kid]['lemma'])
         obl_case_k = ','.join(sorted(list(set(obl_case_lemmas))))
-        span = (deprel, case, verbform, obl_case_k)
-
+        advtype = ''
+       
+        # add advtype based on advtypes_df data
+        if deprel in 'obl':
+            # make search in table to find the matching advtype
+            advtype = ''
+            # ('verb', 'verb_compound', 'obl_root', 'obl_case', 'obl_k',)]
+            advtype_key = (verb_data['lemma'], verb_data['compound'], lemma, case, obl_case_k, )
+            if advtype_key in advtypes_dict:
+                advtype = advtypes_dict[advtype_key]
+           
+        span = (deprel, case, advtype, verbform, obl_case_k)
+        
         if span in spans_dict:
             spans_dict[span]['total'] += 1
             spans_dict[span]['position'].append(n)
@@ -399,6 +273,178 @@ def collect_kids_data(graph, nodes_ids):
         
         
     return spans_dict
+
+def extract_something(graph, collection_id, collocations, verb_global_stat, advtypes_dict):
+
+    # graph.draw_graph()
+
+    # matrix for node distances
+    dpath = graph.get_distances_matrix()
+
+    # ---
+    # 2. collect verbs, compounds node ids
+
+    # verb nodes
+    verb_nodes = graph.get_nodes_by_attributes(attrname='POS', attrvalue='V')
+    # print ('verb_nodes', verb_nodes)
+
+    # compound:prt
+    compound_nodes = graph.get_nodes_by_attributes(attrname='deprel', attrvalue='compound:prt')
+
+    # ---
+    # 3. collect obls
+    obl_nodes = graph.get_nodes_by_attributes(attrname='deprel', attrvalue='obl')
+
+    # iterate over all verbs
+    
+
+    # key = ( 'verb', 'verb_deprel', 'verb_compound', 'deprel1', 'case1', 'advtype1',  'verbform1', 'obl_case1', 'deprel2', 'case2', 'advtype2', 'verbform2', 'obl_case2')
+    for verb in verb_nodes:
+
+        # do skip collocation if verb is "unusual"
+        if do_ignore_verb(verb, graph):
+            continue
+        
+        v_deprel = graph.nodes[verb]['deprel']
+        
+        # skip verb if verb deprel is 'aux'
+        # TODO: add comment why we skip such verbs
+        if v_deprel == 'aux':
+            continue
+            
+
+        # childnodes
+        kids = [k for k in dpath[verb] if dpath[verb][k] == 1]
+        
+        # skip verb if verb has kid with deprel=aux
+        # TODO: add comment why we skip such verbs
+        if 'aux' in [graph.nodes[k]['deprel'] for k in kids]:
+            continue
+        
+        v_lemma = graph.nodes[verb]['lemma']
+        
+        #print(v_lemma)
+
+        # collect ordered verb compounds
+        n_compounds = ListUtils.list_intersection(kids, compound_nodes)
+        if not len(n_compounds):
+            verb_compound = ''
+            n_compounds.append(None)
+        else:
+            verb_compound = ', '.join([graph.nodes[n]['lemma'] for n in sorted(n_compounds) if n])
+
+        kids_with_required_data_dict = collect_kids_data(graph=graph, nodes_ids=kids, verb_data={'lemma':v_lemma, 'compound': verb_compound }, advtypes_dict=advtypes_dict)
+        kids_with_required_data = list(kids_with_required_data_dict.keys())
+        
+        verb_global_key = (v_lemma, verb_compound, )
+        verb_global_stat = add_key_in_verb_total_stat(verb_global_key, verb_global_stat)
+        verb_global_stat[verb_global_key]['occurences'] += 1
+        
+        # if obl_data is empty, there is no need to further check
+        if not len(kids) or not len(kids_with_required_data):
+            # verbi statistika
+            verb_global_stat[verb_global_key]['kids_total'].append(0)
+            verb_global_stat[verb_global_key]['kids_uniq_total'].append(0)
+            
+            # key = ( 'verb',  'verb_compound', 'deprel1', 'case1', 'advtype1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'advtype2', 'verbform2', 'obl_case2')
+            key = (v_lemma, verb_compound, '', '', '', '', '', '', '', '', '', '',)
+            collocations = add_key_in_collocations(key, collocations)
+            collocations[key]['total'] += 1
+            collocations[key]['total_all'] += 1
+            collocations[key]['deprel1_before'] = 0
+            collocations[key]['deprel2_before'] = 0
+            collocations[key]['verb_before'] = 0
+            # add to collacations
+            continue
+
+        
+        
+        
+        # collect all child dependencies
+        verb_stat_kids = []
+       
+        for k1 in kids_with_required_data:
+            
+            for m in range(kids_with_required_data_dict[k1]['total']):
+                verb_stat_kids.append(k1[0])
+            
+            for k2 in kids_with_required_data:
+                
+                (deprel1, case1, advtype1, verbform1, obl_case1) = k1
+                (deprel2, case2, advtype2, verbform2, obl_case2) = k2
+                
+                left = [] # deprel1 if first
+                right = [] # deprel2 is first
+                verb_before = 0
+                for k1_node_pos in kids_with_required_data_dict[k1]['position']:
+                    if k1_node_pos > verb:
+                        verb_before +=1
+                    for k2_node_pos in kids_with_required_data_dict[k2]['position']:
+                        if k1_node_pos == k2_node_pos: continue
+                        if k1_node_pos < k2_node_pos: left.append(k1_node_pos)
+                        if k1_node_pos > k2_node_pos: right.append(k1_node_pos)
+                
+                if k1 == k2 and kids_with_required_data_dict[k1]['total'] == 1 and len(kids_with_required_data_dict)==1:
+                    
+                    key = (
+                        v_lemma,
+                        verb_compound,
+                        deprel1,
+                        case1,
+                        advtype1,
+                        verbform1,
+                        obl_case1,
+                        '',
+                        '',
+                        '',
+                        '',
+                        '',
+                    )
+                    collocations = add_key_in_collocations(key, collocations)
+                    
+                else:
+                    
+                    key = (
+                        v_lemma,
+                        verb_compound,
+                        deprel1,
+                        case1,
+                        advtype1,
+                        verbform1,
+                        obl_case1,
+                        deprel2,
+                        case2,
+                        advtype2,
+                        verbform2,
+                        obl_case2,
+                    )
+                    collocations = add_key_in_collocations(key, collocations)
+                
+                
+                    
+                total_all = kids_with_required_data_dict[k1]['total'] * kids_with_required_data_dict[k2]['total']
+                
+                if k1 == k2 and kids_with_required_data_dict[k1]['total'] > 1:
+                    n = kids_with_required_data_dict[k1]['total']
+                    total_all = n*n - (n*n/2 + n/2)
+                
+                collocations[key]['total'] += 1
+                
+                # key = ( 'verb', 'verb_deprel', 'verb_compound', 'deprel1', 'case1', 'advtype1', 'verbform1', 'obl_case1', 'deprel2', 'case2', 'advtype2', 'verbform2', 'obl_case2')
+   
+                collocations[key]['total_all'] += total_all
+                collocations[key]['deprel1_before'] += len(left)
+                collocations[key]['deprel2_before'] += len(right)
+                collocations[key]['verb_before'] += verb_before
+    
+        # unikaalsed (filtreeritud) lapsed
+        verb_global_stat[verb_global_key]['kids_uniq_total'].append(len(list(set(verb_stat_kids))))
+
+        # koik (filtreeritud) lapsed
+        verb_global_stat[verb_global_key]['kids_total'].append(len(verb_stat_kids))
+    
+    return collocations, verb_global_stat,
+
 
 
 def add_key_in_collocations(key, collocations):

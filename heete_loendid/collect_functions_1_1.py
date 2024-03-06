@@ -248,7 +248,6 @@ def extract_something(graph, collection_id, collocations, verb_global_stat):
 
         # TODO
         # do skip collocation if verb is "unusual"
-        # TODO modify conditions
         if do_ignore_verb(verb, graph):
             continue
 

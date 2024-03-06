@@ -67,9 +67,20 @@ class DbMethods:
                         (`id` INTEGER PRIMARY KEY AUTOINCREMENT,
                         {key_fields_str},
                         `total` int
-                       
                         );
              """
+        )
+
+        # loome näidete faili
+        self._cursor.execute(
+            f"""CREATE TABLE {self._TABLE2_NAME}
+            (row_id integer
+            , sentence_id integer
+            , verb text
+            , sentence_part text
+            , sentence_text text
+            , verb_id integer);
+            """
         )
 
         # add uniq_index on all fields beside id and total
@@ -92,21 +103,42 @@ class DbMethods:
 
     def save_coll_to_db(self, collocations, lastcollection):
         sql_colls = []
-        # sql_examples = []
+        sql_examples = []
         insert_fields_str = ", ".join([f"`{f['id']}`" for f in self.key_fields])
+
         for key in collocations.keys():
             # total = some of cases + opposite case
 
             sql_colls.append(
                 (
                     key[0],  # verb
-                    key[1],  # verb_compound
-                    key[2],  # deprel1
-                    key[3],  # case1
-                    key[4],  # advtype1
+                    key[1],  # verb_person
+                    key[2],  # nsubj
+                    key[3],  # nsubj_case
+                    key[4],  # xcomp
+                    key[5],  # verb_is_aux
+                    key[6],  # has_obl_ad
                     collocations[key]["total"],
                 )
             )
+
+            for example in collocations[key]["examples"]:
+                sql_examples.append(
+                    (
+                        key[0],  # verb
+                        key[1],  # verb_person
+                        key[2],  # nsubj
+                        key[3],  # nsubj_case
+                        key[4],  # xcomp
+                        key[5],  # verb_is_aux
+                        key[6],  # has_obl_ad
+                        example[0],  # sentence_id
+                        example[1],  # verb
+                        example[2],  # verb_id
+                        example[3],  # sentence_part
+                        example[4],  # sentence_text
+                    )
+                )
 
         self._cursor.executemany(
             f"""
@@ -115,13 +147,30 @@ class DbMethods:
             total
             )
 
-            VALUES (?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT({insert_fields_str})
             DO UPDATE SET
                 `total` = `total` + excluded.`total`
         ;
         """,
             sql_colls,
+        )
+
+        example_where_str = " AND ".join([f"`{f['id']}` = ? " for f in self.key_fields])
+        # print(example_where_str)
+        self._cursor.executemany(
+            f"""INSERT INTO {self._TABLE2_NAME} (
+            `row_id`,
+            `sentence_id`,
+            `verb`,
+            `verb_id`,
+            `sentence_part`,
+            `sentence_text`
+            )
+            VALUES (
+                (SELECT `id` FROM {self._TABLE1_NAME} WHERE {example_where_str}),
+                ?, ?, ?, ?, ?);""",
+            sql_examples,
         )
 
         self._cursor.execute(
@@ -200,7 +249,6 @@ def extract_something(graph, collection_id, collocations, verb_global_stat):
         # TODO
         # do skip collocation if verb is "unusual"
         # TODO modify conditions
-        # aux??
         if do_ignore_verb(verb, graph):
             continue
 
@@ -208,19 +256,19 @@ def extract_something(graph, collection_id, collocations, verb_global_stat):
 
         verb_lemma = graph.nodes[verb]["lemma"]
         verb_person = graph.get_node_person(verb)
+        if not verb_person:
+            verb_person = ""
 
+        verb_is_aux = 0
+
+        # verb_is_aux  verb's deprel==aux or verb has kid with deprel == aux
         # skip verb if verb deprel is 'aux'
-        # TODO: add comment why we skip such verbs
-        # if v_deprel == "aux":
-        #     continue
+
+        if graph.nodes[verb]["deprel"] == "aux":
+            verb_is_aux = 1
 
         # childnodes
         kids = [k for k in dpath[verb] if dpath[verb][k] == 1]
-
-        # skip verb if verb has kid with deprel=aux
-        # TODO: add comment why we skip such verbs
-        # if "aux" in [graph.nodes[k]["deprel"] for k in kids]:
-        #    continue
 
         for nsubj in nsubj_nodes:
             # kui nsubj pole vahetu alluv, siis ei huvita
@@ -228,24 +276,24 @@ def extract_something(graph, collection_id, collocations, verb_global_stat):
                 continue
 
             nsubj_lemma = graph.nodes[nsubj]["lemma"]
+            nsubj_case = graph.get_node_case(nsubj)
 
             for xcomp in xcomp_nodes:
                 if xcomp not in kids:
                     continue
-                if graph.nodes[xcomp]["verbform"] not in ["da"]:
+                if "inf" not in graph.nodes[xcomp]["feats"].keys():
                     continue
 
                 xcomp_lemma = graph.nodes[xcomp]["lemma"]
 
-                has_obl_ad = False
+                has_obl_ad = 0
                 for obl in obl_nodes:
                     if obl not in kids:
                         continue
                     if "ad" not in graph.nodes[obl]["feats"].keys():
                         continue
-                    has_obl_ad = True
+                    has_obl_ad = 1
                     break
-                {"id": "verb", "type": "text"},
 
                 key = (
                     verb_lemma,
@@ -258,6 +306,19 @@ def extract_something(graph, collection_id, collocations, verb_global_stat):
                 )
                 collocations = add_key_in_collocations(key, collocations)
                 collocations[key]["total"] += 1
+                collocations[key]["examples"].append(
+                    (
+                        collection_id,
+                        verb_lemma,
+                        verb,
+                        " ".join(
+                            [graph.nodes[n]["form"] for n in sorted([verb] + kids)]
+                        ),
+                        " ".join(
+                            [graph.nodes[n]["form"] for n in sorted(graph.nodes) if n]
+                        ),
+                    )
+                )
                 continue
 
     return (
@@ -270,6 +331,7 @@ def add_key_in_collocations(key, collocations):
     if key not in collocations:
         collocations[key] = {
             "total": 0,
+            "examples": [],
         }
     return collocations
 

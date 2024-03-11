@@ -237,11 +237,10 @@ def extract_something(graph, collection_id, collocations, verb_global_stat):
                 continue
             if "ad" in graph.nodes[obl]["feats"].keys():
                 has_obl_ad_all = 1
-                continue
+                break
             if "all" in graph.nodes[obl]["feats"].keys():
                 has_obl_ad_all = 1
-                continue
-            break
+                break
 
         for csubj in csubj_nodes:
             # kui pole vahetu alluv

@@ -1,0 +1,10 @@
+lemma,compound,occurences,mean_kids,mean_kids_uniq,median_kids,median_kids_uniq,min_kids,min_kids_uniq,max_kids,max_kids_uniq,stdev_kids,stdev_kids_uniq,pstdev_kids,pstdev_kids_uniq
+andma,,6,4.0,3.17,4.0,3.0,3,2,5,4,0.89,0.75,0.82,0.69
+olema,,4,0.0,0.0,0.0,0.0,0,0,0,0,0.0,0.0,0.0,0.0
+andma,ära,1,3.0,3.0,3.0,3.0,3,3,3,3,,,,
+avalduma,,1,2.0,2.0,2.0,2.0,2,2,2,2,,,,
+erinema,,1,3.0,3.0,3.0,3.0,3,3,3,3,,,,
+kinnitama,,1,1.0,1.0,1.0,1.0,1,1,1,1,,,,
+oskama,,1,2.0,2.0,2.0,2.0,2,2,2,2,,,,
+tagama,,1,2.0,2.0,2.0,2.0,2,2,2,2,,,,
+usaldama,,1,2.0,2.0,2.0,2.0,2,2,2,2,,,,

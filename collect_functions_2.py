@@ -240,7 +240,7 @@ def eprint(*args, **kwargs):
 
 def extract_something(graph, collection_id, collocations, verb_global_stat):
 
-    # graph.draw_graph()
+    graph.draw_graph2()
 
     # matrix for node distances
     dpath = graph.get_distances_matrix()

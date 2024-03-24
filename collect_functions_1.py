@@ -342,7 +342,7 @@ def extract_something(
         for k1 in kids_with_required_data:
 
             for m in range(kids_with_required_data_dict[k1]["total"]):
-                verb_stat_kids.append(k1[0])
+                verb_stat_kids.append(k1)
 
             for k2 in kids_with_required_data:
 

@@ -398,17 +398,18 @@ def extract_something(
                         obl_case2,
                     )
                     collocations = add_key_in_collocations(key, collocations)
-                # erinevate võtmete (k1 ja k2) puhul loetakse kokku mitu paari saab moodustada
+                # erinevate võtmete (k1 ja k2) puhul loetakse kokku mitu
+                # paari saab moodustada
                 total_all = (
                     kids_with_required_data_dict[k1]["total"]
                     * kids_with_required_data_dict[k2]["total"]
                 )
-                # korduvate k1 ja k2 korral loetakse kokku nende tippude lihtesinemiste arv (summa), mitte
+                # korduvate k1 ja k2 korral loetakse kokku nende tippude
+                # lihtesinemiste arv (summa), mitte
                 # unikaalsete paaride arv
                 # kui on 3 obl gen tippu , siis on total_all 3
 
                 if k1 == k2 and kids_with_required_data_dict[k1]["total"] > 1:
-                    n = kids_with_required_data_dict[k1]["total"]
                     total_all = kids_with_required_data_dict[k1]["total"]
 
                 collocations[key]["total"] += 1

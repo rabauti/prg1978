@@ -182,10 +182,6 @@ def extract_something(
 
         verb_lemma = graph.nodes[verb]["lemma"]
 
-        # do skip collocation if verb is "unusual"
-        if do_ignore_verb(verb, graph):
-            continue
-
         verb_deprel = graph.nodes[verb]["deprel"]
         verb_feats = ",".join(graph.nodes[verb]["feats"])
 
@@ -264,20 +260,3 @@ def extract_something(
         {},
     )
 
-
-def do_ignore_verb(verb, graph):
-    """
-    conditions when verb is ignored
-    """
-
-    feats = graph.nodes[verb]["feats"].keys()
-
-    # käskiv
-    if "imper" in feats:
-        return True
-
-    # kui on umbisikuline
-    if "imps" in feats:
-        return True
-
-    return False

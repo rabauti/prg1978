@@ -253,7 +253,7 @@ def extract_something(
             )
 
             collocations.append(key)
-            if verb_lemma in ["kibelema", "plaanitsema"]:
+            if verb_lemma in ["spetsialiseeruma", "häälestuma"]:
                 graph.draw_graph2(
                     filename=f"img_ma/{collection_id}_{verb_lemma}_{verb_compound}_{sup_verb}.png",
                     highlight=[verb, ma_verb],

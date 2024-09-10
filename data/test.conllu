@@ -1,0 +1,44 @@
+# text = Üldhariduskool on Eestis kaheteistkümneklassiline.
+# sent_id = 0
+# sent_level = gümn
+# row_nr = 0
+1	Üldhariduskool	üld_haridus_kool	NOUN	S	Case=Nom|Number=Sing	4	nsubj:cop	_	start_char=0|end_char=14
+2	on	olema	AUX	V	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	cop	_	start_char=15|end_char=17
+3	Eestis	Eesti	PROPN	S	Case=Ine|Number=Sing	4	obl	_	start_char=18|end_char=24
+4	kaheteistkümneklassiline	kahe_teist_kümne_klassi=line	ADJ	A	Case=Nom|Degree=Pos|Number=Sing	0	root	_	start_char=25|end_char=49|SpaceAfter=No
+5	.	.	PUNCT	Z	_	4	punct	_	start_char=49|end_char=50|SpaceAfter=No
+
+# text = Lapsed lähevad kooli seitsmeaastaselt.
+# sent_id = 1
+# sent_level = gümn
+# row_nr = 1
+1	Lapsed	laps	NOUN	S	Case=Nom|Number=Plur	2	nsubj	_	start_char=0|end_char=6
+2	lähevad	minema	VERB	V	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	start_char=7|end_char=14
+3	kooli	kool	NOUN	S	Case=Gen|Number=Sing	2	obl	_	start_char=15|end_char=20
+4	seitsmeaastaselt	seitsmeaastane=lt	ADV	D	_	2	advmod	_	start_char=21|end_char=37|SpaceAfter=No
+5	.	.	PUNCT	Z	_	2	punct	_	start_char=37|end_char=38|SpaceAfter=No
+
+# text = Põhikool on kolmeastmeline, pärast üheksandat klassi võivad noored minna edasi õppima gümnaasiumi, kus õpitakse kolm aastat.
+# sent_id = 2
+# sent_level = gümn
+# row_nr = 2
+1	Põhikool	põhi_kool	NOUN	S	Case=Nom|Number=Sing	3	obl	_	start_char=0|end_char=8
+2	on	olema	AUX	V	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	cop	_	start_char=9|end_char=11
+3	kolmeastmeline	kolme_astmeline	ADJ	A	Case=Nom|Degree=Pos|Number=Sing	0	root	_	start_char=12|end_char=26|SpaceAfter=No
+4	,	,	PUNCT	Z	_	10	punct	_	start_char=26|end_char=27
+5	pärast	pärast	ADP	K	AdpType=Prep	7	case	_	start_char=28|end_char=34
+6	üheksandat	üheksas	ADJ	N	Case=Par|NumForm=Word|NumType=Ord|Number=Sing	7	amod	_	start_char=35|end_char=45
+7	klassi	klass	NOUN	S	Case=Par|Number=Sing	10	obl	_	start_char=46|end_char=52
+8	võivad	võima	AUX	V	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	10	aux	_	start_char=53|end_char=59
+9	noored	noor	ADJ	A	Case=Nom|Degree=Pos|Number=Plur	10	nsubj	_	start_char=60|end_char=66
+10	minna	minema	VERB	V	VerbForm=Inf	3	conj	_	start_char=67|end_char=72
+11	edasi	edasi	ADV	D	_	12	compound:prt	_	start_char=73|end_char=78
+12	õppima	õppima	VERB	V	Case=Ill|VerbForm=Sup|Voice=Act	10	xcomp	_	start_char=79|end_char=85
+13	gümnaasiumi	gümnaasium	NOUN	S	Case=Gen|Number=Sing	12	obl	_	start_char=86|end_char=97|SpaceAfter=No
+14	,	,	PUNCT	Z	_	16	punct	_	start_char=97|end_char=98
+15	kus	kus	ADV	D	_	16	mark	_	start_char=99|end_char=102
+16	õpitakse	õppima	VERB	V	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Pass	13	acl	_	start_char=103|end_char=111
+17	kolm	kolm	NUM	N	Case=Nom|NumForm=Word|NumType=Card|Number=Sing	18	nummod	_	start_char=112|end_char=116
+18	aastat	aasta	NOUN	S	Case=Par|Number=Sing	16	obl	_	start_char=117|end_char=123|SpaceAfter=No
+19	.	.	PUNCT	Z	_	3	punct	_	start_char=123|end_char=124|SpaceAfter=No
+

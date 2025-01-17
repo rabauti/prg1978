@@ -203,6 +203,9 @@ def extract_something(graph, collection_id, collocations, lemmas_stat):
             if nmod not in kids:
                 continue
 
+            # nmod peab olema lauses enne ülemust
+            if nmod > noun:
+                continue
             nmod_case = graph.get_node_case(nmod)
             nmod_pos = graph.nodes[nmod]["POS"]
             if nmod_case not in ["nom", "gen", "part"]:

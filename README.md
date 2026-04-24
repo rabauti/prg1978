@@ -16,9 +16,9 @@ data/derived/     genereeritud statistika ja päringute tulemused
 ## Python env setup
 
 ```bash
-uv venv --python 3.12 venv
-source venv/bin/activate
-uv pip install -r requirements.txt
+uv venv --python 3.12 .venv
+source .venv/bin/activate
+uv sync --no-install-project
 ```
 
 ## Notebookid
@@ -36,6 +36,9 @@ Paringute ja puude vaatamine:
 - `notebooks/test.ipynb`
 
 ## Graphviz
+
+Pythoni `graphviz` pakett tuleb nüüd kaasa `uv sync` kaudu.
+Süsteemi `dot` käsu jaoks on siiski vaja Graphviz eraldi installida.
 
 macOS-is:
 

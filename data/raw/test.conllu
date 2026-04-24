@@ -1,0 +1,134 @@
+# text_uid = wqdasd3dsfds
+# sent_id = wqdasd3dsfds-test-a269866c9dcf-000001-1
+# text = Kui Arno isaga koolimajja jõudis, olid tunnid juba alanud…
+1	Kui	kui	J	J	sub=sub|crd=crd	5	mark	_	_
+2	Arno	Arno	S	S	prop=prop|sg=sg|nom=nom	5	nsubj	_	_
+3	isaga	isa	S	S	com=com|sg=sg|kom=kom	5	obl	_	_
+4	koolimajja	koolimaja	S	S	com=com|sg=sg|adit=adit	5	obl	_	_
+5	jõudis	jõudma	V	V	aux=aux|indic=indic|impf=impf|ps3=ps3|sg=sg|ps=ps|af=af	10	advcl	_	_
+6	,	,	Z	Z	_	5	punct	_	_
+7	olid	olema	V	V	mod=mod|indic=indic|impf=impf|ps3=ps3|pl=pl|ps=ps|af=af	10	aux	_	_
+8	tunnid	tund	S	S	com=com|pl=pl|nom=nom	10	obl	_	_
+9	juba	juba	D	D	_	10	advmod	_	_
+10	alanud	algama	V	V	main=main|partic=partic|past=past|ps=ps	0	root	_	_
+11	…	…	Y	Y	nominal=nominal	10	punct	_	_
+
+# text_uid = ssdadsa23234
+# sent_id = ssdadsa23234-test-a269866c9dcf-000002-1
+# text = Elu on üleüldse hädaorg,  aga mis sinna parata.
+1	Elu	elu	S	S	com=com|sg=sg|nom=nom	4	nsubj:cop	_	_
+2	on	olema	V	V	aux=aux|indic=indic|pres=pres|ps3=ps3|sg=sg|ps=ps|af=af	4	cop	_	_
+3	üleüldse	üleüldse	D	D	_	4	advmod	_	_
+4	hädaorg	hädaorg	S	S	com=com|sg=sg|nom=nom	0	root	_	_
+5	,	,	Z	Z	_	9	punct	_	_
+6	aga	aga	J	J	sub=sub|crd=crd	9	cc	_	_
+7	mis	mis	P	P	pl=pl|nom=nom	9	nsubj:cop	_	_
+8	sinna	sinna	D	D	_	9	advmod	_	_
+9	parata	parata	X	X	_	4	conj	_	_
+10	.	.	Z	Z	_	4	punct	_	_
+
+# text_uid = ssdadsa23234
+# sent_id = ssdadsa23234-test-a269866c9dcf-000002-2
+# text = Ainus abinõu: kannata ja täida seadusi.
+1	Ainus	ainus	A	A	pos=pos|sg=sg|nom=nom	2	amod	_	_
+2	abinõu	abinõu	S	S	com=com|sg=sg|nom=nom	0	root	_	_
+3	:	:	Z	Z	_	4	punct	_	_
+4	kannata	kannatama	V	V	aux=aux|imper=imper|pres=pres|ps2=ps2|sg=sg|ps=ps|neg=neg	2	parataxis	_	_
+5	ja	ja	J	J	sub=sub|crd=crd	6	cc	_	_
+6	täida	täitma	V	V	aux=aux|imper=imper|pres=pres|ps2=ps2|sg=sg|ps=ps|af=af	4	conj	_	_
+7	seadusi	seadus	S	S	com=com|pl=pl|part=part	6	obl	_	_
+8	.	.	Z	Z	_	2	punct	_	_
+
+# text_uid = ssdadsa23234
+# sent_id = ssdadsa23234-test-a269866c9dcf-000003-1
+# text = Elu on üleüldse hädaorg, ... aga mis sinna parata.
+1	Elu	elu	S	S	com=com|sg=sg|nom=nom	4	nsubj:cop	_	_
+2	on	olema	V	V	aux=aux|indic=indic|pres=pres|ps3=ps3|pl=pl|ps=ps|af=af	4	cop	_	_
+3	üleüldse	üleüldse	D	D	_	4	advmod	_	_
+4	hädaorg	hädaorg	S	S	com=com|sg=sg|nom=nom	0	root	_	_
+5	,	,	Z	Z	_	8	punct	_	_
+6	...	...	Z	Z	_	10	punct	_	_
+7	aga	aga	J	J	sub=sub|crd=crd	10	cc	_	_
+8	mis	mis	P	P	sg=sg|nom=nom	10	nsubj:cop	_	_
+9	sinna	sinna	D	D	_	10	advmod	_	_
+10	parata	parata	X	X	_	4	conj	_	_
+11	.	.	Z	Z	_	4	punct	_	_
+
+# text_uid = ssdadsa23234
+# sent_id = ssdadsa23234-test-a269866c9dcf-000003-2
+# text = Ainus abinõu: kannata ja täida seadusi.
+1	Ainus	ainus	A	A	pos=pos|sg=sg|nom=nom	2	amod	_	_
+2	abinõu	abinõu	S	S	com=com|sg=sg|nom=nom	0	root	_	_
+3	:	:	Z	Z	_	4	punct	_	_
+4	kannata	kannatama	V	V	main=main|indic=indic|pres=pres|ps=ps|neg=neg	2	parataxis	_	_
+5	ja	ja	J	J	sub=sub|crd=crd	6	cc	_	_
+6	täida	täitma	V	V	main=main|indic=indic|pres=pres|ps=ps|neg=neg	4	conj	_	_
+7	seadusi	seadus	S	S	com=com|pl=pl|part=part	6	obl	_	_
+8	.	.	Z	Z	_	2	punct	_	_
+
+# text_uid = ssdaaa23234
+# sent_id = ssdaaa23234-test-a269866c9dcf-000004-1
+# text = Vajadus tõsta mikroprotsessorite	jõudlust sunnib	pidevalt täiustama olemasolevaid ja otsima uusi, veelgi	paremaid protsessorarhitektuure.
+1	Vajadus	vajadus	S	S	com=com|sg=sg|nom=nom	5	obj	_	_
+2	tõsta	tõstma	V	V	aux=aux|inf=inf	1	acl	_	_
+3	mikroprotsessorite	mikroprotsessor	S	S	com=com|pl=pl|gen=gen	2	obl	_	_
+4	jõudlust	jõudlus	S	S	com=com|sg=sg|part=part	2	obl	_	_
+5	sunnib	sundima	V	V	mod=mod|indic=indic|pres=pres|ps3=ps3|sg=sg|ps=ps|af=af	0	root	_	_
+6	pidevalt	pidevalt	D	D	_	7	advmod	_	_
+7	täiustama	täiustama	V	V	aux=aux|sup=sup|ps=ps|ill=ill	5	xcomp	_	_
+8	olemasolevaid	olemasolev	A	A	pos=pos|pl=pl|part=part	7	obj	_	_
+9	ja	ja	J	J	sub=sub|crd=crd	10	cc	_	_
+10	otsima	otsima	V	V	main=main|sup=sup|ps=ps|ill=ill	7	conj	_	_
+11	uusi	uus	A	A	pos=pos|pl=pl|part=part	15	amod	_	_
+12	,	,	Z	Z	_	14	punct	_	_
+13	veelgi	veelgi	D	D	_	14	advmod	_	_
+14	paremaid	parem	A	A	comp=comp|pl=pl|part=part	11	conj	_	_
+15	protsessorarhitektuure	protsessorarhitektuur	S	S	com=com|pl=pl|part=part	10	obl	_	_
+16	.	.	Z	Z	_	5	punct	_	_
+
+# text_uid = sadasd
+# sent_id = sadasd-test-a269866c9dcf-000005-1
+# text = Kass hüppas katuselt alla ja siis puges keldrisse peitu.
+1	Kass	kass	S	S	com=com|sg=sg|nom=nom	2	nsubj	_	_
+2	hüppas	hüppama	V	V	aux=aux|indic=indic|impf=impf|ps3=ps3|sg=sg|ps=ps|af=af	0	root	_	_
+3	katuselt	katus	S	S	com=com|sg=sg|abl=abl	2	obl	_	_
+4	alla	alla	D	D	_	2	compound:prt	_	_
+5	ja	ja	J	J	sub=sub|crd=crd	7	cc	_	_
+6	siis	siis	D	D	_	7	advmod	_	_
+7	puges	pugema	V	V	main=main|indic=indic|impf=impf|ps3=ps3|sg=sg|ps=ps|af=af	2	conj	_	_
+8	keldrisse	kelder	S	S	com=com|sg=sg|ill=ill	7	obl	_	_
+9	peitu	peit	S	S	com=com|sg=sg|adit=adit	7	obl	_	_
+10	.	.	Z	Z	_	2	punct	_	_
+
+# text_uid = sadasd
+# sent_id = sadasd-test-a269866c9dcf-000005-2
+# text = Esikust läheb üks uks kööki, teine tuppa.
+1	Esikust	esik	S	S	com=com|sg=sg|el=el	2	obl	_	_
+2	läheb	minema	V	V	main=main|indic=indic|pres=pres|ps3=ps3|sg=sg|ps=ps|af=af	0	root	_	_
+3	üks	üks	P	P	sg=sg|nom=nom	2	nsubj	_	_
+4	uks	uks	S	S	com=com|sg=sg|nom=nom	2	obl	_	_
+5	kööki	köök	S	S	com=com|sg=sg|adit=adit	2	obl	_	_
+6	,	,	Z	Z	_	7	punct	_	_
+7	teine	teine	N	N	ord=ord|sg=sg|nom=nom|roman=roman	8	amod	_	_
+8	tuppa	tuba	S	S	com=com|sg=sg|adit=adit	2	obl	_	_
+9	.	.	Z	Z	_	2	punct	_	_
+
+# text_uid = sadasd
+# sent_id = sadasd-test-a269866c9dcf-000005-3
+# text = Püksid ei lähe enam jalga.
+1	Püksid	püks	S	S	com=com|pl=pl|nom=nom	3	nsubj	_	_
+2	ei	ei	V	V	aux=aux|neg=neg	3	aux	_	_
+3	lähe	minema	V	V	aux=aux|imper=imper|pres=pres|ps2=ps2|sg=sg|ps=ps|neg=neg	0	root	_	_
+4	enam	enam	D	D	_	3	advmod	_	_
+5	jalga	jalg	S	S	com=com|sg=sg|part=part	3	obl	_	_
+6	.	.	Z	Z	_	3	punct	_	_
+
+# text_uid = sadasd
+# sent_id = sadasd-test-a269866c9dcf-000005-4
+# text = Lumelabidad läksid nagu soojad saiad.
+1	Lumelabidad	lumelabidas	S	S	com=com|pl=pl|nom=nom	2	obl	_	_
+2	läksid	minema	V	V	mod=mod|indic=indic|impf=impf|ps3=ps3|pl=pl|ps=ps|af=af	0	root	_	_
+3	nagu	nagu	D	D	_	5	mark	_	_
+4	soojad	soe	A	A	pos=pos|pl=pl|nom=nom	5	amod	_	_
+5	saiad	sai	S	S	com=com|pl=pl|nom=nom	2	advcl	_	_
+6	.	.	Z	Z	_	2	punct	_	_

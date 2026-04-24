@@ -9,5 +9,5 @@ dependencies = [
     "tqdm>=4.66.1,<4.67.0",
     "pandas>=2.1.4,<2.2.0",
     "conllu==6.0.0",
-    "graphviz==3.14",
+    "graphviz==0.12",
 ]

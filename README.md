@@ -16,16 +16,9 @@ data/derived/     genereeritud statistika ja päringute tulemused
 ## Python env setup
 
 ```bash
-python3.12 -m venv venv
+uv venv --python 3.12 venv
 source venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-Kui kasutad mooduleid shellist, lisa `src` Pythoni otsinguteele:
-
-```bash
-PYTHONPATH=src python -c "import data_helpers; print(data_helpers.__all__)"
+uv pip install -r requirements.txt
 ```
 
 ## Notebookid

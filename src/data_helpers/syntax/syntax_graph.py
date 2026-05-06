@@ -37,6 +37,14 @@ DEFAULT_NODE_SHAPE = "ellipse"
 DEFAULT_NODE_STYLE = "filled"
 DEFAULT_NODE_FILL = "lightskyblue"
 HIGHLIGHT_NODE_FILL = "red"
+HIGHLIGHT_GROUP_FILLS = (
+    "red",
+    "gold",
+    "palegreen",
+    "plum",
+    "orange",
+    "turquoise",
+)
 ROOT_NODE_SHAPE = "point"
 ROOT_NODE_WIDTH = "0.05"
 ROOT_NODE_HEIGHT = "0.05"
@@ -264,8 +272,52 @@ class SyntaxGraph(BaseDiGraph):
             + '"'
         )
 
-    def _node_colors(self, highlight=None, custom_colors=None):
-        highlight = set(highlight or [])
+    def _highlight_color_map(self, highlight=None, highlight_groups=None):
+        color_map = {node_id: None for node_id in self.nodes}
+
+        for node_id in highlight or []:
+            if node_id in color_map:
+                color_map[node_id] = HIGHLIGHT_NODE_FILL
+
+        if not highlight_groups:
+            return color_map
+
+        if isinstance(highlight_groups, dict):
+            groups = [
+                {"color": color, "nodes": nodes}
+                for color, nodes in highlight_groups.items()
+            ]
+        else:
+            groups = list(highlight_groups)
+
+        for index, group in enumerate(groups):
+            if isinstance(group, dict):
+                nodes = group.get("nodes", [])
+                color = group.get("color")
+            elif (
+                isinstance(group, (tuple, list))
+                and len(group) == 2
+                and isinstance(group[0], str)
+            ):
+                color, nodes = group
+            else:
+                nodes = group
+                color = None
+
+            color = color or HIGHLIGHT_GROUP_FILLS[
+                index % len(HIGHLIGHT_GROUP_FILLS)
+            ]
+            for node_id in nodes or []:
+                if node_id in color_map:
+                    color_map[node_id] = color
+
+        return color_map
+
+    def _node_colors(self, highlight=None, highlight_groups=None, custom_colors=None):
+        highlight_color_map = self._highlight_color_map(
+            highlight=highlight,
+            highlight_groups=highlight_groups,
+        )
         if not custom_colors:
             base_colors = [DEFAULT_NODE_FILL for _ in self.nodes]
         else:
@@ -277,13 +329,23 @@ class SyntaxGraph(BaseDiGraph):
 
         return {
             node_id: (
-                HIGHLIGHT_NODE_FILL if node_id in highlight else base_colors[index]
+                highlight_color_map.get(node_id) or base_colors[index]
             )
             for index, node_id in enumerate(self.nodes)
         }
 
-    def to_dot(self, title=None, highlight=None, custom_colors=None):
-        color_map = self._node_colors(highlight=highlight, custom_colors=custom_colors)
+    def to_dot(
+        self,
+        title=None,
+        highlight=None,
+        highlight_groups=None,
+        custom_colors=None,
+    ):
+        color_map = self._node_colors(
+            highlight=highlight,
+            highlight_groups=highlight_groups,
+            custom_colors=custom_colors,
+        )
         lines = [
             f"digraph {GRAPH_NAME} {{",
             f'  rankdir="{GRAPH_RANKDIR}";',

@@ -76,12 +76,14 @@ def render_syntax_graph(
     output_format=DEFAULT_OUTPUT_FORMAT,
     title=None,
     highlight=None,
+    highlight_groups=None,
     custom_colors=None,
     announce=True,
 ):
     dot_source = graph.to_dot(
         title=title,
         highlight=highlight,
+        highlight_groups=highlight_groups,
         custom_colors=custom_colors,
     )
     return render_dot(

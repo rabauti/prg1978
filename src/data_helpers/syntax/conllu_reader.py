@@ -24,8 +24,6 @@ class CoNNLUReader(BaseReader):
             raise Exception("Unknown mode %s", mode)
         data_file = open(self.__FILE, "r", encoding="utf-8")
         for tokenlist in parse_incr(data_file):
-            # print(tokenlist)
-            # print(vars(tokenlist))
             if mode == MODE_GRAPH:
                 g = SyntaxGraph(tokenlist)
                 for k in tokenlist.metadata.keys():

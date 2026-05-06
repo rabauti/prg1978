@@ -1,5 +1,5 @@
 # text_uid = wqdasd3dsfds
-# sent_id = wqdasd3dsfds-test-a269866c9dcf-000001-1
+# sent_id = wqdasd3dsfds-1
 # text = Kui Arno isaga koolimajja jõudis, olid tunnid juba alanud…
 1	Kui	kui	J	J	sub=sub|crd=crd	5	mark	_	_
 2	Arno	Arno	S	S	prop=prop|sg=sg|nom=nom	5	nsubj	_	_
@@ -13,9 +13,9 @@
 10	alanud	algama	V	V	main=main|partic=partic|past=past|ps=ps	0	root	_	_
 11	…	…	Y	Y	nominal=nominal	10	punct	_	_
 
-# text_uid = ssdadsa23234
-# sent_id = ssdadsa23234-test-a269866c9dcf-000002-1
-# text = Elu on üleüldse hädaorg,  aga mis sinna parata.
+# text_uid = ssdadsa23234f
+# sent_id = ssdadsa23234f-1
+# text = Elu on üleüldse hädaorg, aga mis sinna parata.
 1	Elu	elu	S	S	com=com|sg=sg|nom=nom	4	nsubj:cop	_	_
 2	on	olema	V	V	aux=aux|indic=indic|pres=pres|ps3=ps3|sg=sg|ps=ps|af=af	4	cop	_	_
 3	üleüldse	üleüldse	D	D	_	4	advmod	_	_
@@ -27,8 +27,8 @@
 9	parata	parata	X	X	_	4	conj	_	_
 10	.	.	Z	Z	_	4	punct	_	_
 
-# text_uid = ssdadsa23234
-# sent_id = ssdadsa23234-test-a269866c9dcf-000002-2
+# text_uid = ssdadsa23234f
+# sent_id = ssdadsa23234f-2
 # text = Ainus abinõu: kannata ja täida seadusi.
 1	Ainus	ainus	A	A	pos=pos|sg=sg|nom=nom	2	amod	_	_
 2	abinõu	abinõu	S	S	com=com|sg=sg|nom=nom	0	root	_	_
@@ -39,8 +39,8 @@
 7	seadusi	seadus	S	S	com=com|pl=pl|part=part	6	obl	_	_
 8	.	.	Z	Z	_	2	punct	_	_
 
-# text_uid = ssdadsa23234
-# sent_id = ssdadsa23234-test-a269866c9dcf-000003-1
+# text_uid = ssdadsa23234d
+# sent_id = ssdadsa23234d-1
 # text = Elu on üleüldse hädaorg, ... aga mis sinna parata.
 1	Elu	elu	S	S	com=com|sg=sg|nom=nom	4	nsubj:cop	_	_
 2	on	olema	V	V	aux=aux|indic=indic|pres=pres|ps3=ps3|pl=pl|ps=ps|af=af	4	cop	_	_
@@ -54,8 +54,8 @@
 10	parata	parata	X	X	_	4	conj	_	_
 11	.	.	Z	Z	_	4	punct	_	_
 
-# text_uid = ssdadsa23234
-# sent_id = ssdadsa23234-test-a269866c9dcf-000003-2
+# text_uid = ssdadsa23234d
+# sent_id = ssdadsa23234d-2
 # text = Ainus abinõu: kannata ja täida seadusi.
 1	Ainus	ainus	A	A	pos=pos|sg=sg|nom=nom	2	amod	_	_
 2	abinõu	abinõu	S	S	com=com|sg=sg|nom=nom	0	root	_	_
@@ -66,9 +66,9 @@
 7	seadusi	seadus	S	S	com=com|pl=pl|part=part	6	obl	_	_
 8	.	.	Z	Z	_	2	punct	_	_
 
-# text_uid = ssdaaa23234
-# sent_id = ssdaaa23234-test-a269866c9dcf-000004-1
-# text = Vajadus tõsta mikroprotsessorite	jõudlust sunnib	pidevalt täiustama olemasolevaid ja otsima uusi, veelgi	paremaid protsessorarhitektuure.
+# text_uid = ssdaaa23234a
+# sent_id = ssdaaa23234a-1
+# text = Vajadus tõsta mikroprotsessorite jõudlust sunnib pidevalt täiustama olemasolevaid ja otsima uusi, veelgi paremaid protsessorarhitektuure.
 1	Vajadus	vajadus	S	S	com=com|sg=sg|nom=nom	5	obj	_	_
 2	tõsta	tõstma	V	V	aux=aux|inf=inf	1	acl	_	_
 3	mikroprotsessorite	mikroprotsessor	S	S	com=com|pl=pl|gen=gen	2	obl	_	_
@@ -87,7 +87,7 @@
 16	.	.	Z	Z	_	5	punct	_	_
 
 # text_uid = sadasd
-# sent_id = sadasd-test-a269866c9dcf-000005-1
+# sent_id = sadasd-1
 # text = Kass hüppas katuselt alla ja siis puges keldrisse peitu.
 1	Kass	kass	S	S	com=com|sg=sg|nom=nom	2	nsubj	_	_
 2	hüppas	hüppama	V	V	aux=aux|indic=indic|impf=impf|ps3=ps3|sg=sg|ps=ps|af=af	0	root	_	_
@@ -101,7 +101,7 @@
 10	.	.	Z	Z	_	2	punct	_	_
 
 # text_uid = sadasd
-# sent_id = sadasd-test-a269866c9dcf-000005-2
+# sent_id = sadasd-2
 # text = Esikust läheb üks uks kööki, teine tuppa.
 1	Esikust	esik	S	S	com=com|sg=sg|el=el	2	obl	_	_
 2	läheb	minema	V	V	main=main|indic=indic|pres=pres|ps3=ps3|sg=sg|ps=ps|af=af	0	root	_	_
@@ -114,7 +114,7 @@
 9	.	.	Z	Z	_	2	punct	_	_
 
 # text_uid = sadasd
-# sent_id = sadasd-test-a269866c9dcf-000005-3
+# sent_id = sadasd-3
 # text = Püksid ei lähe enam jalga.
 1	Püksid	püks	S	S	com=com|pl=pl|nom=nom	3	nsubj	_	_
 2	ei	ei	V	V	aux=aux|neg=neg	3	aux	_	_
@@ -124,7 +124,7 @@
 6	.	.	Z	Z	_	3	punct	_	_
 
 # text_uid = sadasd
-# sent_id = sadasd-test-a269866c9dcf-000005-4
+# sent_id = sadasd-4
 # text = Lumelabidad läksid nagu soojad saiad.
 1	Lumelabidad	lumelabidas	S	S	com=com|pl=pl|nom=nom	2	obl	_	_
 2	läksid	minema	V	V	mod=mod|indic=indic|impf=impf|ps3=ps3|pl=pl|ps=ps|af=af	0	root	_	_

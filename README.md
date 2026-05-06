@@ -21,6 +21,12 @@ source .venv/bin/activate
 uv sync --no-install-project
 ```
 
+## Kohalik seadistus
+
+Vaikimisi seadistused on failis `config.py`.
+Masinapohiste failiteede jaoks tee juurkausta oma `config_local.py`, mis on gitignore all.
+Naidis on failis `config_local.example.py`.
+
 ## Notebookid
 
 Notebookid asuvad kaustas `notebooks/`.

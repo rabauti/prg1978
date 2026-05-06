@@ -19,11 +19,6 @@ LEMMA_STATS_FILE = DATA_DERIVED_STATS_DIR / "conllu_lemmas.tsv"
 VERB_STATS_FILE = DATA_DERIVED_STATS_DIR / "conllu_verbs.tsv"
 VERB_COMPOUND_STATS_FILE = DATA_DERIVED_STATS_DIR / "conllu_verbs_compound.tsv"
 
-VERB_XCOMP_INF_RESULTS_DIR = DATA_DERIVED_QUERY_RESULTS_DIR
-MINEMA_KOHAKAANDED_RESULTS_FILE = (
-    DATA_DERIVED_QUERY_RESULTS_DIR / "minema_kohakaanded.tsv"
-)
-
 
 def _apply_local_overrides():
     try:

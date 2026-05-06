@@ -1,5 +1,3 @@
-from pathlib import Path
-
-SOURCE_CONLLU_FILE = Path("/absolute/path/to/source.conllu")
-METADATA_TSV_FILE = Path("/absolute/path/to/metadata.tsv")
+SOURCE_CONLLU_FILE = DATA_RAW_DIR / "my_source.conllu"
+METADATA_TSV_FILE = DATA_RAW_DIR / "my_metadata.tsv"
 METADATA_TSV_DELIMITER = ";"

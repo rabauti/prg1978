@@ -10,22 +10,10 @@ Korpuse DOI: [10.15155/3-00-0000-0000-0000-0888DL](https://metashare.ut.ee/repos
 
 #  Python env setup
 
-
-## Creating virtual environment
 ```bash
-python3.12 -m venv venv
-```
-
-## Activating venv
-```bash
-source venv/bin/activate
-```
-
-
-## Installing requirements with pip
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
+uv venv --python 3.12 .venv
+source .venv/bin/activate
+uv sync --no-install-project
 ```
 
 

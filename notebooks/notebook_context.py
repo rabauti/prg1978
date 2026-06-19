@@ -12,3 +12,10 @@ CORPUS_FILE = Path(
 )
 
 corpus_reader = VrtEmmaReader(file_name=CORPUS_FILE)
+
+
+def clean_lemma(text):
+    text = text.replace("_", "")
+    text = text.replace("+", "")
+    text = text.replace("=", "")
+    return text.strip()

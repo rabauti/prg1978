@@ -91,6 +91,7 @@ class VrtEmmaReader(BaseReader):
                     elif line.startswith("<text"):
                         doc_attrs = dict(self._TEXT_ATTR_RE.findall(line))
                     elif line.startswith("</text") or line in ("<corpus>", "</corpus>") or line.startswith("<corpus"):
+                        doc_attrs = {}
                         # document/corpus-level wrapper tags, nothing to do
                         pass
                     else:

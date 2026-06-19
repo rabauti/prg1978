@@ -4,11 +4,11 @@ from pathlib import Path
 
 sys.path.append(os.path.abspath("../"))
 
-from src.syntax.conllu_reader import CoNNLUReader
+from src.syntax.vrt_emma_reader import VrtEmmaReader
 
 LISTS_FOLDER = Path("../lists")
 CORPUS_FILE = Path(
-    "../data/Model2Eesti-keele-kui-teise-keele-kooliõpikute-lausete-korpus-2021.conllu"
+    "../data/vrt-with-meta-corpus-02-06-25_ordered.vrt"
 )
 
-corpus_reader = CoNNLUReader(file_name=CORPUS_FILE)
+corpus_reader = VrtEmmaReader(file_name=CORPUS_FILE)

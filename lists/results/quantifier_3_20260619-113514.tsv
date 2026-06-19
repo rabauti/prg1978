@@ -1,0 +1,10 @@
+lang_level	child_lemma	child_pos	child_case	child_number	parent_lemma	parent_pos	parent_case	parent_number	text	sentence	sentence_id	child_lemma_total
+kl5	tund	NOUN	Gen	Sing	lõpp	NOUN	Ter	Sing	tunni lõpuni	Kui ___tunni___ ___lõpuni___ oli jäänud veel kümme minutit , ütles õpetaja Laur , et ta peab meiega rääkima .	12439	555
+kl5	tund	NOUN	Gen	Sing	algus	NOUN	Ter	Sing	tunni alguseni	Kui ma kella vaatasin , oli esimese ___tunni___ ___alguseni___ ainult neli minutit aega !	12723	555
+kl5	aasta	NOUN	Gen	Sing	traditsioon	NOUN	Com	Plur	aasta traditsioonidega	Võrdle neid traditsioone enda pere jõulu- või uue ___aasta___ ___traditsioonidega___ !	15365	906
+kl9	aasta	NOUN	Gen	Sing	sport_võimlemine	NOUN	Com	Sing	aasta sportvõimlemisega	Algklassides tegelesin mõne ___aasta___ ___sportvõimlemisega___ , aga ega see mind eriti huvitanud .	21636	906
+gümn	klass	NOUN	Gen	Sing	tüdruk	NOUN	Com	Sing	klassi tüdrukuga	Kooli tõi mind pereema Marjana ja kuna me tulime kooli natuke varem , siis jõudsin tutvuda kahe oma ___klassi___ ___tüdrukuga___ , kes näitasid mulle kooli .	24101	502
+gümn	sõna	NOUN	Gen	Plur	kasutamine	NOUN	Com	Sing	sõnade kasutamisega	Ei tohi unustada , et sõnadel on väga tugev mõju ja seetõttu peab negatiivsete ___sõnade___ ___kasutamisega___ olema eriti ettevaatlik : väga kerge on teisi solvata ja ka endast halba muljet jätta .	25828	244
+gümn	rühm	NOUN	Gen	Sing	tervik	NOUN	Ess	Sing	rühma tervikuna	Hinnake iga osalist eraldi ja kogu ___rühma___ ___tervikuna___ .	25879	46
+gümn	aasta	NOUN	Gen	Sing	kuu	NOUN	Com	Sing	aasta kuuga	Möödunud aastal tabas politsei 11 753 joobes juhti , 2006. ___aasta___ nelja ___kuuga___ juba 3675 roolijoodikut .	29213	906
+kl9	aasta	NOUN	Gen	Plur	lõpp	NOUN	Com	Sing	aastate lõpuga	Kaheksakümnendate ___aastate___ ___lõpuga___ ja Eesti esimese breigilainega võrreldes hindab treener praegust seisu üsna heaks .	40736	906

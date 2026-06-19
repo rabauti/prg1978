@@ -1,0 +1,224 @@
+lang_level	child_lemma	child_pos	child_case	child_number	parent_lemma	parent_pos	parent_case	parent_number	text	sentence	sentence_id	child_lemma_total
+gümn	nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Kolmandas klassis ( meie 9. kl ) viibitakse ___nädal___ ___aega___ kohustuslikul tööpraktikal .	136	225
+gümn	hulk	NOUN	Gen	Sing	sõda	NOUN	Par	Plur	hulga sõdu	Saja aasta sisse saame paigutada kaks verist maailmasõda ja veel terve ___hulga___ lokaalseid ___sõdu___ , kommunismi ja fašismi tõusu ja languse , siia mahub peaaegu kogu teadus- ja tehnikarevolutsioon , kogu modernistlik kunstimaailm , ka infoühiskonna sünd .	570	45
+gümn	kuu	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	kuu aega	Kevadel luban endale ___kuu___ ___aega___ vaba inimese elu .	747	156
+gümn	kuu	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	Kuu aega	___Kuu___ ___aega___ , sest kauem ei suudaks .	748	156
+gümn	kamp	NOUN	Nom	Sing	mardi_jooksja	NOUN	Par	Plur	kamp mardijooksjaid	Mida suurem ___kamp___ ___mardijooksjaid___ , seda rohkem lapsi peremehele ja rikkalikku põllusaaki .	850	7
+gümn	valik	NOUN	Nom	Sing	muusika_video	NOUN	Par	Plur	valik muusikavideoid	Siin on suur tantsupõrand , suurepärane aparatuur ja lai ___valik___ ___muusikavideoid___ .	925	56
+gümn	klaas	NOUN	Par	Sing	õuna_maha	NOUN	Par	Sing	klaasi õunamahla	Palun kaks maasikakooki , kolm suurt võileiba ja kolm ___klaasi___ ___õunamahla___ .	945	21
+gümn	pakk	NOUN	Gen	Sing	sigaret	NOUN	Par	Plur	paki sigarette	Rutt võtab kotist välja ___paki___ ___sigarette___ .	1097	18
+gümn	liik	NOUN	Gen	Sing	levik	NOUN	Par	Sing	liigi levikut	Punane raamat ei sisalda looduskaitse seadusi ega määrusi , see on teadusandmete kogu , mis kajastab ___liigi___ ___levikut___ ja seisukorda koos ettepanekutega selle kaitse vajaduse kohta .	1276	49
+gümn	liik	NOUN	Gen	Plur	olu_kord	NOUN	Par	Sing	liikide olukorda	Loodusuurijad peavad pidevalt jälgima ohustatud ja haruldaste ___liikide___ ___olukorda___ ning kandma uued andmed raamatusse .	1278	49
+gümn	ruut_meeter	NOUN	Par	Sing	maa	NOUN	Par	Sing	ruutmeetrit maad	Iga kaheksakümne krooni eest ostetud pilet võimaldab meil osta 50 ___ruutmeetrit___ ___maad___ .	1333	2
+gümn	liik	NOUN	Gen	Sing	puu	NOUN	Par	Plur	liigi puid	Loodussõpradele pakub aga kindlasti huvi Luua barokne mõisakompleks ja park koos dendropargiga , kus kasvab üle 800 ___liigi___ ___puid___ ja põõsaid mitmelt poolt maailmast .	1500	49
+gümn	enamik	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	Enamik inimesi	___Enamik___ ___inimesi___ armastas lapsena muinasjutte ning paljud ei julge tunnistada , et armastavad neid täiskasvanunagi .	1796	42
+gümn	minut	NOUN	Par	Sing	trenn	NOUN	Par	Sing	minutit trenni	Selleks , et vähendada kehakaalu või ennetada paksuksminemist , on kõige õigem tegeleda mõõduka füüsilise aktiivsusega - kolmel korral nädalas 20 ___minutit___ ___trenni___ .	2215	105
+gümn	minut	NOUN	Gen	Sing	möödumine	NOUN	Par	Sing	minuti möödumist	Enamasti jääme magama juba enne ___minuti___ ___möödumist___ ja hommikul ei mäleta , et oleksime olnud ärkvel .	2270	105
+gümn	grupp	NOUN	Gen	Sing	olemas_olu	NOUN	Par	Sing	grupi olemasolu	Naer on sotsiaalne fenomen - naer eeldab dialoogi olemasolu , homogeense ___grupi___ ___olemasolu___ .	2380	22
+gümn	hulk	NOUN	Nom	Sing	tähendus	NOUN	Par	Plur	hulk tähendusi	Eesti keeles on nii teenistusel kui ka talitusel ___hulk___ ___tähendusi___ : päevase töö palk on päevateenistus , sõjaväes olek - ajateenistus ; peetakse kombetalitusi ja kodus tehakse majatalitusi .	2454	45
+gümn	liiter	NOUN	Par	Sing	kütus	NOUN	Par	Sing	liitrit kütust	Uus 4 , 7-liitrine bensiinimootor ( 288 hj ) töömahuga 4461 cm3 kulutab keskmiselt 10 ___liitrit___ ___kütust___ 100 km kohta .	2649	6
+gümn	kroon	NOUN	Gen	Sing	maine	NOUN	Par	Sing	krooni mainet	Esiteks oleks see kahjustanud alles hiljuti kasutusele võetud ___krooni___ ___mainet___ rahva silmis .	2943	86
+gümn	aasta	NOUN	Gen	Sing	majandus_kriis	NOUN	Par	Sing	aasta majanduskriisi	Pärast 1929. - 1933. ___aasta___ ___majanduskriisi___ hakati järjekindlalt suurendama kulla osatähtsust krooni kattevaras .	2945	906
+gümn	nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Pärast taotluse vormistamist kulub andmete kontrollimiseks umbes ___nädal___ ___aega___ .	3055	225
+gümn	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Politsei saabus sündmuskohale kella 13.40-ks , protokolli koostamine ja seletuste kuulamine lõppes alles kell 14.15 ning seetõttu jõudsin ma staadionile ___tund___ ___aega___ ettenähtust hiljem .	3169	555
+gümn	enamik	NOUN	Nom	Sing	rahvas	NOUN	Par	Sing	Enamik rahvast	___Enamik___ ___rahvast___ näeb metsas suurepärast puhkamispaika , samuti on metsal suur roll loodus- ja keskkonnakaitses .	3193	42
+gümn	enamik	NOUN	Par	Sing	toode	NOUN	Par	Plur	enamikku tooteid	Tänapäeva maailmas on teadus juba niikaugele arenenud , et ___enamikku___ puidust valmistatud ___tooteid___ saaks asendada teiste materjalidega .	3203	42
+gümn	kilo	NOUN	Par	Sing	plast	NOUN	Par	Sing	kilo plasti	Edasi : kui oletada , et korduvkasutusega plastkuuse valmistamiseks kulub umbes viis ___kilo___ ___plasti___ , on selle valmistamiseks vajalik energiahulk võrdne 40 kilos puidus olevaga .	3271	23
+gümn	hulk	NOUN	Nom	Sing	kütus	NOUN	Par	Sing	hulk kütust	Enamasti pärinevad plastkuused Taiwanilt või Hiinast , mis tähendab , et nende Eestisse toomiseks kulub veel üüratu ___hulk___ ___kütust___ transpordile .	3275	45
+gümn	osa	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	osa inimesi	Nõnda peab ___osa___ ___inimesi___ mõistlikumaks ehtida jõuludeks eluskuusk koduaias või oma maakodus akna taga .	3286	236
+gümn	kuu	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	kuu aega	Lühim kihlusaeg võis olla ___kuu___ ___aega___ .	3501	156
+gümn	hulk	NOUN	Nom	Sing	harrastus_teate	NOUN	Par	Plur	hulk harrastusteatreid	Praegu on Eestis 12 riiklikku teatrit , ___hulk___ ___harrastusteatreid___ ning mõned iseseisvad ja isemajandavad trupid , nagu Von Krahh teater Tallinnas ( asutatud 1992 ) .	3677	45
+gümn	enamik	NOUN	Nom	Sing	poiss	NOUN	Par	Plur	Enamik poisse	___Enamik___ ___poisse___ on nooruses midagi pihta pannud või õunaraksus käinud , andmata endale aru , et tegemist on kriminaalkuriteoga .	3788	42
+gümn	kogu	NOUN	Nom	Plur	mõte	NOUN	Par	Plur	kogud mõtteid	Seal siis tegeled enesepuhastamisega , ___kogud___ ___mõtteid___ .	3957	8
+gümn	hulk	NOUN	Nom	Sing	kontsert	NOUN	Par	Plur	hulk kontserte	Festivali raames leiab aset ___hulk___ ___kontserte___ linnas ja maakonnas , samuti päevased pargikontserdid kesklinnas .	4025	45
+gümn	aasta	NOUN	Gen	Plur	osa	NOUN	Par	Sing	aastate osa	Ainulaadsest Suupillifestivalist Baltic-Nordic Harmonica on läbi ___aastate___ ___osa___ võtnud suupillimängijad Põhja- ja Baltimaadest , samuti Saksamaalt , Austriast , Hollandist , Inglismaalt ja Prantsusmaalt .	4031	906
+gümn	enamik	NOUN	Nom	Sing	laul	NOUN	Par	Plur	Enamik laule	___Enamik___ ___laule___ on pärast seda ingliskeelsed .	4174	42
+gümn	enamik	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	enamik inimesi	Arvan , et ___enamik___ ___inimesi___ ei käi kirikus selleks , et jutlust kuulata , palvetada või pihtida .	4338	42
+gümn	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Minu Hispaanias elav tuttav ei saanud ___tükk___ ___aega___ aru , mida see SMS-parkimine endast kujutab .	4498	30
+gümn	enamik	NOUN	Nom	Sing	noor	NOUN	Par	Plur	enamik noori	Mulle ei meeldi , et ___enamik___ ___noori___ kannab igas seltskonnas ja üritusel teksaseid .	4523	42
+kl2	sent	NOUN	Par	Sing	kilo	NOUN	Par	Sing	senti kilo	Nelikümmend ___senti___ ___kilo___ .	6089	20
+kl2	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Aga oleme õues ainult ___tund___ ___aega___ .	6590	555
+kl3	klass	NOUN	Gen	Sing	õpilane	NOUN	Par	Plur	klassi õpilasi	Koolis hakkame sel aastal aitama esimese ___klassi___ ___õpilasi___ .	8535	502
+kl3	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Me sõitsime autoga ___tund___ ___aega___ .	8683	555
+kl3	tükk	NOUN	Par	Sing	kringel	NOUN	Par	Sing	tükki kringlit	Laupäeval sõid sa Birgiti sünnipäeval mitu ___tükki___ ___kringlit___ , eile aga jäätist ja kommi .	9271	30
+kl3	tükk	NOUN	Par	Sing	kringel	NOUN	Par	Sing	tükki kringlit	Pühapäeval sõi Piia mitu ___tükki___ ___kringlit___ .	9291	30
+kl3	tükk	NOUN	Nom	Sing	aja_lugu	NOUN	Par	Sing	tükk ajalugu	Antiigipoes võivad mõned asjad olla väga kallid , sest need on nagu väike ___tükk___ ___ajalugu___ .	9628	30
+kl3	klass	NOUN	Gen	Sing	õpilane	NOUN	Par	Plur	klassi õpilasi	Lilli ütles , et talle meeldis kõige rohkem see , kui me aitasime esimese ___klassi___ ___õpilasi___ .	9732	502
+kl3	klass	NOUN	Gen	Sing	õpilane	NOUN	Par	Plur	klassi õpilasi	Lillile meeldis teise ___klassi___ ___õpilasi___ aidata .	9746	502
+kl4	kord	NOUN	Par	Sing	vana_isa	NOUN	Par	Sing	korda vanaisa	Samal ajal elas ka üks vanavanavana - ja veel mitu tuhat ___korda___ ___vanaisa___ .	9875	411
+kl4	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Mul on üks ___tund___ ___aega___ .	10542	555
+kl4	tund	NOUN	Gen	Sing	kitar	NOUN	Par	Sing	tunni kitarri	Igal laupäeval ma mängin kaks tundi klaverit ja ühe ___tunni___ ___kitarri___ .	11241	555
+kl5	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Teele , ma unistan juba ___tükk___ ___aega___ sellest , et kinno üht koertefilmi vaatama minna !	11956	30
+kl5	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Ma olin juba ___tükk___ ___aega___ uuest rattast unistanud .	12044	30
+kl5	kuu	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	kuu aega	Ema vastas , et nüüd ei saa ma vähemalt ___kuu___ ___aega___ trenni minna .	12219	156
+kl5	klass	NOUN	Gen	Sing	õpilane	NOUN	Par	Sing	klassi õpilast	Aktusejuhid olid kaks 4. ___klassi___ ___õpilast___ .	12402	502
+kl5	kuu	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	kuu aega	Äkki siis ainult ___kuu___ ___aega___ ?	12549	156
+kl5	kuu	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	kuu aega	Kokkuvõttes arvasid vanemad , et ma olen vahetusprogrammi jaoks liiga noor , et ___kuu___ ___aega___ on liiga pikk aeg ning et kõigepealt peaksin sellest rääkima õpetajaga .	12563	156
+kl5	aasta	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	aasta aega	Näiteks oleks väga põnev ___aasta___ ___aega___ Ameerikas õppida !	12715	906
+kl5	minut	NOUN	Par	Sing	aeg	NOUN	Par	Sing	minutit aega	Kui ma kella vaatasin , oli esimese tunni alguseni ainult neli ___minutit___ ___aega___ !	12723	105
+kl5	tund	NOUN	Par	Sing	aeg	NOUN	Par	Sing	tundi aega	Aga Teelel võtab juba kooliminek pool ___tundi___ ___aega___ !	12862	555
+kl5	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Ometi ei ole see nii tähtis , sest sellise kodu nimel olen ma nõus iga päev ___tund___ ___aega___ bussis olema , et kooli , koju või trenni sõita .	13135	555
+kl5	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Me valisime klassiekskursiooni jaoks sobivat kohta ___tükk___ ___aega___ .	13448	30
+kl5	klass	NOUN	Gen	Plur	abi	NOUN	Par	Sing	klasside abi	Selle ja järgmise nädala jooksul palub koolivormi meeskond kõikide ___klasside___ ___abi___ .	13835	502
+kl5	klass	NOUN	Gen	Plur	kokku_võte	NOUN	Par	Plur	klasside kokkuvõtteid	Järgmise nädala reedel ootab koolivormi meeskond ___klasside___ ___kokkuvõtteid___ .	13836	502
+kl5	klass	NOUN	Gen	Sing	õpilane	NOUN	Par	Sing	klassi õpilast	Oleme kaks 9. ___klassi___ ___õpilast___ Doris ja Ervin ning oleme matemaatikahuvilised .	13976	502
+kl5	päev	NOUN	Par	Sing	saade	NOUN	Par	Sing	päeva saadet	Ja nüüd , kolm ___päeva___ pärast ___saadet___ , on kõik plakatid näitusel üleval .	14080	741
+kl5	osa	NOUN	Gen	Sing	lugemine	NOUN	Par	Sing	osa lugemist	Pärast ühe ___osa___ ___lugemist___ mõtle läbi , kas selles lõigus oli sinu jaoks midagi tähtsat või mitte .	14396	236
+kl5	kraad	NOUN	Par	Sing	soe	NOUN	Par	Sing	kraadi sooja	Päeval on 5 – 8 ___kraadi___ ___sooja___ .	14413	29
+kl5	minut	NOUN	Par	Sing	aeg	NOUN	Par	Sing	minutit aega	Igal õpilasel on viis ___minutit___ ___aega___ , et rääkida , kuidas ta oma tööd tegi , millest töö on ja mida uut ta teada sai .	14566	105
+kl5	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Enne kui ma voodist üles tõusen , olen ___tund___ ___aega___ telefonis .	14749	555
+kl5	klass	NOUN	Gen	Sing	tegevus	NOUN	Par	Sing	klassi tegevust	Laura ___klassi___ kolm ___tegevust___ olid õunte söömine , jalgrattaga sõitmine ja filmide vaatamine .	14849	502
+kl5	kogus	NOUN	Gen	Sing	kapsas	NOUN	Par	Sing	koguse kapsast	Seepärast läks memme isa aita väikese kirvega ja raius kapsatünnist paraja ___koguse___ ___kapsast___ , mida soojendada !	15137	6
+kl5	minut	NOUN	Par	Sing	aeg	NOUN	Par	Sing	minutit aega	Nüüd on teil viis ___minutit___ ___aega___ , et see uudis , mille juures te seisate , läbi lugeda .	15228	105
+kl6	aasta	NOUN	Gen	Sing	lõpp	NOUN	Par	Sing	aasta lõppu	Head vana ___aasta___ ___lõppu___ !	15934	906
+kl7	kuu	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	kuu aega	Täiesti uus , alles ___kuu___ ___aega___ tagasi sain selle sünnipäevaks .	17427	156
+kl7	nädal	NOUN	Gen	Plur	viis	NOUN	Par	Sing	nädalate viisi	Sääraseid aga , kes halbade kavatsustega metsa hulkuma tulid , näiteks metsavargad , salakütid või röövlid , eksitas metsarahvas sügavasse laande , kus nad siis ___nädalate___ ___viisi___ näljast nõrkedes tulutult väljapääsu otsisid või viimaks hoopistükkis huntide ja karude saagiks langesid .	17597	225
+kl7	euro	NOUN	Par	Sing	sent	NOUN	Par	Sing	eurot senti	Arve prügiveo eest oli detsembris 6 eurot 40 senti , kütte eest 57 ___eurot___ 80 ___senti___ .	17870	108
+kl7	pakk	NOUN	Nom	Sing	kartuli_krõps	NOUN	Par	Sing	pakk kartulikrõpse	Samas märkan lähenevat sõbrannat , käes Sprite’i - pudel ja suur ___pakk___ ___kartulikrõpse___ .	18460	18
+kl8	aasta	NOUN	Gen	Sing	sekund	NOUN	Par	Plur	aasta sekundeid	Mul on selline tunne , nagu oleks aastavahetus ja meie loeme vana ___aasta___ viimaseid ___sekundeid___ .	19057	906
+kl8	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Jaa , palun , Maria , sul on juba ___tükk___ ___aega___ käsi püsti .	19485	30
+kl8	hunnik	NOUN	Gen	Sing	harjutus	NOUN	Par	Plur	hunniku harjutusi	Esimesed soojendusharjutused ning siit pärast seda me läheme keskele , teeme seal igavese ___hunniku___ ___harjutusi___ .	20430	1
+kl8	tund	NOUN	Nom	Sing	algus	NOUN	Par	Sing	tund algust	Üks ___tund___ enne esimese seansi ___algust___ .	20879	555
+kl8	tilk	NOUN	Par	Sing	vesi	NOUN	Par	Sing	tilka vett	Kas sa tead kedagi , kes on sarnased nagu kaks ___tilka___ ___vett___ ?	20951	2
+kl8	liik	NOUN	Par	Sing	seen	NOUN	Par	Plur	liiki seeni	Eestis leidub 3500 ___liiki___ ___seeni___ .	21572	49
+kl9	osa	NOUN	Nom	Sing	poiss	NOUN	Par	Plur	Osa poisse	___Osa___ ___poisse___ ja tüdrukuid on isegi maadlusvõistlustel käinud .	21649	236
+kl9	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Ta on sellest juba ___tükk___ ___aega___ unistanud , aga kunagi pole aega olnud .	22429	30
+kl9	maa	NOUN	Gen	Sing	harimine	NOUN	Par	Sing	maa harimist	Oma kõnedeski õpetas Jakobson põllumehi hindama ___maa___ ___harimist___ ja väetamist , põlluheina kasvatamist , korralike õhurikaste lautade ehitamist , tõukarja ja mesilaste pidamist , juustu valmistamist , aiandust .	22450	202
+kl9	tõug	NOUN	Gen	Sing	kana	NOUN	Par	Plur	tõugu kanu	Majapidamises oli eri ___tõugu___ ___kanu___ , parte , hanesid .	22458	3
+kl9	liik	NOUN	Gen	Sing	seen	NOUN	Par	Plur	liigi seeni	Kõikjal metsades kasvab üle 300 ___liigi___ ___seeni___ , nende hulgas on tuntud söögiseeni umbes 100 liiki .	22793	49
+kl9	aasta	NOUN	Par	Sing	võõr_keel	NOUN	Par	Sing	aastat võõrkeelt	Mitmendat aastat sa õpid eesti keelt , mitmendat ___aastat___ mõnd muud ___võõrkeelt___ ?	22911	906
+kl9	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Otsisime ___tükk___ ___aega___ malenuppe .	23311	30
+kl9	päev	NOUN	Par	Sing	aeg	NOUN	Par	Sing	päeva aega	Peoni on veel mitu ___päeva___ ___aega___ .	23672	741
+gümn	kuu	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	kuu aega	Me arutasime seda programmi perega ja kuigi alguses olin kahevahel , otsustasime , et mõistlik on osaleda ja teha taotlus ___kuu___ ___aega___ enne õpilasvahetuse algust .	24073	156
+gümn	kuu	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	kuu aega	Ma ei pannud tähelegi , kui ___kuu___ ___aega___ oli linnulennul möödunud .	24126	156
+gümn	kuu	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	kuu aega	Nii kahju oli , et ___kuu___ ___aega___ nii ruttu möödus .	24132	156
+gümn	summa	NOUN	Nom	Sing	raha	NOUN	Par	Sing	summa raha	Stanislavil oli kaasas päris korralik ___summa___ ___raha___ .	24307	22
+gümn	enamus	NOUN	Nom	Sing	õpilane	NOUN	Par	Plur	enamus õpilasi	Nagu uuringust näha , külastab valdav ___enamus___ ( 83% ) ___õpilasi___ internetti nutitelefoni kaudu .	24434	5
+gümn	sari	NOUN	Gen	Sing	tegelane	NOUN	Par	Sing	sarja tegelast	Võrdle kaht ___sarja___ ___tegelast___ : mille poolest nad sarnanevad ja mille poolest erinevad ?	24752	19
+gümn	nädal	NOUN	Par	Sing	vahe_aeg	NOUN	Par	Sing	nädalat vaheaega	Kooliaasta lõpeb märtsi keskel ja enne uue õppeaasta algust on kaks ___nädalat___ ___vaheaega___ .	24856	225
+gümn	kuu	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	kuu aega	Meil oli ___kuu___ ___aega___ enne tagasitulekut aastalõpuseminar YFU-ga .	24876	156
+gümn	arv	NOUN	Gen	Sing	suurendamine	NOUN	Par	Sing	arvu suurendamist	Ehk tuleks kaaluda gümnaasiumis praktiliste tundide ___arvu___ ___suurendamist___ .	25496	39
+gümn	tund	NOUN	Gen	Plur	arv	NOUN	Par	Sing	tundide arvu	Mõttekas on suurendada gümnaasiumis praktiliste ___tundide___ ___arvu___ .	25498	555
+gümn	tund	NOUN	Gen	Plur	arv	NOUN	Par	Sing	tundide arvu	Hea oleks suurendada gümnaasiumis praktiliste ___tundide___ ___arvu___ .	25499	555
+gümn	enamik	NOUN	Nom	Sing	kiri	NOUN	Par	Plur	Enamik kirju	___Enamik___ ___kirju___ saadetakse tänapäeval meiliga .	25925	42
+gümn	maa	NOUN	Gen	Plur	saavutus	NOUN	Par	Plur	maid saavutusi	Kui eesti tudengite üks läbi ajaloo silmapaistva ___maid___ ___saavutusi___ oli kosmose meelevalda jäetud , saabus mõne tunni pikkune hingetõmbeaeg .	26064	202
+gümn	klass	NOUN	Gen	Plur	õpilane	NOUN	Par	Plur	klasside õpilasi	Tihti rakendati vanemate ___klasside___ ___õpilasi___ nooremaid abistama .	26475	502
+gümn	lehe_külg	NOUN	Par	Sing	sõna	NOUN	Par	Plur	lehekülge sõnu	Vahel tuleb 1 lehekülje teksti kohta 2 ___lehekülge___ ___sõnu___ .	26638	42
+gümn	osa	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	Osa inimesi	___Osa___ ___inimesi___ mõtleb teistmoodi kui need tüdrukud .	27004	236
+gümn	põlvkond	NOUN	Nom	Sing	eestlane	NOUN	Par	Plur	põlvkond eestlasi	Ju on vist õige seegi , et juba terve ___põlvkond___ ___eestlasi___ tunneb elu ja maailma mitte niivõrd oma kogemuse , kui telerist nähtu kaudu .	27056	7
+gümn	enamik	NOUN	Nom	Sing	rahvas	NOUN	Par	Plur	enamik rahvaid	Nagu ___enamik___ teisigi ___rahvaid___ erinevates ilmakaartes .	27057	42
+gümn	osa	NOUN	Nom	Sing	uuring	NOUN	Par	Plur	osa uuringuid	Seepärast pole ka midagi imestada , et suurem ___osa___ ___uuringuid___ näitab seost laste agressiivsuse ja telerivaatamise vahel .	27070	236
+gümn	minut	NOUN	Gen	Sing	lemmik_meloodia	NOUN	Par	Plur	minuti lemmikmeloodiaid	Piisab , kui kassetil on umbes 20 ___minuti___ jagu sinu ___lemmikmeloodiaid___ .	27647	105
+gümn	süle_täis	NOUN	Gen	Sing	daalia	NOUN	Par	Plur	sületäie daaliaid	Ükskord tõid kaks tuttavat noormeest mulle tohutu ___sületäie___ kollaseid ja punaseid ___daaliaid___ .	27775	2
+gümn	hulk	NOUN	Nom	Sing	joonistus	NOUN	Par	Plur	hulk joonistusi	Kunsttööstuskooli päevist on Wiiraltist järele jäänud ___hulk___ ___joonistusi___ ja visandeid .	27880	45
+gümn	rida	NOUN	Par	Sing	luule	NOUN	Par	Sing	rida luulet	Mina olen ennekõike võroke ja alles siis eestlane ja ma ei kirjuta põhimõtteliselt ühtegi ___rida___ ___luulet___ eesti keeles .	27979	42
+gümn	tass	NOUN	Gen	Sing	kohv	NOUN	Par	Sing	tassi kohvi	Ma joon ___tassi___ ___kohvi___ .	28811	8
+gümn	hulk	NOUN	Nom	Sing	kõrval_hoon	NOUN	Par	Plur	hulk kõrvalhooneid	Suur ___hulk___ stiilseid ___kõrvalhooneid___ ja kaunis park koos rajatistega pärinevad 19. sajandist .	29268	45
+gümn	hulk	NOUN	Nom	Sing	pargi_paviljone	NOUN	Par	Plur	hulk pargipaviljone	Peahoone taga laiuvas mitme tiigiga pargis asub ___hulk___ ___pargipaviljone___ .	29269	45
+gümn	hulk	NOUN	Nom	Sing	mööbel	NOUN	Par	Sing	hulk mööblit	Maja sisustas perenaine ning sinna mahtus tohutu ___hulk___ ___mööblit___ .	29356	45
+gümn	hulk	NOUN	Nom	Sing	külalis+te_tuba	NOUN	Par	Plur	hulk külalistetubasid	Eramu ühes tiivas on ___hulk___ ___külalistetubasid___ ühe- või kaheinimesevooditega ja tualettruumid .	29359	45
+gümn	osa	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	Osa inimesi	___Osa___ ___inimesi___ eelistab täiesti tühja korterit , kuid noored üürnikud eelistavad sellist , kus mööbel ja kodutehnika on olemas .	29383	236
+gümn	aasta	NOUN	Gen	Sing	tiitel	NOUN	Par	Sing	Aasta tiitlit	___Aasta___ Isa ___tiitlit___ annab välja Eesti Naisliit , üle antakse see Estonia kontserdisaalis .	29992	906
+gümn	osa	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	osa aega	Paljud üliõpilased õpivad ___osa___ ___aega___ välismaal , saades lisaks heale hariduslikule pagasile palju uusi sõpru , hindamatu kogemuse ja hädavajalikud oskused tulevikus läbilöömiseks .	30106	236
+gümn	tund	NOUN	Gen	Plur	viis	NOUN	Par	Sing	tundide viisi	Üks loeb teksti korra läbi , ja kõik on selge , teine aga peab vaeva nägema ___tundide___ ___viisi___ , kuid saab ikkagi rahuldava .	30197	555
+gümn	nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Õppige kontrolltööks või eksamiks ___nädal___ ___aega___ iga päev paar tundi .	30207	225
+gümn	päev	NOUN	Nom	Sing	hindamine	NOUN	Par	Sing	päev hindamist	Kas teile meeldiks rohkem , kui iga ___päev___ ___hindamist___ üldse poleks , kuid iga veerandi lõpus oleksid arvestused ja eksamid ?	30256	741
+gümn	enamik	NOUN	Nom	Sing	õpilane	NOUN	Par	Plur	Enamik õpilasi	___Enamik___ ___õpilasi___ õpib riiklikes koolides .	30472	42
+gümn	aasta	NOUN	Gen	Sing	aeg	NOUN	Par	Sing	aasta aega	Lisaks oli tal ka kogemus USAs toimunud ärialaselt võistluselt ning ___aasta___ ___aega___ oli ta raadiosaateid toimetanud .	30553	906
+gümn	enamik	NOUN	Nom	Sing	spetsialist	NOUN	Par	Plur	Enamik spetsialiste	___Enamik___ ___spetsialiste___ tõstab Linuxi Windowsist ettepoole just usaldatavuse tõttu .	31104	42
+gümn	hulk	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	hulk inimesi	Suur ___hulk___ ___inimesi___ ei kujuta endale elu ilma arvutita ette .	31148	45
+gümn	tund	NOUN	Gen	Sing	jagu	NOUN	Par	Sing	tunni jagu	Mobiiltelefoniga on võimalik teha kvaliteetset filmi - telefoni mälukaart mahutab rohkem kui ___tunni___ ___jagu___ filmi .	31218	555
+gümn	jagu	NOUN	Par	Sing	film	NOUN	Par	Sing	jagu filmi	Mobiiltelefoniga on võimalik teha kvaliteetset filmi - telefoni mälukaart mahutab rohkem kui tunni ___jagu___ ___filmi___ .	31218	5
+gümn	tüüp	NOUN	Par	Sing	seade	NOUN	Par	Plur	tüüpi seadmeid	Jaapanis on kolme ___tüüpi___ 3G ___seadmeid___ - üks on lihtne terminal , teine on videotelefon ja kolmas on mõeldud peamiselt andmesidel põhinevate teenuste kasutamiseks .	31236	16
+gümn	kilo	NOUN	Par	Sing	prügi	NOUN	Par	Sing	kilo prügi	Iga inimene toodab Eestis aastaga umbes 400 ___kilo___ ___prügi___ , millest 60 protsenti moodustavad pakendid .	31262	23
+gümn	liik	NOUN	Gen	Sing	levik	NOUN	Par	Sing	liigi levikut	See on teaduslike andmete kogu , mis kajastab ___liigi___ ___levikut___ ja seisukorda koos ettepanekutega selle kaitseks .	31413	49
+gümn	liik	NOUN	Gen	Plur	olu_kord	NOUN	Par	Sing	liikide olukorda	Looduseuurijad peavad kogu aeg jälgima ohustatud ja haruldaste ___liikide___ ___olukorda___ ja kandma uued andmed punasesse raamatusse .	31415	49
+gümn	liik	NOUN	Par	Sing	taim	NOUN	Par	Plur	liiki taimi	Eesti esimeses punases raamatus ( 1979 ) oli kokku 259 ___liiki___ ___taimi___ ja loomi .	31417	49
+gümn	liik	NOUN	Gen	Plur	kadumine	NOUN	Par	Sing	Liikide kadumist	___Liikide___ ___kadumist___ seostatakse mitmesuguse metsade majandamisega seotud tegevuse , veekogude muutmise ja põllumajandusliku tegevusega , samuti kliimamuutustega .	31420	49
+gümn	tonn	NOUN	Par	Sing	nafta	NOUN	Par	Sing	tonni naftat	Igal aastal satub merre rohkem kui kolm miljonit ___tonni___ ___naftat___ .	31493	10
+gümn	enamik	NOUN	Nom	Sing	noor	NOUN	Par	Plur	enamik noori	Pärimise peale ___enamik___ ___noori___ eitab , et nad on meelemürke tarvitanud .	31817	42
+gümn	valik	NOUN	Nom	Sing	või_leib	NOUN	Par	Plur	valik võileibu	Õiges puhvetis on ka ___valik___ ___võileibu___ .	31880	56
+gümn	osa	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	Osa inimesi	___Osa___ ___inimesi___ on teatud valguühendite suhtes tundlikud ning on haigusi , mille puhul tuleb muna söömist vähendada , tarvitada seda poolpehmena või omletina .	31895	236
+gümn	valik	NOUN	Nom	Sing	kirjandus	NOUN	Par	Sing	valik kirjandust	Tänapäeval võib sellekohast teavet lugeda kõikjalt , sest tervisest ja spordist kirjutavad kõik perioodilised väljaanded ning raamatukogude lugemissaalides on saadaval lai ___valik___ ___kirjandust___ .	31949	56
+gümn	päev	NOUN	Nom	Sing	ratsutamine	NOUN	Par	Sing	päev ratsutamist	Korraldage midagi ohutumat , näiteks hipodroomil üks ___päev___ ___ratsutamist___ .	31971	741
+gümn	nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Mida teha siis , kui juba ___nädal___ ___aega___ on dieedil oldud ja näljatunne on tugev ?	31993	225
+gümn	osa	NOUN	Nom	Sing	tervise_kaup	NOUN	Par	Plur	osa tervisekaupu	Suurem ___osa___ saadaolevaid ___tervisekaupu___ kuulub kallimasse hinnaklassi .	32203	236
+gümn	liik	NOUN	Par	Sing	orhidee	NOUN	Par	Plur	liiki orhideesid	Metsades õitseb külluses igat ___liiki___ käpalisi ehk põhjamaade ___orhideesid___ .	32343	49
+gümn	aasta	NOUN	Par	Sing	töö_kogemus	NOUN	Par	Sing	aastat töökogemust	Vabatahtlik peab olema vähemalt 25-aastane ja on hea , kui tal on oma erialal mitu ___aastat___ ___töökogemust___ .	32562	906
+gümn	pakk	NOUN	Nom	Sing	küpsis	NOUN	Par	Plur	pakk küpsiseid	Kursuse alguses antakse igale osalejale kaasa üks konserv , ___pakk___ ___küpsiseid___ , puljongikuubik , 100 grammi šokolaadi , pool leiba , sõjaväevorm , tekk , telkmantel , taskunuga , lisaks veel plekkpurke , prügikotte ja voodilinu .	32701	18
+gümn	gramm	NOUN	Par	Sing	šokolaad	NOUN	Par	Sing	grammi šokolaadi	Kursuse alguses antakse igale osalejale kaasa üks konserv , pakk küpsiseid , puljongikuubik , 100 ___grammi___ ___šokolaadi___ , pool leiba , sõjaväevorm , tekk , telkmantel , taskunuga , lisaks veel plekkpurke , prügikotte ja voodilinu .	32701	4
+gümn	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Tavaliselt tulen ___tund___ ___aega___ varem kohale , istun garderoobis ja mõtlen .	32792	555
+gümn	rida	NOUN	Nom	Sing	lavastus	NOUN	Par	Plur	rida lavastusi	Tema tulek tõi Ugalasse uue hoo ja hingamise , üksteise järel sündis ___rida___ suurepäraseid ___lavastusi___ .	32871	42
+kl6	osa	NOUN	Nom	Sing	õpilane	NOUN	Par	Plur	osa õpilasi	Suur ___osa___ ___õpilasi___ tahtis osa võtta kergejõustikuvõistlustest .	33926	236
+kl6	hulk	NOUN	Nom	Sing	olümpia_medal	NOUN	Par	Plur	hulk olümpiamedaleid	Siin on väljas väga suur ___hulk___ eestlaste ___olümpiamedaleid___ .	33984	45
+kl6	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Sõit kestis umbes ___tund___ ___aega___ .	34266	555
+kl6	hulk	NOUN	Gen	Sing	lisa_töö	NOUN	Par	Plur	hulga lisatööd	Koolivorm ei too minu arvates võrdsust , vaid lastele pingeid ja lastevanematele ___hulga___ ___lisatööd___ ning kulutusi , et vormirõivaid korras hoida .	34347	45
+kl6	komplekt	NOUN	Par	Sing	kooli_rõivas	NOUN	Par	Plur	komplekti koolirõivaid	Arvan , et minu lapsel peaks olema kolm ___komplekti___ ___koolirõivaid___ .	34349	8
+kl6	enamik	NOUN	Nom	Sing	korra_valvur	NOUN	Par	Plur	enamik korravalvureid	Olete te kunagi mõelnud , miks kannab ___enamik___ ___korravalvureid___ tumesiniseid riideid ?	34366	42
+kl6	osa	NOUN	Nom	Sing	teadlane	NOUN	Par	Plur	Osa teadlasi	___Osa___ ___teadlasi___ arvab , et eestlased tulid praegusele territooriumile kohe pärast jää sulamist , seega juba 10 000 – 12 000 aastat tagasi .	34724	236
+kl6	liiter	NOUN	Par	Sing	suhkru_vesi	NOUN	Par	Sing	liitrit suhkruvett	Kuidas reklaamida poolt ___liitrit___ ___suhkruvett___ ?	35110	6
+kl6	kilo_gramm	NOUN	Par	Sing	prügi	NOUN	Par	Sing	kilogrammi prügi	Iga Eestis elav inimene tekitab aastas 400 ___kilogrammi___ ___prügi___ .	35168	10
+kl6	kilo_gramm	NOUN	Gen	Sing	vana_paber	NOUN	Par	Sing	kilogrammi vanapaberit	Kui sa kogud 70 ___kilogrammi___ ___vanapaberit___ , päästad ühe puu .	35169	10
+kl6	tonn	NOUN	Par	Sing	pakend	NOUN	Par	Plur	tonni pakendeid	Eestis kogutakse aastas umbes 73 000 ___tonni___ ___pakendeid___ .	35170	10
+kl6	tonn	NOUN	Par	Sing	prügi	NOUN	Par	Sing	tonni prügi	Eesti metsades ja teede ääres on kevadel kuni 10 000 ___tonni___ ___prügi___ .	35172	10
+kl6	enamik	NOUN	Gen	Sing	kodu_töö	NOUN	Par	Plur	enamiku kodutöid	Robotite asemel teevad ___enamiku___ ___kodutöid___ jälle inimesed ise .	35230	42
+kl6	leht	NOUN	Gen	Plur	laste_nurk	NOUN	Par	Sing	lehtede lastenurki	Loe eestikeelseid lasteajakirju või ___lehtede___ ___lastenurki___ .	35647	47
+kl6	teelusika_täis	NOUN	Par	Sing	rasv	NOUN	Par	Sing	teelusikatäis rasva	Näiteks on ühes väikeses viineris umbes ___teelusikatäis___ ___rasva___ .	36718	1
+kl6	tee_lusika_täis	NOUN	Par	Sing	suhkur	NOUN	Par	Sing	teelusikatäit suhkrut	Ühes 1 , 5-liitrises limonaadipudelis on peaaegu 30 ___teelusikatäit___ ___suhkrut___ .	36719	2
+kl6	pakk	NOUN	Par	Sing	krõps	NOUN	Par	Plur	pakki krõpse	Ma olen ükskord kümme ___pakki___ ___krõpse___ korraga ära söönud .	36728	18
+kl6	tee_lusika_täis	NOUN	Par	Sing	sool	NOUN	Par	Sing	teelusikatäit soola	Näiteks on ühes 100-grammises pakis krõpsudes umbes pool ___teelusikatäit___ ___soola___ .	36741	2
+kl6	pakk	NOUN	Gen	Sing	kartuli_krõps	NOUN	Par	Sing	paki kartulikrõpse	Kui sööksime aasta jooksul iga päev ühe 100-grammise ___paki___ ___kartulikrõpse___ , siis saaksime nendest kilogrammi soola ja 13 kilogrammi rasva .	36742	18
+kl6	kilo_gramm	NOUN	Gen	Sing	sool	NOUN	Par	Sing	kilogrammi soola	Kui sööksime aasta jooksul iga päev ühe 100-grammise paki kartulikrõpse , siis saaksime nendest ___kilogrammi___ ___soola___ ja 13 kilogrammi rasva .	36742	10
+kl6	kilo_gramm	NOUN	Gen	Sing	rasv	NOUN	Par	Sing	kilogrammi rasva	Kui sööksime aasta jooksul iga päev ühe 100-grammise paki kartulikrõpse , siis saaksime nendest kilogrammi soola ja 13 ___kilogrammi___ ___rasva___ .	36742	10
+kl6	gramm	NOUN	Par	Sing	kapsas	NOUN	Par	Sing	grammi kapsast	Süües päevas ühe tomati ühe suure porgandi , sada ___grammi___ ___kapsast___ ja rohelisi köögivilju , ühe banaani ja sada grammi tumedamaid marju , saame kätte vajaliku koguse vitamiine ja mineraalaineid .	36795	4
+kl6	kogus	NOUN	Gen	Sing	vitamiin	NOUN	Par	Plur	koguse vitamiine	Süües päevas ühe tomati ühe suure porgandi , sada grammi kapsast ja rohelisi köögivilju , ühe banaani ja sada grammi tumedamaid marju , saame kätte vajaliku ___koguse___ ___vitamiine___ ja mineraalaineid .	36795	6
+kl6	nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Kutsu sõbrad oma sünnipäevale vähemalt ___nädal___ ___aega___ varem , siis saavad nad külaskäiguks paremini ette valmistuda .	36866	225
+kl6	maa	NOUN	Gen	Plur	rahva_muusika	NOUN	Par	Sing	maade rahvamuusikat	Mulle meeldib erinevate ___maade___ ___rahvamuusikat___ kuulata .	36910	202
+kl6	aasta	NOUN	Gen	Sing	sündmus	NOUN	Par	Plur	aasta sündmusi	Koolitants on noorele tantsijale üks ___aasta___ olulisemaid ___sündmusi___ .	37133	906
+kl7	pakk	NOUN	Par	Sing	mängu_kaar	NOUN	Par	Plur	pakki mängukaarte	Tal kulus selleks 1200 ___pakki___ ___mängukaarte___ , ta ei kasutanud liimi ega muud kleepainet .	37503	18
+kl7	nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Igal aastal toimub augustikuus ühes Hispaania linnas suur toidufestival , mis kestab ___nädal___ ___aega___ .	37515	225
+kl7	tonn	NOUN	Par	Sing	tomat	NOUN	Par	Plur	tonni tomateid	Suurtelt veoautodelt visatakse tänavatele inimeste sekka 120 ___tonni___ ___tomateid___ .	37518	10
+kl7	kilo	NOUN	Par	Sing	friikartul	NOUN	Par	Plur	kilo friikartuleid	Kuu jooksul teeb see umbes kaks ___kilo___ ___friikartuleid___ .	37556	23
+kl7	protsent	NOUN	Par	Sing	rasv	NOUN	Par	Sing	protsenti rasva	Mitu ___protsenti___ ___rasva___ sisaldab üks portsjon friikartuleid ?	37575	39
+kl7	portsjon	NOUN	Nom	Sing	friikartul	NOUN	Par	Plur	portsjon friikartuleid	Mitu protsenti rasva sisaldab üks ___portsjon___ ___friikartuleid___ ?	37575	5
+kl7	pakk	NOUN	Nom	Sing	kohu_piim	NOUN	Par	Sing	pakk kohupiima	Osta poest või võta külmkapist üks ___pakk___ ___kohupiima___ jne .	37673	18
+kl7	klaas	NOUN	Nom	Sing	vesi	NOUN	Par	Sing	klaas vett	Nõuanne : jätke alati ahju ___klaas___ ___vett___ .	37952	21
+kl7	sekund	NOUN	Par	Sing	järel_valmimine	NOUN	Par	Sing	sekundit järelvalmimisaega	Pärast ahju väljalülitamist jätke ALATI 20 ___sekundit___ ___järelvalmimisaega___ , et temperatuur saaks võrdsustuda .	37964	38
+kl7	tükk	NOUN	Nom	Sing	maa	NOUN	Par	Sing	tükk maad	Et uus ___tükk___ kuiva ___maad___ jäi täpselt kahe maa vahele , pandi talle nimeks Piirissaar .	38139	30
+kl7	nädal	NOUN	Gen	Plur	viis	NOUN	Par	Sing	nädalate viisi	Vägimees magas ___nädalate___ ___viisi___ , pea allapoole rippumas .	38145	225
+kl7	nädal	NOUN	Gen	Plur	viis	NOUN	Par	Sing	nädalate viisi	Kalevipoeg ärkas alles siis , kui oli ___nädalate___ ___viisi___ maganud .	38182	225
+kl7	tilk	NOUN	Par	Sing	vesi	NOUN	Par	Sing	tilka vett	Mõned muistendid on sarnased nagu kaks ___tilka___ ___vett___ .	38185	2
+kl7	pakk	NOUN	Par	Sing	mängu_kaar	NOUN	Par	Plur	pakki mängukaarte	Tal kulus selleks tuhat kaheksasada ___pakki___ ___mängukaarte___ , kusjuures ta ei kasutanud liimi ega muud kleepainet .	38306	18
+kl7	kilo_gramm	NOUN	Par	Sing	jahu	NOUN	Par	Sing	kilogrammi jahu	Selles oli neli tuhat kuussada ___kilogrammi___ ___jahu___ , üheksakümmend kilogrammi soola , tuhat kaheksasada kilogrammi juustu ja kaheksasada kilogrammi tomatipüreed .	38309	10
+kl7	kilo_gramm	NOUN	Par	Sing	sool	NOUN	Par	Sing	kilogrammi soola	Selles oli neli tuhat kuussada kilogrammi jahu , üheksakümmend ___kilogrammi___ ___soola___ , tuhat kaheksasada kilogrammi juustu ja kaheksasada kilogrammi tomatipüreed .	38309	10
+kl7	kilo_gramm	NOUN	Par	Sing	juust	NOUN	Par	Sing	kilogrammi juustu	Selles oli neli tuhat kuussada kilogrammi jahu , üheksakümmend kilogrammi soola , tuhat kaheksasada ___kilogrammi___ ___juustu___ ja kaheksasada kilogrammi tomatipüreed .	38309	10
+kl7	kilo_gramm	NOUN	Par	Sing	tomati_püreed	NOUN	Par	Sing	kilogrammi tomatipüreed	Selles oli neli tuhat kuussada kilogrammi jahu , üheksakümmend kilogrammi soola , tuhat kaheksasada kilogrammi juustu ja kaheksasada ___kilogrammi___ ___tomatipüreed___ .	38309	10
+kl7	nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Igal aastal augustikuus toimub Hispaanias suur toidufestival , mis kestab ___nädal___ ___aega___ .	38319	225
+kl7	tonn	NOUN	Par	Sing	tomat	NOUN	Par	Plur	tonni tomateid	Suurtelt veoautodelt visatakse tänavatele inimeste sekka sada kakskümmend ___tonni___ ___tomateid___ .	38322	10
+kl7	tükk	NOUN	Nom	Sing	leib	NOUN	Par	Sing	tükk leiba	Talle anti kaasa ___tükk___ ___leiba___ ja kruus vett .	38652	30
+kl8	enamik	NOUN	Nom	Sing	tüdruk	NOUN	Par	Plur	Enamik tüdrukuid	___Enamik___ ___tüdrukuid___ , kes diskol käivad , ongi põhiliselt turistid , sest meil on islami usk ja tüdrukud ei tohiks väljas käia , aga osa käib ikka .	38940	42
+kl8	purk	NOUN	Nom	Plur	vastu_võtu_punkt	NOUN	Par	Sing	purgid vastuvõtupunkti	Mitu protsenti küsitletud elanikest viib klaaspudelid ja - ___purgid___ ___vastuvõtupunkti___ ?	39020	7
+kl8	protsent	NOUN	Par	Sing	inimene	NOUN	Par	Plur	protsenti inimesi	Mitu ___protsenti___ ___inimesi___ on ohtlikke jäätmeid ära andnud kogumispäevadel ?	39024	39
+kl8	enamik	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	enamik inimesi	Mida teeb jäätmete töötlemise heaks ___enamik___ ___inimesi___ ?	39027	42
+kl8	kroon	NOUN	Par	Sing	telkimis_tasu	NOUN	Par	Sing	krooni telkimistasu	Loa saab , makstes ca 25 ___krooni___ ___telkimistasu___ .	39609	86
+kl8	hulk	NOUN	Nom	Sing	suur_tüki_patarei	NOUN	Par	Plur	hulk suurtükipatareisid	Aegnal on ilus liivarand , surnuaed , ___hulk___ õhkulastud ___suurtükipatareisid___ ja keskus .	39612	45
+kl8	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Sõit saarele kestab umbes ___tund___ ___aega___ .	39613	555
+kl8	enamus	NOUN	Nom	Sing	õpilane	NOUN	Par	Plur	enamus õpilasi	Aga ___enamus___ [ enamik ] ___õpilasi___ ei pea nendest reeglitest kinni .	39707	5
+kl8	tund	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tund aega	Oleme ___tund___ ___aega___ .	39769	555
+kl8	tonn	NOUN	Gen	Plur	viis	NOUN	Par	Sing	tonnide viisi	Igal kevadel koristavad kooliõpilased metsa alt ___tonnide___ ___viisi___ prügi , mida inimesed on sinna jätnud .	39785	10
+kl8	grupp	NOUN	Nom	Sing	töötaja	NOUN	Par	Plur	grupp töötajaid	See on üks ___grupp___ ___töötajaid___ , loominguline grupp .	39800	22
+kl8	grupp	NOUN	Nom	Sing	töötaja	NOUN	Par	Plur	grupp töötajaid	Ja on nüüd teine ___grupp___ ___töötajaid___ , see on majanduslik , tehniline personal : assistendid , autojuhid , valgustajad , administraatorid , monteerijad .	39801	22
+kl9	enamik	NOUN	Nom	Sing	kursuslane	NOUN	Par	Plur	Enamik kursuslasi	___Enamik___ ___kursuslasi___ tormas mõisast lihtsalt läbi .	40170	42
+kl9	kilo	NOUN	Par	Sing	varustus	NOUN	Par	Sing	kilo varustust	Kakskümmend kaheksa ___kilo___ ___varustust___ seljas ja mask peas - see on tavaline asi .	40228	23
+kl9	klass	NOUN	Gen	Sing	lõpetamine	NOUN	Par	Sing	klassi lõpetamist	Pärast üheksanda ___klassi___ ___lõpetamist___ hakkan õppima gümnaasiumis .	40260	502
+kl9	klass	NOUN	Gen	Sing	lõpetamine	NOUN	Par	Sing	klassi lõpetamist	Millised edasiõppimisvõimalused on sul pärast üheksanda ___klassi___ ___lõpetamist___ ?	40289	502
+kl9	klass	NOUN	Gen	Sing	lõpetamine	NOUN	Par	Sing	klassi lõpetamist	Mida hakkad tegema pärast üheksanda ___klassi___ ___lõpetamist___ ?	40290	502
+kl9	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Pole Sinust juba ___tükk___ ___aega___ midagi kuulnud .	40424	30
+kl9	hulk	NOUN	Nom	Sing	õpilane	NOUN	Par	Plur	hulk õpilasi	Sageli haarab ___hulk___ ___õpilasi___ pärast tundi telefoni kätte , et teha kõne korrus allpool asuvale sõbrale .	40507	45
+kl9	tüüp	NOUN	Par	Sing	vagun	NOUN	Par	Plur	tüüpi vaguneid	Tokios näeb sõitmas ronge , millel on kaht ___tüüpi___ ___vaguneid___ - mobiiliga ning mobiilita .	40511	16
+kl9	jagu	NOUN	Par	Sing	vihm	NOUN	Par	Sing	jagu vihma	Pärnus sadas eile poole tunni jooksul maha 15 päeva normi ___jagu___ ___vihma___ , mis uputas kesklinnas bussijaama ümbruse põlvini ulatuva veega .	40963	5
+kl9	kausi_täis	NOUN	Nom	Sing	toit	NOUN	Par	Sing	kausitäis toitu	Üks ___kausitäis___ ___toitu___ , kuivtoitu .	41593	1
+kl9	kogu	NOUN	Nom	Plur	raha	NOUN	Par	Sing	kogud raha	Kas sa ___kogud___ ka ___raha___ millegi jaoks ?	41695	8
+kl9	tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	No veel ei ole saanud , aga ma arvan , et kui ta veel ___tükk___ ___aega___ nuiab , siis ma ikka annan talle selle raha .	41723	30
+kl9	valik	NOUN	Nom	Sing	pliiatsei	NOUN	Par	Plur	valik pliiatseid	Nojah , meil on siin suur ___valik___ harilikke ___pliiatseid___ .	41758	56
+kl9	paar	NOUN	Gen	Sing	pluus	NOUN	Par	Plur	paari pluuse	Et peab olema ikka mitu paari pükse ja mitu ___paari___ ___pluuse___ ja .	42070	4

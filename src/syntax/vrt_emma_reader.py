@@ -51,76 +51,124 @@ class VrtEmmaReader(BaseReader):
     def get_sentences(self, mode="graph"):
         print(self._file_name)
         self.log_info("Reading sentences in progress.")
-        if mode not in ["graph", "text"]:
-            raise Exception("Unknown mode %s", mode)
- 
+
+        if mode not in ("graph", "text"):
+            raise Exception(f"Unknown mode {mode}")
+
         header = None
         current_sentence = []
         sent_id = None
         doc_attrs = {}
- 
+
         with open(self._file_name, "r", encoding="utf-8") as f:
             for line_no, raw_line in enumerate(f, start=1):
                 line = raw_line.rstrip("\r\n")
+
                 if not line:
                     continue
- 
-                if line_no==1:
-                    # header line, e.g. "#word word_id word_tokens ... error_type"
+
+                # Read the column header.
+                if line_no == 1:
                     if line.startswith("#"):
                         header = line[1:]
                     else:
-                        header = line[0:]
+                        header = line
+
                     header = header.strip().split()
                     continue
- 
+
+                # Process structural tags.
                 if line.startswith("<"):
                     if line.startswith("<sentence"):
-                        m = self._SENTENCE_OPEN_RE.match(line)
-                        sent_id = m.group(1) if m else None
+                        match = self._SENTENCE_OPEN_RE.match(line)
+                        sent_id = match.group(1) if match else None
                         current_sentence = []
+
                     elif line == "</sentence>":
-                        g = UDSyntaxGraph(current_sentence)
-                        g.set_metadata("doc", doc_attrs)
-                        g.set_metadata("sent_id", sent_id)
+                        sentence_text = self._make_sentence_text(
+                            current_sentence
+                        )
+
                         if mode == "graph":
-                            yield sent_id, g
+                            graph = UDSyntaxGraph(current_sentence)
+                            graph.set_metadata("doc", doc_attrs)
+                            graph.set_metadata("sent_id", sent_id)
+                            graph.set_metadata("text", sentence_text)
+
+                            yield sent_id, graph
                         else:
-                            text = " ".join(t["form"] for t in current_sentence)
-                            yield sent_id, text
+                            yield sent_id, sentence_text
+
+                        current_sentence = []
+                        sent_id = None
+
                     elif line.startswith("<text"):
-                        doc_attrs = dict(self._TEXT_ATTR_RE.findall(line))
-                    elif line.startswith("</text") or line in ("<corpus>", "</corpus>") or line.startswith("<corpus"):
+                        doc_attrs = dict(
+                            self._TEXT_ATTR_RE.findall(line)
+                        )
+
+                    elif (
+                        line.startswith("</text")
+                        or line == "<corpus>"
+                        or line == "</corpus>"
+                        or line.startswith("<corpus")
+                    ):
                         doc_attrs = {}
-                        # document/corpus-level wrapper tags, nothing to do
-                        pass
+
                     else:
-                        self.log_info(f"Ignoring unknown tag on line {line_no}: {line}")
+                        self.log_info(
+                            f"Ignoring unknown tag on line "
+                            f"{line_no}: {line}"
+                        )
+
                     continue
- 
+
                 if header is None:
                     raise Exception(
-                        f"Token row found before header line ({line_no}) in {self._file_name}"
+                        f"Token row found before header line "
+                        f"({line_no}) in {self._file_name}"
                     )
- 
+
                 row = line.split("\t")
+
                 if len(row) != len(header):
                     self.log_error(line)
-                    for i, t in enumerate(row):
-                        print(header[i], i+1, t)
+
+                    for index, value in enumerate(row):
+                        column_name = (
+                            header[index]
+                            if index < len(header)
+                            else "<extra column>"
+                        )
+                        print(column_name, index + 1, value)
+
                     raise Exception(
-                        f"Wrong column count on line {line_no} in {self._file_name}: "
-                        f"expected {len(header)}, got {len(row)}"
+                        f"Wrong column count on line {line_no} "
+                        f"in {self._file_name}: expected "
+                        f"{len(header)}, got {len(row)}"
                     )
+
                 fields = dict(zip(header, row))
- 
+
                 node_id = int(fields["word_id"])
                 head = int(fields["DependencyHead"])
+
                 if head == node_id:
-                    # raw file marks the root with a self-loop (head == id);
-                    # normalize to the standard CoNLL-U root convention (0)
+                    # The source marks a root using a self-loop.
+                    # Convert it to the standard CoNLL-U root head.
                     head = 0
- 
+
+                try:
+                    pos_start, pos_end = map(
+                        int,
+                        fields["word_tokens"].split("-", maxsplit=1),
+                    )
+                except (TypeError, ValueError) as error:
+                    raise ValueError(
+                        f"Invalid word_tokens value on line {line_no}: "
+                        f"{fields.get('word_tokens')!r}"
+                    ) from error
+
                 current_sentence.append(
                     {
                         "id": node_id,
@@ -130,15 +178,85 @@ class VrtEmmaReader(BaseReader):
                         "deprel": fields["DependencyType"],
                         "head": head,
                         "feats": self._parse_feats(fields["value"]),
-                        "verbform": None if fields["verbForm"] == "_" else fields["verbForm"],
+                        "verbform": (
+                            None
+                            if fields["verbForm"] == "_"
+                            else fields["verbForm"]
+                        ),
+                        "pos_start": pos_start,
+                        "pos_end": pos_end,
                     }
                 )
- 
+
+    @staticmethod
+    def _make_sentence_text(tokens):
+        """
+        Reconstruct sentence text using token character positions.
+
+        A space is inserted only when there is a gap between the end of
+        the previous token and the beginning of the current token.
+
+        Examples:
+            Hello + ,       -> Hello,
+            Hello, + world  -> Hello, world
+            world + !       -> world!
+
+        The exact gap length is preserved when it is greater than zero.
+        No leading whitespace is added before the first token.
+        """
+        if not tokens:
+            return ""
+
+        ordered_tokens = sorted(
+            tokens,
+            key=lambda token: (
+                token["pos_start"],
+                token["pos_end"],
+                token["id"],
+            ),
+        )
+
+        sentence_parts = []
+        previous_pos_end = None
+
+        for token in ordered_tokens:
+            form = token.get("form", "")
+            pos_start = token["pos_start"]
+            pos_end = token["pos_end"]
+
+            if previous_pos_end is not None:
+                gap = pos_start - previous_pos_end
+
+                if gap > 0:
+                    sentence_parts.append(" " * gap)
+
+            sentence_parts.append(form)
+
+            if previous_pos_end is None:
+                previous_pos_end = pos_end
+            else:
+                # Keep the furthest end position if token spans overlap.
+                previous_pos_end = max(previous_pos_end, pos_end)
+
+        return "".join(sentence_parts)
+
     @staticmethod
     def _parse_feats(value):
-        """Parses a UD-style "Key1=Val1|Key2=Val2" string into a dict; "_" -> {}."""
+        """
+        Parse a UD-style feature string into a dictionary.
+
+        Example:
+            "Case=Nom|Number=Sing"
+            -> {"Case": "Nom", "Number": "Sing"}
+
+        "_" or an empty value becomes an empty dictionary.
+        """
         if not value or value == "_":
             return {}
-        return dict(part.split("=", 1) for part in value.split("|") if "=" in part)
- 
- 
+
+        return {
+            key: feature_value
+            for part in value.split("|")
+            if "=" in part
+            for key, feature_value in [part.split("=", 1)]
+        }

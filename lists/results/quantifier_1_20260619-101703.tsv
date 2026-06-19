@@ -9,6 +9,7 @@ klaas	NOUN	Par	Sing	õuna_maha	NOUN	Par	Sing	klaasi õunamahla	Palun kaks maasik
 pakk	NOUN	Gen	Sing	sigaret	NOUN	Par	Plur	paki sigarette	Rutt võtab kotist välja ___paki___ ___sigarette___ .	1097	18
 liik	NOUN	Gen	Sing	levik	NOUN	Par	Sing	liigi levikut	Punane raamat ei sisalda looduskaitse seadusi ega määrusi , see on teadusandmete kogu , mis kajastab ___liigi___ ___levikut___ ja seisukorda koos ettepanekutega selle kaitse vajaduse kohta .	1276	49
 liik	NOUN	Gen	Plur	olu_kord	NOUN	Par	Sing	liikide olukorda	Loodusuurijad peavad pidevalt jälgima ohustatud ja haruldaste ___liikide___ ___olukorda___ ning kandma uued andmed raamatusse .	1278	49
+ruut_meeter	NOUN	Par	Sing	maa	NOUN	Par	Sing	ruutmeetrit maad	Iga kaheksakümne krooni eest ostetud pilet võimaldab meil osta 50 ___ruutmeetrit___ ___maad___ .	1333	2
 liik	NOUN	Gen	Sing	puu	NOUN	Par	Plur	liigi puid	Loodussõpradele pakub aga kindlasti huvi Luua barokne mõisakompleks ja park koos dendropargiga , kus kasvab üle 800 ___liigi___ ___puid___ ja põõsaid mitmelt poolt maailmast .	1500	49
 enamik	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	Enamik inimesi	___Enamik___ ___inimesi___ armastas lapsena muinasjutte ning paljud ei julge tunnistada , et armastavad neid täiskasvanunagi .	1796	42
 minut	NOUN	Par	Sing	trenn	NOUN	Par	Sing	minutit trenni	Selleks , et vähendada kehakaalu või ennetada paksuksminemist , on kõige õigem tegeleda mõõduka füüsilise aktiivsusega - kolmel korral nädalas 20 ___minutit___ ___trenni___ .	2215	105
@@ -102,11 +103,13 @@ tund	NOUN	Gen	Plur	arv	NOUN	Par	Sing	tundide arvu	Hea oleks suurendada gümnaasi
 enamik	NOUN	Nom	Sing	kiri	NOUN	Par	Plur	Enamik kirju	___Enamik___ ___kirju___ saadetakse tänapäeval meiliga .	25925	42
 maa	NOUN	Gen	Plur	saavutus	NOUN	Par	Plur	maid saavutusi	Kui eesti tudengite üks läbi ajaloo silmapaistva ___maid___ ___saavutusi___ oli kosmose meelevalda jäetud , saabus mõne tunni pikkune hingetõmbeaeg .	26064	202
 klass	NOUN	Gen	Plur	õpilane	NOUN	Par	Plur	klasside õpilasi	Tihti rakendati vanemate ___klasside___ ___õpilasi___ nooremaid abistama .	26475	502
+lehe_külg	NOUN	Par	Sing	sõna	NOUN	Par	Plur	lehekülge sõnu	Vahel tuleb 1 lehekülje teksti kohta 2 ___lehekülge___ ___sõnu___ .	26638	42
 osa	NOUN	Nom	Sing	inimene	NOUN	Par	Plur	Osa inimesi	___Osa___ ___inimesi___ mõtleb teistmoodi kui need tüdrukud .	27004	236
 põlvkond	NOUN	Nom	Sing	eestlane	NOUN	Par	Plur	põlvkond eestlasi	Ju on vist õige seegi , et juba terve ___põlvkond___ ___eestlasi___ tunneb elu ja maailma mitte niivõrd oma kogemuse , kui telerist nähtu kaudu .	27056	7
 enamik	NOUN	Nom	Sing	rahvas	NOUN	Par	Plur	enamik rahvaid	Nagu ___enamik___ teisigi ___rahvaid___ erinevates ilmakaartes .	27057	42
 osa	NOUN	Nom	Sing	uuring	NOUN	Par	Plur	osa uuringuid	Seepärast pole ka midagi imestada , et suurem ___osa___ ___uuringuid___ näitab seost laste agressiivsuse ja telerivaatamise vahel .	27070	236
 minut	NOUN	Gen	Sing	lemmik_meloodia	NOUN	Par	Plur	minuti lemmikmeloodiaid	Piisab , kui kassetil on umbes 20 ___minuti___ jagu sinu ___lemmikmeloodiaid___ .	27647	105
+süle_täis	NOUN	Gen	Sing	daalia	NOUN	Par	Plur	sületäie daaliaid	Ükskord tõid kaks tuttavat noormeest mulle tohutu ___sületäie___ kollaseid ja punaseid ___daaliaid___ .	27775	2
 hulk	NOUN	Nom	Sing	joonistus	NOUN	Par	Plur	hulk joonistusi	Kunsttööstuskooli päevist on Wiiraltist järele jäänud ___hulk___ ___joonistusi___ ja visandeid .	27880	45
 rida	NOUN	Par	Sing	luule	NOUN	Par	Sing	rida luulet	Mina olen ennekõike võroke ja alles siis eestlane ja ma ei kirjuta põhimõtteliselt ühtegi ___rida___ ___luulet___ eesti keeles .	27979	42
 tass	NOUN	Gen	Sing	kohv	NOUN	Par	Sing	tassi kohvi	Ma joon ___tassi___ ___kohvi___ .	28811	8
@@ -154,12 +157,19 @@ komplekt	NOUN	Par	Sing	kooli_rõivas	NOUN	Par	Plur	komplekti koolirõivaid	Arvan
 enamik	NOUN	Nom	Sing	korra_valvur	NOUN	Par	Plur	enamik korravalvureid	Olete te kunagi mõelnud , miks kannab ___enamik___ ___korravalvureid___ tumesiniseid riideid ?	34366	42
 osa	NOUN	Nom	Sing	teadlane	NOUN	Par	Plur	Osa teadlasi	___Osa___ ___teadlasi___ arvab , et eestlased tulid praegusele territooriumile kohe pärast jää sulamist , seega juba 10 000 – 12 000 aastat tagasi .	34724	236
 liiter	NOUN	Par	Sing	suhkru_vesi	NOUN	Par	Sing	liitrit suhkruvett	Kuidas reklaamida poolt ___liitrit___ ___suhkruvett___ ?	35110	6
+kilo_gramm	NOUN	Par	Sing	prügi	NOUN	Par	Sing	kilogrammi prügi	Iga Eestis elav inimene tekitab aastas 400 ___kilogrammi___ ___prügi___ .	35168	10
+kilo_gramm	NOUN	Gen	Sing	vana_paber	NOUN	Par	Sing	kilogrammi vanapaberit	Kui sa kogud 70 ___kilogrammi___ ___vanapaberit___ , päästad ühe puu .	35169	10
 tonn	NOUN	Par	Sing	pakend	NOUN	Par	Plur	tonni pakendeid	Eestis kogutakse aastas umbes 73 000 ___tonni___ ___pakendeid___ .	35170	10
 tonn	NOUN	Par	Sing	prügi	NOUN	Par	Sing	tonni prügi	Eesti metsades ja teede ääres on kevadel kuni 10 000 ___tonni___ ___prügi___ .	35172	10
 enamik	NOUN	Gen	Sing	kodu_töö	NOUN	Par	Plur	enamiku kodutöid	Robotite asemel teevad ___enamiku___ ___kodutöid___ jälle inimesed ise .	35230	42
 leht	NOUN	Gen	Plur	laste_nurk	NOUN	Par	Sing	lehtede lastenurki	Loe eestikeelseid lasteajakirju või ___lehtede___ ___lastenurki___ .	35647	47
+teelusika_täis	NOUN	Par	Sing	rasv	NOUN	Par	Sing	teelusikatäis rasva	Näiteks on ühes väikeses viineris umbes ___teelusikatäis___ ___rasva___ .	36718	1
+tee_lusika_täis	NOUN	Par	Sing	suhkur	NOUN	Par	Sing	teelusikatäit suhkrut	Ühes 1 , 5-liitrises limonaadipudelis on peaaegu 30 ___teelusikatäit___ ___suhkrut___ .	36719	2
 pakk	NOUN	Par	Sing	krõps	NOUN	Par	Plur	pakki krõpse	Ma olen ükskord kümme ___pakki___ ___krõpse___ korraga ära söönud .	36728	18
+tee_lusika_täis	NOUN	Par	Sing	sool	NOUN	Par	Sing	teelusikatäit soola	Näiteks on ühes 100-grammises pakis krõpsudes umbes pool ___teelusikatäit___ ___soola___ .	36741	2
 pakk	NOUN	Gen	Sing	kartuli_krõps	NOUN	Par	Sing	paki kartulikrõpse	Kui sööksime aasta jooksul iga päev ühe 100-grammise ___paki___ ___kartulikrõpse___ , siis saaksime nendest kilogrammi soola ja 13 kilogrammi rasva .	36742	18
+kilo_gramm	NOUN	Gen	Sing	sool	NOUN	Par	Sing	kilogrammi soola	Kui sööksime aasta jooksul iga päev ühe 100-grammise paki kartulikrõpse , siis saaksime nendest ___kilogrammi___ ___soola___ ja 13 kilogrammi rasva .	36742	10
+kilo_gramm	NOUN	Gen	Sing	rasv	NOUN	Par	Sing	kilogrammi rasva	Kui sööksime aasta jooksul iga päev ühe 100-grammise paki kartulikrõpse , siis saaksime nendest kilogrammi soola ja 13 ___kilogrammi___ ___rasva___ .	36742	10
 gramm	NOUN	Par	Sing	kapsas	NOUN	Par	Sing	grammi kapsast	Süües päevas ühe tomati ühe suure porgandi , sada ___grammi___ ___kapsast___ ja rohelisi köögivilju , ühe banaani ja sada grammi tumedamaid marju , saame kätte vajaliku koguse vitamiine ja mineraalaineid .	36795	4
 kogus	NOUN	Gen	Sing	vitamiin	NOUN	Par	Plur	koguse vitamiine	Süües päevas ühe tomati ühe suure porgandi , sada grammi kapsast ja rohelisi köögivilju , ühe banaani ja sada grammi tumedamaid marju , saame kätte vajaliku ___koguse___ ___vitamiine___ ja mineraalaineid .	36795	6
 nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Kutsu sõbrad oma sünnipäevale vähemalt ___nädal___ ___aega___ varem , siis saavad nad külaskäiguks paremini ette valmistuda .	36866	225
@@ -179,6 +189,10 @@ nädal	NOUN	Gen	Plur	viis	NOUN	Par	Sing	nädalate viisi	Vägimees magas ___näda
 nädal	NOUN	Gen	Plur	viis	NOUN	Par	Sing	nädalate viisi	Kalevipoeg ärkas alles siis , kui oli ___nädalate___ ___viisi___ maganud .	38182	225
 tilk	NOUN	Par	Sing	vesi	NOUN	Par	Sing	tilka vett	Mõned muistendid on sarnased nagu kaks ___tilka___ ___vett___ .	38185	2
 pakk	NOUN	Par	Sing	mängu_kaar	NOUN	Par	Plur	pakki mängukaarte	Tal kulus selleks tuhat kaheksasada ___pakki___ ___mängukaarte___ , kusjuures ta ei kasutanud liimi ega muud kleepainet .	38306	18
+kilo_gramm	NOUN	Par	Sing	jahu	NOUN	Par	Sing	kilogrammi jahu	Selles oli neli tuhat kuussada ___kilogrammi___ ___jahu___ , üheksakümmend kilogrammi soola , tuhat kaheksasada kilogrammi juustu ja kaheksasada kilogrammi tomatipüreed .	38309	10
+kilo_gramm	NOUN	Par	Sing	sool	NOUN	Par	Sing	kilogrammi soola	Selles oli neli tuhat kuussada kilogrammi jahu , üheksakümmend ___kilogrammi___ ___soola___ , tuhat kaheksasada kilogrammi juustu ja kaheksasada kilogrammi tomatipüreed .	38309	10
+kilo_gramm	NOUN	Par	Sing	juust	NOUN	Par	Sing	kilogrammi juustu	Selles oli neli tuhat kuussada kilogrammi jahu , üheksakümmend kilogrammi soola , tuhat kaheksasada ___kilogrammi___ ___juustu___ ja kaheksasada kilogrammi tomatipüreed .	38309	10
+kilo_gramm	NOUN	Par	Sing	tomati_püreed	NOUN	Par	Sing	kilogrammi tomatipüreed	Selles oli neli tuhat kuussada kilogrammi jahu , üheksakümmend kilogrammi soola , tuhat kaheksasada kilogrammi juustu ja kaheksasada ___kilogrammi___ ___tomatipüreed___ .	38309	10
 nädal	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	nädal aega	Igal aastal augustikuus toimub Hispaanias suur toidufestival , mis kestab ___nädal___ ___aega___ .	38319	225
 tonn	NOUN	Par	Sing	tomat	NOUN	Par	Plur	tonni tomateid	Suurtelt veoautodelt visatakse tänavatele inimeste sekka sada kakskümmend ___tonni___ ___tomateid___ .	38322	10
 tükk	NOUN	Nom	Sing	leib	NOUN	Par	Sing	tükk leiba	Talle anti kaasa ___tükk___ ___leiba___ ja kruus vett .	38652	30
@@ -203,6 +217,7 @@ tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	Pole Sinust juba ___tükk___ __
 hulk	NOUN	Nom	Sing	õpilane	NOUN	Par	Plur	hulk õpilasi	Sageli haarab ___hulk___ ___õpilasi___ pärast tundi telefoni kätte , et teha kõne korrus allpool asuvale sõbrale .	40507	45
 tüüp	NOUN	Par	Sing	vagun	NOUN	Par	Plur	tüüpi vaguneid	Tokios näeb sõitmas ronge , millel on kaht ___tüüpi___ ___vaguneid___ - mobiiliga ning mobiilita .	40511	16
 jagu	NOUN	Par	Sing	vihm	NOUN	Par	Sing	jagu vihma	Pärnus sadas eile poole tunni jooksul maha 15 päeva normi ___jagu___ ___vihma___ , mis uputas kesklinnas bussijaama ümbruse põlvini ulatuva veega .	40963	5
+kausi_täis	NOUN	Nom	Sing	toit	NOUN	Par	Sing	kausitäis toitu	Üks ___kausitäis___ ___toitu___ , kuivtoitu .	41593	1
 kogu	NOUN	Nom	Plur	raha	NOUN	Par	Sing	kogud raha	Kas sa ___kogud___ ka ___raha___ millegi jaoks ?	41695	8
 tükk	NOUN	Nom	Sing	aeg	NOUN	Par	Sing	tükk aega	No veel ei ole saanud , aga ma arvan , et kui ta veel ___tükk___ ___aega___ nuiab , siis ma ikka annan talle selle raha .	41723	30
 valik	NOUN	Nom	Sing	pliiatsei	NOUN	Par	Plur	valik pliiatseid	Nojah , meil on siin suur ___valik___ harilikke ___pliiatseid___ .	41758	56

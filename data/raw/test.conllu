@@ -107,7 +107,7 @@
 2	läheb	minema	V	V	main=main|indic=indic|pres=pres|ps3=ps3|sg=sg|ps=ps|af=af	0	root	_	_
 3	üks	üks	P	P	sg=sg|nom=nom	2	nsubj	_	_
 4	uks	uks	S	S	com=com|sg=sg|nom=nom	2	obl	_	_
-5	kööki	köök	S	S	com=com|sg=sg|adit=adit	2	obl	_	_
+5	kööki	köök	S	S	com=com|sg=sg|gen=gen	2	obl	_	_
 6	,	,	Z	Z	_	7	punct	_	_
 7	teine	teine	N	N	ord=ord|sg=sg|nom=nom|roman=roman	8	amod	_	_
 8	tuppa	tuba	S	S	com=com|sg=sg|adit=adit	2	obl	_	_
